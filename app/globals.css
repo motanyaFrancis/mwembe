@@ -1,0 +1,197 @@
+@import "tailwindcss";
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  --navy: #143a52;
+  --gold: #d4a64f;
+  --light-gray: #e9e9e9;
+  --text-dark: #1b2d3a;
+
+  --color-primary-50: #f0f9ff;
+  --color-primary-100: #e0f2fe;
+  --color-primary-200: #bae6fd;
+  --color-primary-300: #7dd3fc;
+  --color-primary-400: #38bdf8;
+  --color-primary-500: #0ea5e9;
+  --color-primary-600: #0284c7;
+  --color-primary-700: #0369a1;
+  --color-primary-800: #075985;
+  --color-primary-900: #0c4a6e;
+  --color-primary-950: #082f49;
+
+  --color-gold-50: #FFF9E6;
+  --color-gold-100: #FFF1BF;
+  --color-gold-200: #FFE28A;
+  --color-gold-300: #FFD24D;
+  --color-gold-400: #F5C21B;
+  --color-gold-500: #D4AF37;
+  --color-gold-600: #B8962E;
+  --color-gold-700: #947725;
+  --color-gold-800: #705A1C;
+  --color-gold-900: #4D3E14;
+  --color-gold-950: #2E240B;
+
+  --color-beige-50: #FAF8F4;
+  --color-beige-100: #F5F0E6;
+  --color-beige-200: #E8DFCF;
+  --color-beige-300: #D9CBB4;
+  --color-beige-400: #C9B69A;
+  --color-beige-500: #B8A180;
+  --color-beige-600: #9E8768;
+  --color-beige-700: #7F6B52;
+  --color-beige-800: #5F503E;
+  --color-beige-900: #40362A;
+  --color-beige-950: #261F17;
+
+  --color-dark-50: #F3F4F6;
+  --color-dark-100: #E5E7EB;
+  --color-dark-200: #D1D5DB;
+  --color-dark-300: #9CA3AF;
+  --color-dark-400: #6B7280;
+  --color-dark-500: #4B5563;
+  --color-dark-600: #374151;
+  --color-dark-700: #1F2937;
+  --color-dark-800: #111827;
+  --color-dark-900: #0B1220;
+  --color-dark-950: #050914;
+}
+
+/* @theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+} */
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.css-wyqlws-Pinstripes {
+    background: url(/img/site/pinstripes.png) repeat-x;
+    -webkit-background-size: contain;
+    background-size: contain;
+    height: 20vw;
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+
+.news-section {
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.section-title {
+  color: white;
+  letter-spacing: 3px;
+  margin-bottom: 60px;
+}
+
+/* Grid */
+.card-grid {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Card */
+.card {
+  position: relative;
+  background: var(--light-gray);
+  width: 320px;
+  padding-top: 60px;
+  text-align: left;
+}
+
+/* Date badge */
+.date-badge {
+  position: absolute;
+  top: -30px;
+  left: 30px;
+  background: var(--gold);
+  color: white;
+  text-align: center;
+  padding: 10px 15px;
+  font-weight: bold;
+}
+
+.date-badge .month {
+  font-size: 12px;
+  display: block;
+}
+
+.date-badge .day {
+  font-size: 22px;
+  display: block;
+}
+
+.date-badge .year {
+  font-size: 12px;
+  display: block;
+}
+
+/* Content */
+.card-content {
+  padding: 30px;
+}
+
+.category {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--navy);
+}
+
+.card h3 {
+  margin: 15px 0;
+  color: var(--text-dark);
+}
+
+.card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Button */
+.read-more {
+  display: inline-block;
+  margin-top: 20px;
+  background: var(--gold);
+  color: white;
+  padding: 10px 15px;
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.read-more:hover {
+  opacity: 0.9;
+}
+
+/* Post page */
+.post-page {
+  background: white;
+  padding: 80px 40px;
+  max-width: 800px;
+  margin: auto;
+}
