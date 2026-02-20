@@ -22,8 +22,8 @@ export default function Pagination({
             onClick={() => onPageChange(page)}
             className={`px-4 py-2 border text-sm font-semibold transition cursor-pointer ${
               currentPage === page
-                ? "bg-sky-900 text-white border-sky-900"
-                : "border-sky-900 text-sky-900 hover:bg-sky-100"
+                ? "bg-primary-900 text-white border-primary-900"
+                : "border-primary-900 text-primary-900 hover:bg-primary-100"
             }`}
           >
             {page}

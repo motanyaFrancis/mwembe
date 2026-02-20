@@ -21,6 +21,8 @@ export default {
                 accent: ['Rochester', 'cursive'],
             },
             colors: {
+                white: 'var(--color-white)',
+                black: 'var(--color-black)',
                 primary: mapColors('primary'),
                 gold: mapColors('gold'),
                 beige: mapColors('beige'),

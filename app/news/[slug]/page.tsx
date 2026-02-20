@@ -23,9 +23,9 @@ export default async function PostPage({ params }: Props) {
         <main className="min-h-screen bg-[#f7f1e7] text-[#1a1f38]">
 
             {/* HERO */}
-            <section className="bg-sky-900 text-white px-6 md:px-20 py-32 pt-44">
+            <section className="bg-primary-900 text-white px-6 md:px-20 py-32 pt-44">
                 <div className="max-w-5xl mx-auto">
-                    <div className="text-xs font-semibold uppercase tracking-widest text-amber-400 mb-4">
+                    <div className="text-xs font-semibold uppercase tracking-widest text-gold-400 mb-4">
                         {post.category}
                     </div>
 
@@ -33,7 +33,7 @@ export default async function PostPage({ params }: Props) {
                         {post.title}
                     </h1>
 
-                    <div className="text-sm text-sky-200">
+                    <div className="text-sm text-primary-200">
                         {month} {day}, {year}
                     </div>
                 </div>
@@ -41,7 +41,7 @@ export default async function PostPage({ params }: Props) {
 
             {/* CONTENT + SIDEBAR */}
             <section className="flex justify-center px-6 md:px-20 py-20">
-                <div className="max-w-[1100px] flex flex-col lg:flex-row gap-16 w-full border-t border-sky-600 pt-16">
+                <div className="max-w-[1100px] flex flex-col lg:flex-row gap-16 w-full border-t border-primary-600 pt-16">
 
                     <article className="flex-1 max-w-4xl">
                         <div className="prose prose-slate max-w-none">
@@ -50,7 +50,7 @@ export default async function PostPage({ params }: Props) {
                         <div className="mt-16">
                             <Link
                                 href="/news"
-                                className="inline-block bg-sky-900 text-white text-sm font-bold tracking-wider px-6 py-3 border-b-4 border-amber-400 hover:bg-sky-800 transition"
+                                className="inline-block bg-primary-900 text-white text-sm font-bold tracking-wider px-6 py-3 border-b-4 border-gold-400 hover:bg-primary-800 transition"
                             >
                                 BACK TO NEWS & PRESS
                             </Link>

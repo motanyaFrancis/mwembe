@@ -1,131 +1,135 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Menu, X, EllipsisVertical, Heart } from "lucide-react";
+import { Menu, X, Heart } from "lucide-react";
 import Link from "next/link";
 
 type NavItem = {
-    label: string;
-    href: string;
-    variant?: "default" | "primary";
-    icon?: React.ReactNode;
+  label: string;
+  href: string;
+  variant?: "default" | "primary";
+  icon?: React.ReactNode;
 };
 
 const navItems: NavItem[] = [
-    { label: "Meet Mwembe", href: "/about" },
-    { label: "Agenda", href: "/issues" },
-    { label: "Volunteer", href: "/volunteer" },
-    { label: "Donate", href: "/donate", variant: "primary", icon: <Heart size={20} /> },
+  { label: "Meet Mwembe", href: "/about" },
+  { label: "Agenda", href: "/issues" },
+  { label: "Volunteer", href: "/volunteer" },
+  {
+    label: "Donate",
+    href: "/donate",
+    variant: "primary",
+    icon: <Heart size={18} />,
+  },
 ];
 
 export default function Navbar() {
-    const [scrolled, setScrolled] = useState(false);
-    const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
 
-    // Scroll detection
-    useEffect(() => {
-        const onScroll = () => {
-            const halfScreen = window.innerHeight / 2;
-            setScrolled(window.scrollY > halfScreen);
-        };
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 80);
+    };
 
-        window.addEventListener("scroll", onScroll);
-        return () => window.removeEventListener("scroll", onScroll);
-    }, []);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
-    // Lock scroll when mobile menu is open
-    useEffect(() => {
-        if (open) {
-            document.body.style.overflow = "hidden";
-        } else {
-            document.body.style.overflow = "";
-        }
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
 
-        // Cleanup when unmounting
-        return () => {
-            document.body.style.overflow = "";
-        };
-    }, [open]);
+  return (
+    <>
+      {/* HEADER */}
+      <header
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-t-4 border-gold-400 ${
+          scrolled
+            ? "bg-primary-950 shadow-xl order-t-4 border-gold-400"
+            : "bg-transparent"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-6 py-8 flex items-center justify-between">
+          {/* LOGO */}
+          <Link
+            href="/"
+            className="text-gold-400 font-black text-2xl tracking-widest uppercase"
+          >
+            Mwembe 2026
+          </Link>
 
-    return (
-        <>
-            <header
-                className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled
-                    ? "bg-sky-950/95 backdrop-blur shadow-lg"
-                    : "bg-transparent"
-                    }`}
-            >
-                <div className="max-w-7xl mx-auto px-6 py-8 flex items-center justify-between">
-                    {/* LOGO */}
-                    <Link href='/' className="text-white font-black text-2xl tracking-wide">
-                        Mr. President
-                    </Link>
+          {/* DESKTOP NAV */}
+          <nav className="hidden md:flex items-center space-x-6">
+            {navItems.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                className={
+                  item.variant === "primary"
+                    ? "bg-gold-500 text-primary-50 font-extrabold px-6 py-3 uppercase tracking-wide hover:bg-gold-400 transition flex items-center shadow-lg"
+                    : "text-gold-100 font-bold uppercase text-sm tracking-wide hover:text-gold-400 transition"
+                }
+              >
+                {item.icon && <span className="mr-2">{item.icon}</span>}
+                {item.label}
+              </Link>
+            ))}
+          </nav>
 
-                    {/* DESKTOP NAV */}
-                    <nav className="hidden md:flex items-center space-x-4">
-                        {navItems.map((item) => (
-                            <a
-                                key={item.label}
-                                href={item.href}
-                                className={ 
-                                    item.variant === "primary"
-                                        ? "bg-amber-500 text-neutral-50 font-extrabold px-6 py-3 uppercase tracking-wide hover:opacity-90 transition rounded-md flex items-center"
-                                        : "text-neutral-200 px-4 py-2 font-bold uppercase text-sm hover:opacity-90 transition"
-                                }
-                            >
-                                {item.icon && <span className="mr-2">{item.icon}</span>}
-                                {item.label}
-                            </a>
-                        ))}
-                    </nav>
+          {/* MOBILE TOGGLE */}
+          <button
+            onClick={() => setOpen(!open)}
+            className="md:hidden text-gold-400 focus:outline-none"
+          >
+            {open ? <X size={32} /> : <Menu size={32} />}
+          </button>
+        </div>
+      </header>
 
-                    {/* MOBILE TOGGLE */}
-                    <button
-                        onClick={() => setOpen(!open)}
-                        className="md:hidden text-neutral-900 z-50 relative cursor-pointer focus:outline-none"
-                    >
-                        {open ? <X className="text-neutral-900" strokeWidth={.5} size={36} /> : <EllipsisVertical className="text-neutral-100" size={36} />}
-                    </button>
-                </div>
+      {/* MOBILE FULLSCREEN MENU */}
+      {open && (
+        <div className="fixed inset-0 bg-primary-950 z-50 flex flex-col items-center justify-center">
+          {/* Close Button */}
+          <button
+            onClick={() => setOpen(false)}
+            className="absolute top-8 right-6 text-gold-400"
+          >
+            <X size={32} />
+          </button>
 
+          {/* Logo */}
+          <Link
+            href="/"
+            onClick={() => setOpen(false)}
+            className="absolute top-8 left-6 text-gold-400 font-black text-xl tracking-widest uppercase"
+          >
+            Mwembe 2026
+          </Link>
 
-            </header>
-            {/* MOBILE FULLSCREEN MENU */}
-            {open && (
-                <div className="fixed inset-0 bg-white z-50 flex flex-col items-center justify-center space-y-8">
-                    {/* CLOSE BUTTON */}
-                    <button
-                        onClick={() => setOpen(false)}
-                        className="absolute top-8 right-6 text-neutral-900 cursor-pointer focus:outline-none"
-                    >
-                        <X size={36} strokeWidth={0.5} />
-                    </button>
-
-                    {/* Logo at top */}
-                    <Link href='/' className="absolute top-8 left-6  text-neutral-900 font-black text-2xl tracking-wide">
-                        Mr. President
-                    </Link>
-
-                    {/* Nav Items */}
-                    <div className="flex flex-col items-center space-y-6">
-                        {navItems.map((item) => (
-                            <a
-                                key={item.label}
-                                href={item.href}
-                                onClick={() => setOpen(false)}
-                                className={
-                                    item.variant === "primary"
-                                        ? "block bg-amber-300 text-neutral-900 font-extrabold px-6 py-3 rounded-lg text-2xl tracking-wide text-center hover:opacity-90 transition"
-                                        : "block text-neutral-900 px-6 py-3 font-black text-3xl text-center hover:opacity-90 transition"
-                                }
-                            >
-                                {item.label}
-                            </a>
-                        ))}
-                    </div>
-                </div>
-            )}
-
-        </>
-    );
+          {/* Nav Items */}
+          <div className="flex flex-col items-center space-y-8">
+            {navItems.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                onClick={() => setOpen(false)}
+                className={
+                  item.variant === "primary"
+                    ? "bg-gold-500 text-primary-50 font-extrabold px-8 py-4 text-xl uppercase tracking-wide shadow-xl hover:bg-gold-400 transition flex items-center"
+                    : "text-gold-100 text-2xl font-black uppercase tracking-wide hover:text-gold-400 transition"
+                }
+              >
+                {item.icon && <span className="mr-2">{item.icon}</span>}
+                {item.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+    </>
+  );
 }

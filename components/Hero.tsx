@@ -29,14 +29,14 @@ export default function Hero() {
 
             {/* CONTENT */}
             <div className="relative z-10 w-7xl mx-auto px-0 sm:px-6 flex flex-col justify-end md:justify-center min-h-screen sm:mt-32">
-                <div className="max-w-3xl mx-0 sm:mx-0 text-left sm:text-left py-12 px-4 bg-gradient-to-b from-sky-800/10 to-sky-950 sm:bg-none"                >
-                    <h1 className="text-4xl md:text-6xl font-extrabold text-amber-50 mb-6">
+                <div className="max-w-3xl mx-0 sm:mx-0 text-left sm:text-left py-12 px-4 bg-gradient-to-b from-primary-800/10 to-primary-950 sm:bg-none"                >
+                    <h1 className="text-4xl md:text-6xl font-extrabold text-gold-50 mb-6">
                         Lead. Innovate. Empower.
                     </h1>
-                    <p className="text-lg md:text-2xl font-bold text-amber-50 mb-6">
+                    <p className="text-lg md:text-2xl font-bold text-gold-50 mb-6">
                         Vying for President of the Engineers Board — driving collaboration, growth, and excellence.
                     </p>
-                    <p className="text-md md:text-xl font-semibold text-amber-500">
+                    <p className="text-md md:text-xl font-semibold text-gold-500">
                         Join me to shape a brighter future for our engineering community.
                     </p>
                 </div>

@@ -35,7 +35,8 @@ export default function IssuesPage() {
     return (
         <main className="min-h-screen bg-[#E9E4D8] ">
             {/* Header Section */}
-            <section className="px-2 md:px-20 pt-40 pb-10 bg-sky-900 text-white"
+            <section
+                className="relative px-2 md:px-20 pt-40 pb-10 bg-pri-900 text-white"
                 style={{
                     backgroundImage: "url('/images/construction-elements-tools.jpg')",
                     backgroundPosition: "center",
@@ -43,7 +44,10 @@ export default function IssuesPage() {
                     backgroundRepeat: "no-repeat",
                 }}
             >
-                <div className="max-w-7xl mx-auto">
+                {/* Dark overlay */}
+                <div className="absolute inset-0 bg-primary-800/60"></div>
+
+                <div className="relative max-w-7xl mx-auto">
                     <p className="uppercase tracking-widest text-white font-semibold mb-2">
                         My Policy Platform:
                     </p>
@@ -58,6 +62,7 @@ export default function IssuesPage() {
                 </div>
             </section>
 
+
             {/* Content Section */}
             <section className="px-6 md:px-20 pt-20 pb-20 max-w-7xl mx-auto">
                 <div className="grid md:grid-cols-3 gap-16">
@@ -69,9 +74,9 @@ export default function IssuesPage() {
                                 placeholder="Search"
                                 value={search}
                                 onChange={(e) => handleSearch(e.target.value)}
-                                className="w-full outline-none text-sky-900"
+                                className="w-full outline-none text-primary-900"
                             />
-                            <Search className="text-sky-900 ml-2" size={18} />
+                            <Search className="text-primary-900 ml-2" size={18} />
                         </div>
                     </div>
 

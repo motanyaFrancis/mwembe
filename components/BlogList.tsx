@@ -27,11 +27,11 @@ export default function BlogList({
     const displayedPosts = posts ?? allPosts.slice(0, limit);
 
     return (
-        <section className="bg-sky-50 py-24">
+        <section className="bg-primary-50 py-24">
             <div className="max-w-7xl mx-auto">
 
                 {showHeadline && (
-                    <h2 className="text-amber-500 text-center text-xs tracking-widest font-semibold mb-16">
+                    <h2 className="text-gold-500 text-center text-lg tracking-widest font-semibold pb-16 mb-16">
                         NEWS & PRESS
                     </h2>
                 )}
@@ -43,11 +43,11 @@ export default function BlogList({
                         return (
                             <Link href={`/news/${post.slug}`} key={post.slug}>
                                 <article
-                                    className="relative bg-sky-100 flex flex-col h-[520px] max-w-[360px] mx-auto shadow-xl cursor-pointer group transition-all duration-300 hover:bg-sky-200 hover:-translate-y-1"
+                                    className="relative bg-primary-100 flex flex-col h-[520px] max-w-[360px] mx-auto shadow-xl cursor-pointer group transition-all duration-300 hover:bg-primary-200 hover:-translate-y-1"
                                 >
-                                    <div className="absolute top-0 left-0 w-full h-3 bg-amber-600" />
+                                    <div className="absolute top-0 left-0 w-full h-3 bg-gold-600" />
 
-                                    <div className="absolute -top-6 left-6 bg-amber-600 text-white w-[78px] text-center font-bold text-xs leading-tight py-2 z-10">
+                                    <div className="absolute -top-6 left-6 bg-gold-600 text-white w-[78px] text-center font-bold text-xs leading-tight py-2 z-10">
                                         <div className="tracking-widest">{month}</div>
                                         <div className="text-3xl font-black leading-none">{day}</div>
                                         <div className="text-sm tracking-widest font-medium">
@@ -71,7 +71,7 @@ export default function BlogList({
 
                                     {/* READ MORE BUTTON */}
                                     <div className="absolute -bottom-3 right-5 transition-transform duration-300 group-hover:-translate-y-6">
-                                        <span className="bg-amber-600 text-sky-100 font-black text-sm py-4 px-6 hover:bg-amber-700 transition">
+                                        <span className="bg-gold-600 text-primary-100 font-black text-sm py-4 px-6 hover:bg-gold-700 transition">
                                             READ MORE
                                         </span>
                                     </div>
@@ -87,15 +87,15 @@ export default function BlogList({
                     <div className="flex justify-end mt-16">
                         {/* <Link
                             href="/news"
-                            className="border border-amber-600 text-amber-600 px-10 py-4 text-xs tracking-widest font-bold hover:bg-amber-600 hover:text-sky-950 transition"
+                            className="border border-gold-600 text-gold-600 px-10 py-4 text-xs tracking-widest font-bold hover:bg-gold-600 hover:text-primary-950 transition"
                         >
                             SEE ALL NEWS
                         </Link> */}
                         <Link
                             href="/news"
-                            className="group inline-flex items-center text-xl text-amber-600 font-bold px-3 py-2.5 uppercase tracking-wide"
+                            className="group inline-flex items-center text-xl text-gold-600 font-bold px-3 py-2.5 uppercase tracking-wide"
                         >
-                            <span className="relative inline-flex items-center border-b-4 border-amber-600 transition-colors duration-300 group-hover:border-sky-500">
+                            <span className="relative inline-flex items-center border-b-4 border-gold-600 transition-colors duration-300 group-hover:border-primary-500">
                                 view ALL
                             </span>
                             <ChevronRight

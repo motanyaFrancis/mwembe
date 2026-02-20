@@ -25,7 +25,7 @@ export default function IssuesSection() {
                   {left && <IssueBlock issue={left} />}
 
                   {/* Vertical separator */}
-                  <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 h-[70%] w-px bg-sky-700" />
+                  <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 h-[70%] w-px bg-primary-700" />
                 </div>
 
                 {/* Right Column */}
@@ -37,8 +37,8 @@ export default function IssuesSection() {
               {/* Horizontal separator */}
               {!isLastRow && (
                 <div className="hidden md:flex justify-between items-center">
-                  <div className="h-px bg-sky-700 w-[46%]" />
-                  <div className="h-px bg-sky-700 w-[46%]" />
+                  <div className="h-px bg-primary-700 w-[46%]" />
+                  <div className="h-px bg-primary-700 w-[46%]" />
                 </div>
               )}
             </div>
@@ -49,9 +49,9 @@ export default function IssuesSection() {
         <div className="mt-28 text-right">
           <Link
             href="/issues"
-            className="group inline-flex items-center text-xl text-sky-950 font-bold px-3 py-2.5 uppercase tracking-wide"
+            className="group inline-flex items-center text-xl text-primary-950 font-bold px-3 py-2.5 uppercase tracking-wide"
           >
-            <span className="relative inline-flex items-center border-b-4 border-amber-300 transition-colors duration-300 group-hover:border-sky-500">
+            <span className="relative inline-flex items-center border-b-4 border-gold-300 transition-colors duration-300 group-hover:border-primary-500">
               More Items
             </span>
             <ChevronRight
@@ -73,15 +73,15 @@ function IssueBlock({ issue }: { issue: any }) {
       className="block max-w-xl group transition"
     >
       <div className="flex items-start gap-6">
-        <div className="flex-shrink-0 w-10 h-10 md:w-13 md:h-13 rounded-full border-4 border-blue-300 flex items-center justify-center transition group-hover:border-sky-600">
-          <Check className="w-7 h-5 text-blue-900 group-hover:text-sky-700 transition" />
+        <div className="flex-shrink-0 w-10 h-10 md:w-13 md:h-13 rounded-full border-4 border-beige-600 flex items-center justify-center transition group-hover:border-primary-600">
+          <Check className="w-7 h-5 text-beige-700 group-hover:text-primary-700 transition" />
         </div>
 
         <div>
-          <h3 className="text-3xl font-extrabold text-sky-950 mb-4 group-hover:text-sky-800 transition">
+          <h3 className="text-3xl font-extrabold text-primary-950 mb-4 group-hover:text-primary-800 transition">
             {issue.title}
           </h3>
-          <p className="text-xl leading-relaxed text-sky-950">
+          <p className="text-xl leading-relaxed text-primary-950">
             {issue.description.substring(0, 200)}...
           </p>
         </div>

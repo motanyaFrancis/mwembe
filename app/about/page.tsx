@@ -81,7 +81,7 @@ export default function AboutPage() {
 
             {/* Accomplishments Section */}
             <section className="max-w-7xl mx-auto px-6 md:px-20 py-12 bg-gray-50 rounded-lg shadow-lg">
-                <h2 className="text-3xl font-extrabold text-sky-900 mb-8 text-center md:text-left">
+                <h2 className="text-3xl font-extrabold text-primary-900 mb-8 text-center md:text-left">
                     Mwembe's Accomplishments
                 </h2>
 
@@ -99,7 +99,7 @@ export default function AboutPage() {
                     ].map((item, idx) => (
                         <div key={idx} className="flex items-start space-x-3">
                             <CheckCircle
-                                className="flex-shrink-0 text-amber-500 mt-1"
+                                className="flex-shrink-0 text-gold-500 mt-1"
                                 size={24}
                                 strokeWidth={1.5}
                             />

@@ -43,7 +43,7 @@ export default function RelatedNewsSidebar({
         <aside className="w-full lg:w-80">
             <div className="sticky top-32">
 
-                <h3 className="text-sm font-bold tracking-widest uppercase text-sky-700 mb-6">
+                <h3 className="text-sm font-bold tracking-widest uppercase text-primary-700 mb-6">
                     Related News
                 </h3>
 
@@ -53,7 +53,7 @@ export default function RelatedNewsSidebar({
                     placeholder="Search related news..."
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
-                    className="w-full mb-6 px-4 py-2 border border-sky-300 text-sm focus:outline-none focus:ring-2 focus:ring-sky-600"
+                    className="w-full mb-6 px-4 py-2 border border-primary-300 text-sm focus:outline-none focus:ring-2 focus:ring-primary-600"
                 />
 
                 {/* LIST */}
@@ -63,13 +63,13 @@ export default function RelatedNewsSidebar({
                             <Link
                                 key={item.slug}
                                 href={`/news/${item.slug}`}
-                                className="block group border-b border-sky-200 pb-4"
+                                className="block group border-b border-primary-200 pb-4"
                             >
-                                <div className="text-xs font-semibold uppercase text-amber-800 mb-1">
+                                <div className="text-xs font-semibold uppercase text-gold-800 mb-1">
                                     {item.category}
                                 </div>
 
-                                <h4 className="text-base font-semibold group-hover:text-sky-800 transition">
+                                <h4 className="text-base font-semibold group-hover:text-primary-800 transition">
                                     {item.title}
                                 </h4>
                             </Link>

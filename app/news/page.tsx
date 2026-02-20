@@ -44,7 +44,7 @@ export default function NewsPage() {
       </section>
       <BlogList posts={currentPosts} />
 
-      <div className="flex justify-center bg-sky-50 pb-20">
+      <div className="flex justify-center bg-primary-50 pb-20">
         <Pagination
           currentPage={currentPage}
           totalPages={totalPages}
