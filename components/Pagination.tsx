@@ -20,7 +20,7 @@ export default function Pagination({
           <button
             key={page}
             onClick={() => onPageChange(page)}
-            className={`px-4 py-2 border text-sm font-semibold transition ${
+            className={`px-4 py-2 border text-sm font-semibold transition cursor-pointer ${
               currentPage === page
                 ? "bg-sky-900 text-white border-sky-900"
                 : "border-sky-900 text-sky-900 hover:bg-sky-100"

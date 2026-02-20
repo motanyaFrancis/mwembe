@@ -19,11 +19,11 @@ export default async function PostPage({ params }: Props) {
 
     return (
         <main className="min-h-screen bg-[#f7f1e7] text-[#1a1f38] flex justify-center py-36 px-4 ">
-            <div className="max-w-[1100px] flex gap-10 w-full border-t border-sky-500">
+            <div className="max-w-[1100px] flex gap-10 w-full border-t border-sky-600">
                 {/* Sidebar can go here */}
 
                 <article className="flex-1 max-w-4xl">
-                    <div className="inline-block bg-primary-600 text-white text-center px-3 py-2 mb-6 font-bold">
+                    <div className="inline-block bg-sky-600 text-white text-center px-4 py-2 mb-6 font-bold">
                         <div className="text-sm">{month}</div>
                         <div className="text-3xl -mt-1">{day}</div>
                         <div className="text-sm">{year}</div>

@@ -195,3 +195,12 @@ body {
   max-width: 800px;
   margin: auto;
 }
+
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

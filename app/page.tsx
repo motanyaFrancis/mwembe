@@ -4,8 +4,20 @@ import CallToAction from "@/components/CallToAction";
 import Issues from "@/components/Issues";
 import AboutUs from "@/components/About";
 import BlogList from "@/components/BlogList"
+import GalleryCarousel from "@/components/GalleryCarousel";
 
 export default function HomePage() {
+
+  const galleryImages = [
+    "/images/architects-checking-documents.jpg",
+    "/images/teamwork-cooperation.jpg",
+    "/images/executives-comparing-blueprint-with-actual-building.jpg",
+    "/images/view-male-engineer-work-engineers-day-celebration.jpg",
+    "/images/executives-comparing-blueprint-with-actual-building.jpg",
+    "/images/black-female-architect-civil-engineers-with-protective-face-masks-talking-construction-site.jpg",
+    "/images/teamwork-cooperation.jpg",
+    "/images/black-female-architect-civil-engineers-with-protective-face-masks-talking-construction-site.jpg",
+  ];
   return (
     <>
       <Hero />
@@ -17,9 +29,10 @@ export default function HomePage() {
       />
 
       <Issues />
-      <BlogList limit={3}/>
+      <BlogList limit={3} showSeeAll showHeadline />
       <Agenda />
       <CallToAction />
+      <GalleryCarousel images={galleryImages} />
     </>
   );
 }
