@@ -1,20 +1,21 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Menu, X, EllipsisVertical } from "lucide-react";
+import { Menu, X, EllipsisVertical, Heart } from "lucide-react";
 import Link from "next/link";
 
 type NavItem = {
     label: string;
     href: string;
     variant?: "default" | "primary";
+    icon?: React.ReactNode;
 };
 
 const navItems: NavItem[] = [
     { label: "Meet Mwembe", href: "/about" },
-    { label: "Issues", href: "/issues" },
-    { label: "Volunteer", href: "#volunteer" },
-    { label: "Donate", href: "#donate", variant: "primary" },
+    { label: "Agenda", href: "/issues" },
+    { label: "Volunteer", href: "/volunteer" },
+    { label: "Donate", href: "/donate", variant: "primary", icon: <Heart size={20} /> },
 ];
 
 export default function Navbar() {
@@ -66,12 +67,13 @@ export default function Navbar() {
                             <a
                                 key={item.label}
                                 href={item.href}
-                                className={
+                                className={ 
                                     item.variant === "primary"
-                                        ? "bg-amber-500 text-neutral-50 font-extrabold px-6 py-3 uppercase tracking-wide hover:opacity-90 transition rounded-md"
+                                        ? "bg-amber-500 text-neutral-50 font-extrabold px-6 py-3 uppercase tracking-wide hover:opacity-90 transition rounded-md flex items-center"
                                         : "text-neutral-200 px-4 py-2 font-bold uppercase text-sm hover:opacity-90 transition"
                                 }
                             >
+                                {item.icon && <span className="mr-2">{item.icon}</span>}
                                 {item.label}
                             </a>
                         ))}

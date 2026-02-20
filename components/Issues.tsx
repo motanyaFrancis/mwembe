@@ -52,7 +52,7 @@ export default function IssuesSection() {
             className="group inline-flex items-center text-xl text-sky-950 font-bold px-3 py-2.5 uppercase tracking-wide"
           >
             <span className="relative inline-flex items-center border-b-4 border-amber-300 transition-colors duration-300 group-hover:border-sky-500">
-              More Issues
+              More Items
             </span>
             <ChevronRight
               className="ml-1 opacity-0 -translate-x-2 transition-all duration-300 ease-out group-hover:opacity-100 group-hover:translate-x-0"

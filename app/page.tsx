@@ -1,5 +1,5 @@
 import Hero from "@/components/Hero";
-import Agenda from "@/components/Agenda";
+// import Agenda from "@/components/Agenda";
 import CallToAction from "@/components/CallToAction";
 import Issues from "@/components/Issues";
 import AboutUs from "@/components/About";
@@ -29,9 +29,9 @@ export default function HomePage() {
       />
 
       <Issues />
-      <BlogList limit={3} showSeeAll showHeadline />
-      <Agenda />
+      {/* <Agenda /> */}
       <CallToAction />
+      <BlogList limit={3} showSeeAll showHeadline />
       <GalleryCarousel images={galleryImages} />
     </>
   );
