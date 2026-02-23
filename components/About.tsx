@@ -15,13 +15,13 @@ export default function AboutUs({
 }: AboutUsProps) {
     return (
         <section className="bg-primary-50">
-            <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center md:items-start gap-10">
+            <div className="max-w-6xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center md:items-start gap-10">
                 {/* Image on the left */}
-                <div className="flex-shrink-0 w-full md:w-1/3 pt-16">
+                <div className="flex-shrink-0 my-auto w-full md:w-1/3 rotate-3 shadow-lg">
                     <img
                         src={imageUrl}
                         alt={`Photo of ${name}`}
-                        className="w-full h-auto rounded-xl object-cover"
+                        className="object-cover"
                     />
                 </div>
 

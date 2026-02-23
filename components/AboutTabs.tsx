@@ -8,45 +8,45 @@ export default function AboutTabs() {
 
     const tabs = [
         { id: "bio", label: "Personal Biography" },
-        { id: "achievements", label: "Industry Accomplishments" },
+        { id: "achievements", label: "Professional Experience & Leadership" },
         { id: "agenda", label: "Aims & Reform Agenda" },
     ];
 
     const pillars = [
         {
-            title: "Professional Dignity & Fair Compensation",
+            title: "Inclusivity & Equity",
             description:
-                "Restoring respect for the engineering profession through fair compensation standards and structured recognition frameworks.",
+                "Championing gender equity, youth participation, and the inclusion of persons living with disabilities. Strengthening programs for graduate engineers and expanding women-focused initiatives like the She-Program.",
         },
         {
-            title: "Regulatory Strength & Enforcement",
+            title: "Good Governance",
             description:
-                "Strengthening institutional authority to protect standards, enforce compliance, and uphold public trust.",
+                "Upholding the IEK Constitution and governance policies. Leading a member-driven review and amendment of the Constitution to ensure a robust framework for the future.",
         },
         {
-            title: "Youth Employment & Mentorship Pathways",
+            title: "Partnerships & Collaboration",
             description:
-                "Creating structured mentorship programs and employment pipelines for graduate and early-career engineers.",
+                "Strengthening ties with Industry, Academia, and Government. Promoting professional mobility through regional and global affiliations and easing international work transitions.",
         },
         {
-            title: "National Policy Influence",
+            title: "Strong Advocacy",
             description:
-                "Positioning engineers at the center of national policy conversations and development planning.",
+                "Advocating for a harmonized Scheme of Service in the public sector, full implementation of the scale of fees, and ensuring local engineers lead national infrastructure projects.",
         },
         {
-            title: "Institutional Transparency & Reform",
+            title: "Research & Development",
             description:
-                "Launching transparency dashboards, audits, and member-centered accountability systems.",
+                "Promoting research-driven policy engagement and collaboration between academia and industry to anchor IEK’s relevance in a rapidly evolving world.",
         },
         {
-            title: "Inclusive Representation",
+            title: "Welfare & Financing",
             description:
-                "Ensuring generational, regional, and disciplinary inclusivity across leadership structures.",
+                "Negotiating affordable financing solutions and structured welfare programs including medical cover, SACCOs, professional indemnity, and asset financing.",
         },
     ];
 
     return (
-        <section className="py-16 pt-4 px-6 md:px-20 bg-white">
+        <section className="py-16 px-6 md:px-20 bg-white">
             <div className="max-w-7xl mx-auto">
 
                 {/* TAB NAVIGATION */}
@@ -56,8 +56,8 @@ export default function AboutTabs() {
                             key={tab.id}
                             onClick={() => setActiveTab(tab.id)}
                             className={`px-6 py-4 font-semibold transition duration-300 cursor-pointer ${activeTab === tab.id
-                                ? "text-primary-900 border-b-4 border-gold-500"
-                                : "text-neutral-600 hover:text-primary-800"
+                                    ? "text-primary-900 border-b-4 border-gold-500"
+                                    : "text-neutral-600 hover:text-primary-800"
                                 }`}
                         >
                             {tab.label}
@@ -77,279 +77,141 @@ export default function AboutTabs() {
                                 </h2>
 
                                 <p className="text-lg">
-                                    Eng. Jacton “Tony” Mwembe is a Kenyan civil engineer, institutional leader,
-                                    and advocate for professional reform within the engineering sector.
-                                    With nearly two decades of practice, he has built a career grounded in
-                                    technical excellence, ethical leadership, and institutional service.
+                                    Eng. <strong>Jacton Mwembe Achieng</strong> is a senior Kenyan civil engineer with nearly two decades of experience across infrastructure delivery, regulatory governance, and professional leadership. He currently serves as <strong>Honorary Secretary of the Institution of Engineers of Kenya (IEK)</strong> for the 2024–2026 term.
                                 </p>
 
                                 <p>
-                                    He holds a Bachelor’s degree in Civil Engineering from the University of Nairobi
-                                    and is a registered Professional Engineer with the Engineers Board of Kenya (EBK).
-                                    He is also a Corporate Member of the Institution of Engineers of Kenya (IEK),
-                                    where he currently serves in national leadership.
+                                    He holds a <strong>Bachelor’s degree in Civil Engineering from the University of Nairobi</strong> and is a registered Professional Engineer (EBK A4516). He is a Corporate Member of the IEK (MIEK M.4014), and an active member of the Architectural Association of Kenya Engineers’ Chapter (M.AAK(E) 4693). He is also an Associate of the Chartered Institute of Arbitrators (ACIArb).
                                 </p>
 
                                 <p>
-                                    His professional journey spans consultancy, construction, infrastructure delivery,
-                                    regulatory governance, and industry advocacy. Through these roles, he has consistently
-                                    championed integrity, professional standards, and youth mentorship within the engineering profession.
+                                    His leadership philosophy is built on <strong>Integrity, Inclusion, and Impact</strong>, and he has consistently demonstrated a commitment to professional standards, ethical governance, and mentorship across Kenya’s engineering sector.
                                 </p>
+
+                                <div className="bg-gold-50 p-6 border-l-4 border-gold-500">
+                                    <h4 className="font-bold text-primary-900 mb-2">Core Values</h4>
+                                    <ul className="grid grid-cols-2 gap-2 text-base">
+                                        <li>• Integrity & Accountability</li>
+                                        <li>• Inclusivity & Equity</li>
+                                        <li>• Professional Excellence</li>
+                                        <li>• Collaboration & Partnership</li>
+                                        <li>• Service to Members & Society</li>
+                                    </ul>
+                                </div>
 
                                 <p className="font-semibold text-gold-600 italic">
-                                    His leadership philosophy is simple: institutions must serve professionals,
-                                    and professionals must serve society.
+                                    "I seek your mandate to lead IEK into its next phase of growth, relevance, and influence."
                                 </p>
                             </div>
 
                             <div className="overflow-hidden -rotate-2 shadow-2xl transform hover:scale-105 transition duration-500">
                                 <img
                                     src="/images/mwembe-about.jpg"
-                                    alt="Eng. Jacton Mwembe"
-                                    className="w-full h-auto object-cover "
+                                    alt="Eng. Jacton Mwembe Achieng"
+                                    className="w-full h-auto object-cover"
                                 />
                             </div>
                         </div>
 
-
-                        {/* Career Path & Leadership */}
-                        <div className="space-y-8 text-dark-800 max-w-4xl mx-auto">
-                            <h3 className="text-2xl font-bold text-primary-900">
-                                Career Path & Institutional Leadership
-                            </h3>
-
-                            <p>
-                                Eng. Mwembe’s early career focused on civil works and infrastructure development,
-                                including building structures, maritime projects, geothermal and hydroelectric
-                                support works, and large-scale master planning initiatives.
-                            </p>
-
-                            <p>
-                                He later expanded into engineering management, feasibility analysis,
-                                design supervision, and regulatory compliance frameworks, developing
-                                a holistic understanding of both technical delivery and institutional systems.
-                            </p>
-
-                            <p>
-                                In professional governance, he has served in multiple leadership capacities,
-                                including as Honorary Secretary of the Institution of Engineers of Kenya (IEK).
-                                In this role, he has been directly involved in policy engagement, professional
-                                standards advocacy, and institutional reform conversations affecting engineers nationwide.
-                            </p>
-
-                            <p>
-                                He has also served within the Architectural Association of Kenya (AAK),
-                                contributing to registration processes, membership oversight,
-                                and professional accountability committees.
-                            </p>
-                        </div>
-
-
-                        {/* Professional Development & Engagement */}
-                        <div className="space-y-8 text-dark-800 max-w-4xl mx-auto">
-                            <h3 className="text-2xl font-bold text-primary-900">
-                                Professional Development & Industry Engagement
-                            </h3>
-
-                            <p>
-                                Throughout his career, Eng. Mwembe has pursued continued professional development,
-                                including postgraduate training in Environmental Health and Safety Management,
-                                ISO 9001 and ISO 45001 systems certification, and entrepreneurship and leadership
-                                programs through recognized institutions.
-                            </p>
-
-                            <p>
-                                He has participated in and represented engineering institutions at national
-                                conferences, regulatory workshops, and policy forums aimed at strengthening
-                                engineering practice, infrastructure standards, and public safety compliance in Kenya.
-                            </p>
-
-                            <p>
-                                As Managing Director and Principal Partner in private practice,
-                                he has overseen multidisciplinary project teams and contributed to
-                                residential, institutional, commercial, and infrastructure developments
-                                across the country.
-                            </p>
-
-                            <p className="font-semibold text-primary-900">
-                                His career reflects a rare combination of technical depth,
-                                institutional leadership, and reform-oriented vision.
-                            </p>
-                        </div>
-
-
-                        {/* Leadership Charter (Preserved) */}
-                        <div className="text-center max-w-3xl mx-auto space-y-6">
-                            <h2 className="text-3xl md:text-4xl font-extrabold text-primary-900">
-                                A Leadership Charter
-                            </h2>
-
-                            <p>“Engineers deserve dignity.”</p>
-                            <p>“Leadership must be transparent.”</p>
-                            <p>“Integrity must guide every decision.”</p>
-                            <p>“Inclusivity strengthens institutions.”</p>
-
-                            <p className="font-bold text-primary-900 text-xl pt-6">
-                                If elected, I will lead not for position — but for progress.
-                            </p>
-                        </div>
-
                     </div>
                 )}
 
+                {/* ================= ACHIEVEMENTS TAB ================= */}
                 {activeTab === "achievements" && (
-                    <div className="space-y-8 text-dark-800">
+                    <div className="space-y-12">
 
                         <h2 className="text-3xl md:text-4xl font-extrabold text-primary-900 text-center">
-                            Industry Accomplishments
+                            Professional Experience & Leadership
                         </h2>
 
-                        <div className="space-y-6">
+                        <div className="space-y-16">
 
-                            <p>
-                                Eng. Jacton “Tony” Mwembe is an experienced civil engineer and institutional leader
-                                with over 19 years in professional practice. He holds a Civil Engineering degree
-                                from the University of Nairobi and advanced qualifications in environmental safety,
-                                risk management, entrepreneurship, and leadership.
-                                (Professional Engineer — EBK, Corporate Member — IEK)
-                            </p>
+                            {/* Institutional Leadership */}
+                            <div className="bg-neutral-50 p-8 rounded-lg shadow-md">
+                                <h3 className="text-2xl font-bold text-primary-900 mb-6">Institutional Leadership</h3>
+                                <ul className="list-disc pl-6 space-y-3">
+                                    <li><strong>Honorary Secretary:</strong> IEK Council (2024–2026)</li>
+                                    <li><strong>Secretary & Registrar:</strong> AAK Engineers’ Chapter</li>
+                                    <li>Member of Editorial Board, Governance & Controls Committee — IEK</li>
+                                    <li>Chairperson, Membership & Research Committees — AAK Engineers’ Chapter</li>
+                                    <li>Chairperson, Logistics Subcommittee — 32nd IEK International Convention</li>
+                                </ul>
+                            </div>
 
-                            <p className="font-semibold">
-                                Leadership & Professional Roles
-                            </p>
-                            <ul className="list-disc pl-6 space-y-2">
-                                <li>Honorary Secretary, Institution of Engineers of Kenya (IEK) Council (2024–2026).</li>
-                                <li>Former Registrar, Engineers Chapter — Architectural Association of Kenya (AAK).</li>
-                                <li>Member of governance and industry committees shaping engineering policy.</li>
-                            </ul>
+                            {/* Public & Social Engagement */}
+                            <div className="bg-neutral-50 p-8 rounded-lg shadow-md">
+                                <h3 className="text-2xl font-bold text-primary-900 mb-6">Public & Social Impact</h3>
+                                <ul className="list-disc pl-6 space-y-3">
+                                    <li>Lead Structural Engineer — Design Studio, State Department for Housing & Urban Development</li>
+                                    <li>Board Chairperson — Akala Primary School, Homa Bay County</li>
+                                    <li>Taskforce Member — Pending Bills, Lands & County Assets Verification, Homa Bay County</li>
+                                    <li>Founder — Mwembe Foundation supporting students through mentorship and education</li>
+                                    <li>Judge & Advisor — Wood Architect Rockstars Initiative and climate innovation competitions</li>
+                                </ul>
+                            </div>
 
-                            <p className="font-semibold">
-                                Professional Experience
-                            </p>
-                            <ul className="list-disc pl-6 space-y-2">
-                                <li>Director & Managing Partner — Mwembe & Mwembe Ltd.</li>
-                                <li>Principal Partner — Thatch Consultants Ltd.</li>
-                                <li>Led project work in buildings, transport infrastructure, power generation,
-                                    maritime engineering, and master planning.</li>
-                                <li>Oversaw feasibility studies, audits, design supervision, geotechnical investigations,
-                                    and topographic surveys.</li>
-                                <li>Recognized at the National Construction Authority Construction Excellence Awards.</li>
-                            </ul>
-
-                            <p className="font-semibold">
-                                Industry Engagement & Advocacy
-                            </p>
-                            <ul className="list-disc pl-6 space-y-2">
-                                <li>Represented engineers at national policy and regulatory forums.</li>
-                                <li>Delivered keynote and institutional remarks at engineering conferences.</li>
-                                <li>Participated in professional standards review and reform initiatives.</li>
-                            </ul>
+                            {/* Private Sector Leadership */}
+                            <div className="bg-neutral-50 p-8 rounded-lg shadow-md">
+                                <h3 className="text-2xl font-bold text-primary-900 mb-6">Entrepreneurship & Industry Leadership</h3>
+                                <ul className="list-disc pl-6 space-y-3">
+                                    <li>Managing Partner — Mwembe & Mwembe Ltd (Award-winning, NCA-certified construction firm)</li>
+                                    <li>Principal Partner — Thatch Consultants Ltd</li>
+                                    <li>Led multidisciplinary projects in buildings, transport, energy, and master planning</li>
+                                    <li>Promoted safety, quality, and regulatory compliance across projects</li>
+                                </ul>
+                            </div>
 
                         </div>
                     </div>
                 )}
-                {activeTab === "agenda" && (
-                    <div className="space-y-24">
 
-                        {/* ================= VISION & MISSION ================= */}
+                {/* ================= AGENDA TAB ================= */}
+                {activeTab === "agenda" && (
+                    <div className="space-y-20">
+
+                        {/* Vision & Mission */}
                         <div className="grid md:grid-cols-2 gap-10">
-                            <div className="bg-neutral-50 p-10 shadow-lg">
-                                <h3 className="text-2xl font-bold text-primary-900 mb-4">
-                                    Vision
-                                </h3>
-                                <p>
-                                    A respected, empowered, and nationally influential engineering
-                                    profession at the center of Kenya’s development.
+                            <div className="bg-primary-900 text-white p-10 rounded-sm">
+                                <h3 className="text-2xl font-bold text-gold-400 mb-4">Vision</h3>
+                                <p className="text-lg leading-relaxed">
+                                    Build a strong, inclusive, globally respected, and influential IEK that safeguards the profession, empowers members, and shapes national development.
                                 </p>
                             </div>
-
-                            <div className="bg-neutral-50 p-10 shadow-lg">
-                                <h3 className="text-2xl font-bold text-primary-900 mb-4">
-                                    Mission
-                                </h3>
-                                <p>
-                                    To restore dignity, strengthen influence, and expand opportunity
-                                    through transparent leadership and people-centered reform.
+                            <div className="bg-gold-500 text-primary-950 p-10 rounded-sm">
+                                <h3 className="text-2xl font-bold mb-4">Mission</h3>
+                                <p className="text-lg leading-relaxed">
+                                    Provide ethical leadership, effective governance, strategic partnerships, and strong advocacy that advance the welfare, professionalism, and societal impact of engineers in Kenya.
                                 </p>
                             </div>
                         </div>
 
-
-                        {/* ================= STRATEGIC REFORM PILLARS ================= */}
+                        {/* Strategic Reform Pillars */}
                         <div className="bg-neutral-100 py-20 px-6 md:px-12 rounded-sm">
                             <h2 className="text-3xl md:text-4xl font-extrabold text-primary-950 mb-20 text-center">
                                 Strategic Reform Pillars
                             </h2>
-
-                            {[0, 1, 2].map((rowIndex) => {
-                                const left = pillars[rowIndex * 2];
-                                const right = pillars[rowIndex * 2 + 1];
-                                const isLastRow = rowIndex === 2;
-
-                                return (
-                                    <div key={rowIndex} className="relative">
-                                        <div className="flex flex-col lg:flex-row items-start">
-
-                                            {/* Left Column */}
-                                            <div className="flex-1 py-16 md:pr-16 relative">
-                                                {left && <PillarBlock pillar={left} />}
-                                                <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 h-[70%] w-px bg-primary-700" />
-                                            </div>
-
-                                            {/* Right Column */}
-                                            <div className="flex-1 py-16 md:pl-16">
-                                                {right && <PillarBlock pillar={right} />}
-                                            </div>
-
-                                        </div>
-
-                                        {!isLastRow && (
-                                            <div className="hidden md:flex justify-between items-center">
-                                                <div className="h-px bg-primary-700 w-[46%]" />
-                                                <div className="h-px bg-primary-700 w-[46%]" />
-                                            </div>
-                                        )}
-                                    </div>
-                                );
-                            })}
-                        </div>
-
-
-                        {/* ================= 90 DAY TIMELINE ================= */}
-                        <div className="bg-primary-900 text-white py-20 px-6 md:px-20">
-                            <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-20">
-                                The First 90 Days
-                            </h2>
-
-                            <div className="relative">
-                                <div className="hidden md:block absolute left-1/2 -translate-x-1/2 h-full w-1 bg-gold-400"></div>
-
-                                {[
-                                    "Transparency Dashboard",
-                                    "Institutional Audit",
-                                    "Youth Advisory Council",
-                                    "Regulatory Enforcement Reform",
-                                    "National Policy Engagement",
-                                ].map((item, idx) => (
-                                    <div
-                                        key={idx}
-                                        className={`mb-16 flex flex-col md:flex-row items-center ${idx % 2 === 0 ? "md:justify-start" : "md:justify-end"
-                                            }`}
-                                    >
-                                        <div className="hidden md:block absolute left-1/2 -translate-x-1/2 w-5 h-5 bg-gold-400 rounded-full border-4 border-primary-900"></div>
-
-                                        <div className="bg-white text-dark-900 p-8 shadow-xl w-full md:w-5/12">
-                                            <h3 className="font-bold text-primary-900 mb-3">
-                                                {item}
-                                            </h3>
-                                            <p>
-                                                Structured institutional reform initiative focused on
-                                                transparency, accountability, and professional growth.
-                                            </p>
-                                        </div>
+                            <div className="grid md:grid-cols-2 gap-x-12 gap-y-16">
+                                {pillars.map((pillar, index) => (
+                                    <div key={index}>
+                                        <PillarBlock pillar={pillar} />
                                     </div>
                                 ))}
                             </div>
+                        </div>
+
+                        {/* Why Vote Section */}
+                        <div className="text-center bg-primary-50 py-16 px-6">
+                            <h2 className="text-3xl font-extrabold text-primary-900 mb-6">Why Vote for Eng. Jacton Mwembe?</h2>
+                            <div className="flex flex-wrap justify-center gap-6">
+                                {["Visionary Leadership", "Proven Institutional Experience", "Results-Oriented", "Collaborative & Inclusive", "Firm Advocate for Engineers"].map((tag) => (
+                                    <span key={tag} className="px-6 py-2 bg-white border border-gold-400 text-primary-900 font-bold rounded-full shadow-sm">
+                                        {tag}
+                                    </span>
+                                ))}
+                            </div>
+                            <p className="mt-12 text-xl font-bold text-primary-900">
+                                Let us move forward together — towards Sustainable Engineering and Professional Excellence.
+                            </p>
                         </div>
 
                     </div>

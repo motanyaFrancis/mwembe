@@ -14,6 +14,7 @@ type NavItem = {
 const navItems: NavItem[] = [
   { label: "Meet Mwembe", href: "/about" },
   { label: "Agenda", href: "/issues" },
+  { label: "Manifesto", href: "#manifesto" },
   { label: "Volunteer", href: "/volunteer" },
   {
     label: "Donate",

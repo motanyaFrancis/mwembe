@@ -37,49 +37,51 @@ export default function BlogList({
                 )}
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-32 px-4 md:px-0">
-                    {displayedPosts.map((post) => {
-                        const { day, month, year } = formatDate(post.date);
+                    {displayedPosts.length > 0 ? (
+                        displayedPosts.map((post) => {
+                            const { day, month, year } = formatDate(post.date);
 
-                        return (
-                            <Link href={`/news/${post.slug}`} key={post.slug}>
-                                <article
-                                    className="relative bg-primary-100 flex flex-col h-[520px] max-w-[360px] mx-auto shadow-xl cursor-pointer group transition-all duration-300 hover:bg-primary-200 hover:-translate-y-1"
-                                >
-                                    <div className="absolute top-0 left-0 w-full h-3 bg-gold-600" />
+                            return (
+                                <Link href={`/news/${post.slug}`} key={post.slug}>
+                                    <article
+                                        className="relative bg-primary-100 flex flex-col h-[520px] max-w-[360px] mx-auto shadow-xl cursor-pointer group transition-all duration-300 hover:bg-primary-200 hover:-translate-y-1"
+                                    >
+                                        <div className="absolute top-0 left-0 w-full h-3 bg-gold-600" />
 
-                                    <div className="absolute -top-6 left-6 bg-gold-600 text-white w-[78px] text-center font-bold text-xs leading-tight py-2 z-10">
-                                        <div className="tracking-widest">{month}</div>
-                                        <div className="text-3xl font-black leading-none">{day}</div>
-                                        <div className="text-sm tracking-widest font-medium">
-                                            {year}
+                                        <div className="absolute -top-6 left-6 bg-gold-600 text-white w-[78px] text-center font-bold text-xs leading-tight py-2 z-10">
+                                            <div className="tracking-widest">{month}</div>
+                                            <div className="text-3xl font-black leading-none">{day}</div>
+                                            <div className="text-sm tracking-widest font-medium">{year}</div>
                                         </div>
-                                    </div>
 
-                                    <div className="pt-16 px-8 pb-0 flex flex-col flex-grow">
-                                        <span className="text-[11px] tracking-[0.2em] uppercase text-[#143A52] mb-6">
-                                            PRESS RELEASE
-                                        </span>
+                                        <div className="pt-16 px-8 pb-0 flex flex-col flex-grow">
+                                            <span className="text-[11px] tracking-[0.2em] uppercase text-[#143A52] mb-6">
+                                                PRESS RELEASE
+                                            </span>
 
-                                        <h3 className="font-serif font-extrabold text-[22px] leading-[1.2] mb-6 text-[#143A52]">
-                                            {post.title}
-                                        </h3>
+                                            <h3 className="font-serif font-extrabold text-[22px] leading-[1.2] mb-6 text-[#143A52]">
+                                                {post.title}
+                                            </h3>
 
-                                        <p className="text-[14px] text-[#143A52] flex-grow leading-relaxed">
-                                            {post.excerpt}
-                                        </p>
-                                    </div>
+                                            <p className="text-[14px] text-[#143A52] flex-grow leading-relaxed">
+                                                {post.excerpt}
+                                            </p>
+                                        </div>
 
-                                    {/* READ MORE BUTTON */}
-                                    <div className="absolute -bottom-3 right-5 transition-transform duration-300 group-hover:-translate-y-6">
-                                        <span className="bg-gold-600 text-primary-100 font-black text-sm py-4 px-6 hover:bg-gold-700 transition">
-                                            READ MORE
-                                        </span>
-                                    </div>
-                                </article>
-                            </Link>
-
-                        );
-                    })}
+                                        <div className="absolute -bottom-3 right-5 transition-transform duration-300 group-hover:-translate-y-6">
+                                            <span className="bg-gold-600 text-primary-100 font-black text-sm py-4 px-6 hover:bg-gold-700 transition">
+                                                READ MORE
+                                            </span>
+                                        </div>
+                                    </article>
+                                </Link>
+                            );
+                        })
+                    ) : (
+                        <div className="col-span-1 md:col-span-3 text-center text-[#143A52] text-lg font-semibold py-20">
+                            No press releases available at the moment.
+                        </div>
+                    )}
                 </div>
 
                 {/* SEE ALL BUTTON */}

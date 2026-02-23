@@ -8,114 +8,51 @@ export type Issue = {
 export const issues: Issue[] = [
     {
         id: 1,
-        title: "Anti Authoritarianism",
-        slug: "anti-authoritarianism",
+        title: "Inclusivity",
+        slug: "inclusivity",
         description:
-            `Historical antifascist movements all prove the same thing: The only way to properly fight fascism is loudly, proudly, and every single day. And that principle must be upheld by those in public office.
-            Their vision is fascist, one of a militarized country where only certain people — a few dozen rich men — have a seat at the table. We will not and cannot let them win.
-
-            Historical antifascist movements all prove the same thing: The only way to properly fight fascism is loudly, proudly, and every single day. And that principle must be upheld by those in public office.
-
-            I refuse to stand by as Trump and Bove attack my constituents. As your Congresswoman, I will take my experience fighting the far-right to Capitol Hill and beyond.
-
-            Instead, I’ll continue to speak out against authoritarians. I will take the fight to them, whether it’s the House floor or on the streets where ICE is attacking us.
-
-            And I will do everything in my power to make sure constituents know they are not alone.
-      `,
+            `Inclusivity is the foundation of a strong and progressive Institution. As President, I will champion gender equity, youth participation, and the inclusion of persons living with disabilities. I will also strengthen programs for graduate engineers, technologists, technicians, and students, while expanding women-focused initiatives such as the She-Program. An inclusive IEK is a stronger, more relevant IEK.`,
     },
     {
         id: 2,
-        title: "Basic Existence",
-        slug: "basic-existence",
+        title: "Good Governance",
+        slug: "good-governance",
         description:
-            `You should be able to comfortably afford housing, groceries, and healthcare each month with plenty of money left over.
-            
-            I will fight to raise the minimum wage, expand affordable housing, and ensure that everyone has access to quality healthcare. Together, we can build an economy that works for everyone, not just the wealthy few.
-            
-            You should be able to comfortably afford housing, groceries, and healthcare each month with plenty of money left over.
-            
-            I will fight to raise the minimum wage, expand affordable housing, and ensure that everyone has access to quality healthcare. Together, we can build an economy that works for everyone, not just the wealthy few.
-            
-            You should be able to comfortably afford housing, groceries, and healthcare each month with plenty of money left over.
-            
-            I will fight to raise the minimum wage, expand affordable housing, and ensure that everyone has access to quality healthcare. Together, we can build an economy that works for everyone, not just the wealthy few.
-            
-            You should be able to comfortably afford housing, groceries, and healthcare each month with plenty of money left over.`,
+            `Strong institutions are built on trust, transparency, and accountability. I will uphold strict adherence to the IEK Constitution and governance policies while strengthening oversight and ethical leadership across all organs. I will lead a member-driven review and amendment of the IEK Constitution to ensure it remains a robust framework for our institution's future.`,
     },
     {
         id: 3,
-        title: "Climate Change",
-        slug: "climate-change",
+        title: "Partnerships and Collaboration",
+        slug: "partnerships-and-collaboration",
         description:
-            `Climate action isn't just about planning for a better future because, unfortunately, our world is being hit with unprecedented disasters right now.
-            
-            I will fight to pass bold climate legislation that creates good-paying green jobs, invests in renewable energy, and holds polluters accountable. Together, we can build a sustainable future for ourselves and generations to come.
-             Climate action isn't just about planning for a better future because, unfortunately, our world is being hit with unprecedented disasters right now.
-             
-             I will fight to pass bold climate legislation that creates good-paying green jobs, invests in renewable energy, and holds polluters accountable. Together, we can build a sustainable future for ourselves and generations to come.
-             Climate action isn't just about planning for a better future because, unfortunately, our world is being hit with unprecedented disasters right now.
-             
-             I will fight to pass bold climate legislation that creates good-paying green jobs, invests in renewable energy, and holds polluters accountable. Together, we can build a sustainable future for ourselves and generations to come.
-             Climate action isn't just about planning for a better future because, unfortunately, our world is being hit with unprecedented disasters right now.
-             
-             I will fight to pass bold climate legislation that creates good-paying green jobs, invests in renewable energy, and holds polluters accountable. Together, we can build a sustainable future for ourselves and generations to come.
-             Climate action isn't just about planning for a better future because, unfortunately, our world is being hit with unprecedented disasters right now.`,
+            `No institution thrives in isolation. I will strengthen partnerships with Industry, Academia, Government, and Development partners. By deepening regional and global affiliations, I will align IEK with international best practices and promote professional mobility for our members, including initiating partnerships to ease VISA renewals for engineers working abroad.`,
     },
     {
         id: 4,
-        title: "Healthcare For All",
-        slug: "healthcare-for-all",
+        title: "Advocacy",
+        slug: "advocacy",
         description:
-            `Healthcare should be universal, affordable, and accessible to everyone regardless of income or employment.
-            
-            I will fight to expand Medicare to cover all Americans, lower prescription drug costs, and ensure that healthcare is a right, not a privilege. Together, we can build a healthier future for everyone.
-             Healthcare should be universal, affordable, and accessible to everyone regardless of income or employment.
-            
-            I will fight to expand Medicare to cover all Americans, lower prescription drug costs, and ensure that healthcare is a right, not a privilege. Together, we can build a healthier future for everyone.
-            Healthcare should be universal, affordable, and accessible to everyone regardless of income or employment.
-            
-            I will fight to expand Medicare to cover all Americans, lower prescription drug costs, and ensure that healthcare is a right, not a privilege. Together, we can build a healthier future for everyone.
-            Healthcare should be universal, affordable, and accessible to everyone regardless of income or employment.
-            
-            I will fight to expand Medicare to cover all Americans, lower prescription drug costs, and ensure that healthcare is a right, not a privilege. Together, we can build a healthier future for everyone.
-            Healthcare should be universal, affordable, and accessible to everyone regardless of income or employment.`,
+            `IEK must be the strongest voice for engineers in Kenya. I will advocate for a harmonized Scheme of Service in the public sector, full implementation of the scale of fees, and greater engagement of local engineers in infrastructure projects. The engineering voice must be heard, respected, and acted upon in policy and legislative processes.`,
     },
     {
         id: 5,
-        title: "Workers Rights",
-        slug: "workers-rights",
+        title: "Research and Development",
+        slug: "research-and-development",
         description:
-            `Workers deserve fair wages, safe working conditions, and the right to organize without retaliation.
-
-            I will fight to raise the minimum wage, protect the right to unionize, and ensure that workers have a voice in the workplace.
-
-            I will also work to expand access to paid family leave, affordable childcare, and healthcare for all workers. Together, we can build an economy that works for everyone, not just the wealthy few.
-            
-            Workers deserve fair wages, safe working conditions, and the right to organize without retaliation.
-            
-            I will fight to raise the minimum wage, protect the right to unionize, and ensure that workers have a voice in the workplace.
-
-            I will also work to expand access to paid family leave, affordable childcare, and healthcare for all workers. Together, we can build an economy that works for everyone, not just the wealthy few.
-            `,
+            `Innovation is the currency of progress. I will promote research-driven policy engagement and encourage collaboration between academia, industry, and government. By using evidence-based advocacy, we will shape the national development discourse and anchor IEK’s relevance in a rapidly evolving world.`,
     },
     {
         id: 6,
-        title: "Education Access",
-        slug: "education-access",
+        title: "Training, Mentorship, and CPD",
+        slug: "training-mentorship-cpd",
         description:
-            `Public education should be fully funded and higher education should not saddle students with lifelong debt.
-
-            Everyone deserves access to quality education regardless of their background or financial situation.
-
-            Their vision is fascist, one of a militarized country where only certain people — a few dozen rich men — have a seat at the table. We will not and cannot let them win.
-
-            Historical antifascist movements all prove the same thing: The only way to properly fight fascism is loudly, proudly, and every single day. And that principle must be upheld by those in public office.
-
-            I refuse to stand by as Trump and Bove attack my constituents. As your Congresswoman, I will take my experience fighting the far-right to Capitol Hill and beyond.
-
-            Instead, I’ll continue to speak out against authoritarians. I will take the fight to them, whether it’s the House floor or on the streets where ICE is attacking us.
-
-            And I will do everything in my power to make sure constituents know they are not alone.
-            `,
+            `Professional growth must be continuous and accessible. I will strengthen structured training and mentorship across all membership classes and support the smooth transition from student to professional engineer. My goal is to make CPD programs affordable, accessible, and highly relevant to the needs of all engineers.`,
+    },
+    {
+        id: 7,
+        title: "Affordable Financing and Member Welfare",
+        slug: "financing-and-welfare",
+        description:
+            `Engineers must be economically empowered. I will negotiate affordable financing solutions for engineers and firms while promoting structured welfare programs, including medical cover, SACCOs, and professional indemnity. Member welfare is essential for institutional sustainability.`,
     },
 ];
