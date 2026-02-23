@@ -6,7 +6,7 @@ export default function Hero() {
             bg-dark-950
             bg-no-repeat bg-cover
             bg-[position:7%_center]
-            sm:bg-[position:20%_center]
+            sm:bg-[position:10%_center]
             lg:bg-[position:85%_bottom]
             flex items-center
         "
