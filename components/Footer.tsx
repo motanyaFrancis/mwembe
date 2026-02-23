@@ -15,7 +15,7 @@ export default function Footer() {
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/construction-site.jpg')" }}
+        style={{ backgroundImage: "url('/images/footer.jpg')" }}
       />
 
       {/* Dark Backdrop Overlay */}
