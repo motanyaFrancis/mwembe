@@ -24,8 +24,8 @@ export default function Footer() {
       {/* Content */}
       <div className="relative max-w-6xl mx-auto px-6 py-16 text-center">
         {/* Logo / Campaign Title */}
-        <div className="inline-block border-4 border-gold-400 px-6 py-3 mb-6 bg-primary-900/40">
-          <h2 className="text-2xl md:text-3xl font-extrabold tracking-wide text-gold-400">
+        <div className="inline-block border-4 border-gold-500 px-6 py-3 mb-6 bg-primary-900/40">
+          <h2 className="text-2xl md:text-3xl font-extrabold tracking-wide text-gold-500">
             Mwembe
           </h2>
           <p className="text-sm uppercase tracking-widest text-primary-200">
@@ -39,7 +39,7 @@ export default function Footer() {
         </p>
         <a
           href="mailto:hello@example.com"
-          className="text-gold-400 font-semibold hover:text-gold-300 transition"
+          className="text-gold-600 font-semibold hover:text-gold-300 transition"
         >
           hello@example.com
         </a>
@@ -74,27 +74,27 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="relative bg-primary-950/95 text-primary-300 text-sm py-4 border-t border-primary-800">
-        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-2">
+      <div className="relative bg-primary-950/95 text-primary-50 text-sm py-4 border-t border-primary-800">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-2">
           <p>
             © {new Date().getFullYear()} Mwembe Campaign. All rights reserved.
           </p>
 
           <div className="flex gap-4">
-            <Link href="/privacy" className="hover:text-gold-400 transition">
+            <Link href="/privacy" className="hover:text-gold-100 transition">
               Privacy Policy
             </Link>
+            <div>
+              powered by{" "}
+              <Link
+                href="https://www.motanya.co.ke"
+                className="text-gold-100 font-semibold hover:text-gold-300 transition"
+              >
+                Motanya
+              </Link>
+            </div>
           </div>
 
-          <div>
-            powered by{" "}
-            <Link
-              href="https://www.motanya.co.ke"
-              className="text-gold-400 font-semibold hover:text-gold-300 transition"
-            >
-              Motanya
-            </Link>
-          </div>
         </div>
       </div>
     </footer>

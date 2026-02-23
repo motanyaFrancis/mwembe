@@ -45,7 +45,7 @@ export default function IssuesPage() {
                 }}
             >
                 {/* Dark overlay */}
-                <div className="absolute inset-0 bg-primary-800/60"></div>
+                <div className="absolute inset-0 bg-dark-800/70"></div>
 
                 <div className="relative max-w-7xl mx-auto">
                     <p className="uppercase tracking-widest text-white font-semibold mb-2">

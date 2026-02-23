@@ -47,7 +47,7 @@ export default function Navbar() {
     <>
       {/* HEADER */}
       <header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-t-4 border-gold-400 ${
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-t-4 border-gold-500 ${
           scrolled
             ? "bg-primary-950 shadow-xl order-t-4 border-gold-400"
             : "bg-transparent"
@@ -57,7 +57,7 @@ export default function Navbar() {
           {/* LOGO */}
           <Link
             href="/"
-            className="text-gold-400 font-black text-2xl tracking-widest uppercase"
+            className="text-gold-500 font-black text-2xl tracking-widest uppercase"
           >
             Mwembe 2026
           </Link>
@@ -70,8 +70,8 @@ export default function Navbar() {
                 href={item.href}
                 className={
                   item.variant === "primary"
-                    ? "bg-gold-500 text-primary-50 font-extrabold px-6 py-3 uppercase tracking-wide hover:bg-gold-400 transition flex items-center shadow-lg"
-                    : "text-gold-100 font-bold uppercase text-sm tracking-wide hover:text-gold-400 transition"
+                    ? "bg-gold-500 text-white font-extrabold px-6 py-3 uppercase tracking-wide hover:bg-gold-400 transition flex items-center shadow-lg"
+                    : "text-white font-bold uppercase text-sm tracking-wide hover:text-gold-400 transition"
                 }
               >
                 {item.icon && <span className="mr-2">{item.icon}</span>}
