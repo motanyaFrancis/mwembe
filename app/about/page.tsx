@@ -12,8 +12,8 @@ export default function AboutPage() {
         <section
           className="relative px-6 md:px-20 pt-32 md:pt-40 pb-24 md:pb-28 text-white"
           style={{
-            backgroundImage: "url('/images/background-1.png')",
-            backgroundPosition: "center",
+            backgroundImage: "url('/gallery/gallery-3.jpeg')",
+            backgroundPosition: "top ",
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
           }}

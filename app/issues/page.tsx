@@ -38,7 +38,7 @@ export default function IssuesPage() {
             <section
                 className="relative px-2 md:px-20 pt-40 pb-10 bg-pri-900 text-white"
                 style={{
-                    backgroundImage: "url('/images/construction-elements-tools.jpg')",
+                    backgroundImage: "url('/gallery/gallery-11.jpeg')",
                     backgroundPosition: "center",
                     backgroundSize: "cover",
                     backgroundRepeat: "no-repeat",

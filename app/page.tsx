@@ -5,9 +5,12 @@ import Issues from "@/components/Issues";
 import AboutUs from "@/components/About";
 import BlogList from "@/components/BlogList"
 import GalleryCarousel from "@/components/GalleryCarousel";
-import { galleryImages } from "@/data/gallery";
+import { gallery } from "@/data/gallery";
+
+
 
 export default function HomePage() {
+const imageGallery = gallery.filter((item) => item.type === "image").map((item) => item.src);
 
  
   return (
@@ -24,7 +27,7 @@ export default function HomePage() {
       {/* <Agenda /> */}
       <CallToAction />
       <BlogList limit={3} showSeeAll showHeadline />
-      <GalleryCarousel images={galleryImages} />
+      <GalleryCarousel images={imageGallery} />
     </>
   );
 }
