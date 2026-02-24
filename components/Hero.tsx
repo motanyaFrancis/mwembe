@@ -27,9 +27,9 @@ export default function Hero() {
 
             {/* CONTENT */}
             <div className="relative z-10 w-7xl mx-auto px-0 sm:px-6 flex flex-col justify-end md:justify-center min-h-screen sm:mt-32">
-                <div className="max-w-3xl mx-0 sm:mx-0 text-left py-12 px-4 bg-gradient-to-b from-primary-800/10 to-primary-950 sm:bg-none">
+                <div className="max-w-3xl mx-0 sm:mx-0 text-left py-12 pb-4 px-8 bg-gradient-to-b from-primary-800/10 to-primary-950 sm:bg-none">
                     
-                    <h1 className="text-4xl md:text-6xl font-extrabold text-primary-100 mb-6 leading-tight">
+                    <h1 className="text-4xl md:text-6xl font-black text-primary-100 mb-6 leading-tight">
                         Engineering Integrity. Institutional Reform. National Impact.
                     </h1>
 
