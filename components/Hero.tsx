@@ -5,17 +5,16 @@ export default function Hero() {
             relative min-h-screen overflow-hidden
             bg-dark-950
             bg-no-repeat bg-cover
-            bg-[position:7%_center]
-            sm:bg-[position:10%_center]
+            bg-[position:85%_center]
+            sm:bg-[position:75%_center]
             lg:bg-[position:85%_bottom]
             flex items-center
         "
             style={{
-                backgroundImage: "url('/images/hero-1.jpeg')",
+                backgroundImage: "url('/images/hero-bg2.jpg')",
             }}
         >
-            {/* <div className="absolute inset-0 bg-gradient-to-b from-dark-950/95 via-transparent via-dark-900/20 to-transparent" /> */}
-            <div className="absolute inset-0 bg-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-dark-950/90 via-dark-950/20 to-transparent" />
             <div className="run-pinstripes undefined css-wyqlws-Pinstripes"></div>
 
             <div
@@ -28,14 +27,14 @@ export default function Hero() {
 
             {/* CONTENT */}
             <div className="relative z-10 w-7xl mx-auto px-0 sm:px-6 flex flex-col justify-end md:justify-center min-h-screen sm:mt-32">
-                {/* <div className="max-w-3xl mx-0 sm:mx-0 text-left py-12 px-4 bg-gradient-to-b from-primary-800/10 to-primary-950 sm:bg-none">
+                <div className="max-w-3xl mx-0 sm:mx-0 text-left py-12 px-4 bg-gradient-to-b from-primary-800/10 to-primary-950 sm:bg-none">
                     
-                    <h1 className="text-4xl md:text-6xl font-extrabold text-gold-50 mb-6 leading-tight">
+                    <h1 className="text-4xl md:text-6xl font-extrabold text-primary-100 mb-6 leading-tight">
                         Engineering Integrity. Institutional Reform. National Impact.
                     </h1>
 
-                    <p className="text-lg md:text-2xl font-bold text-gold-50 mb-6">
-                        Eng. Jacton “Tony” Mwembe for President — Engineers Board of Kenya
+                    <p className="text-lg md:text-2xl font-bold text-primary-100 mb-6">
+                        Eng. Jacton Mwembe Achieng for President — Engineers Board of Kenya
                     </p>
 
                     <p className="text-md md:text-xl font-semibold text-gold-500">
@@ -43,7 +42,7 @@ export default function Hero() {
                         and position engineers at the center of Kenya’s sustainable development.
                     </p>
 
-                </div> */}
+                </div>
             </div>
         </section>
     );
