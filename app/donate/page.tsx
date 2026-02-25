@@ -1,3 +1,11 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Donate 2026–2028",
+  description:
+    "Support the campaign of Eng. Jacton Mwembe for IEK President 2026–2028. Integrity. Inclusion. Impact.",
+};
+
 export default function DonatePage() {
     return (
         <main className="bg-[#f7f1e7] text-[#1a1f38]">

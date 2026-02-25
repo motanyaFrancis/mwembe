@@ -2,6 +2,13 @@ import React from "react";
 import AboutTabs from "@/components/AboutTabs";
 import CallToAction from "@/components/CallToAction";
 import PillarBlock from "@/components/PillarBlock";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "Read the official manifesto of Eng. Jacton Mwembe for IEK President 2026–2028. Integrity. Inclusion. Impact.",
+};
 
 export default function AboutPage() {
   return (

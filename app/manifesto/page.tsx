@@ -1,11 +1,15 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 import MeetMwembeGallery from "@/components/MeetMwembeGallery";
 import { FaFilePdf } from "react-icons/fa";
 
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Manifesto 2026–2028",
+  description:
+    "Read the official manifesto of Eng. Jacton Mwembe for IEK President 2026–2028. Integrity. Inclusion. Impact.",
+};
 
 
 export default function ManifestoArticle() {
@@ -124,7 +128,8 @@ export default function ManifestoArticle() {
                             Candidate for President, IEK (2026–2028)
                         </p>
                         <a
-                            href="/files/Jacton_Mwembe_Manifesto.pdf"
+                            // href="/files/Jacton_Mwembe_Manifesto.pdf"
+                            href="/#"
                             download
                             className="mt-4 inline-flex items-center gap-2 px-6 py-2 bg-gold-600 text-white font-bold  hover:bg-gold-500 transition-colors"
                         >

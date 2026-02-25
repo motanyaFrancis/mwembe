@@ -6,6 +6,7 @@ import IssueCard from "@/components/IssueCard";
 import Pagination from "@/components/Pagination";
 import { Search } from "lucide-react";
 
+
 const ITEMS_PER_PAGE = 5;
 
 export default function IssuesPage() {

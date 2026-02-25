@@ -1,4 +1,11 @@
 import Link from "next/link"
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Volunteer",
+  description:
+    "Join the movement to support Eng. Jacton Mwembe's campaign for IEK President 2026–2028. Integrity. Inclusion. Impact.",
+};
 
 export default function VolunteerPage() {
     return (

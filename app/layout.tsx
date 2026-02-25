@@ -1,10 +1,17 @@
+// app/layout.tsx
+
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import type { Metadata } from "next";
 
-export const metadata = {
-  title: "Mr. President | Campaign",
-  description: "A campaign for unity, progress, and opportunity.",
+export const metadata: Metadata = {
+  title: {
+    default: "President Eng. Jacton Mwembe",
+    template: "%s | Eng. Jacton Mwembe",
+  },
+  description:
+    "Build Better, Together. Vote Eng. Jacton Mwembe for IEK President.",
 };
 
 export default function RootLayout({
