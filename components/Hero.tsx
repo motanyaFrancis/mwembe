@@ -5,7 +5,7 @@ export default function Hero() {
         <section
             className="
             relative min-h-screen overflow-hidden
-            bg-dark-800
+            bg-blue-800
             bg-no-repeat bg-cover
             bg-[position:85%_center]
             sm:bg-[position:75%_center]
