@@ -221,7 +221,13 @@ export default function ManifestoArticle() {
                             <li>Member, Editorial Board: Institution of Engineers of Kenya</li>
                             <li>Member: Governance and Controls Committee- IEK</li>
                             <li>Lead Structural Engineer- Design Studio: State Department for Housing and Urban Development</li>
-                            <li>...and more</li>
+                            <li>Secretary: Architectural Association of Kenya (Engineers’ Chapter) </li>
+                            <li>Registrar: Architectural Association of Kenya (Engineers’ Chapter) </li>
+                            <li>Chairperson: Research and Advocacy Committee Architectural Association of Kenya (Engineers’ Chapter) </li>
+                            <li>Chairperson: Membership and Registration Committee; Architectural Association of Kenya (Engineers’ Chapter) </li>
+                            <li>Jury: Wood Architect Rockstars Initiative </li>
+                            <li>Taskforce Member: Pending Bills, Lands and County Assets Verification Taskforce- County Government of Homa Bay</li>
+
                         </ul>
                     </section>
 
