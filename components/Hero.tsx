@@ -36,7 +36,7 @@ export default function Hero() {
                     </h1>
 
                     <p className="text-lg md:text-2xl font-bold text-white mb-6">
-                        Eng. Jacton Mwembe Achieng for President — Engineers Board of Kenya
+                        Eng. Jacton Mwembe Achieng for President — Institute of Engineers of Kenya (2026–2028)
                     </p>
 
                     <p className="text-md md:text-xl font-semibold text-gold-500">
