@@ -118,7 +118,7 @@ export default function ManifestoArticle() {
             >
                 <div className="absolute inset-0 bg-gradient-to-r from-gold-800/50 via-gold-800/10 to-transparent flex flex-col justify-end sm:justify-center items-left text-left px-0 sm:px-4">
                     <div className="max-w-3xl mx-0 sm:mx-auto text-left py-12 pb-4 px-8 bg-gradient-to-b from-transparent via-gold-800/30 to-gold-900 sm:bg-none">
-                        <h1 className="text-4xl md:text-5xl font-extrabold text-gold-500">
+                        <h1 className="text-4xl md:text-5xl font-extrabold text-black leading-tight">
                             Integrity. Inclusion. Impact.
                         </h1>
                         <h2 className="text-xl md:text-2xl text-white font-semibold mt-2">
