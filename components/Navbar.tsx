@@ -54,10 +54,10 @@ export default function Navbar() {
                     : "bg-gradient-to-b from-white via-white/70 to-transparent border-transparent"
                     }`}
             >
-                <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+                <div className="max-w-7xl mx-auto px-6 py-8 flex items-center justify-between">
                     {/* LOGO */}
                     <Link href="/" className="text-gold-500 font-black text-2xl tracking-widest uppercase"                    >
-                        {scrolled ? <Image src="/images/logoWhite.png" alt="Mwembe 2026 Logo" width={250} height={40} /> : <Image src="/images/logoBlue.png" alt="Mwembe 2026 Logo" width={250} height={40} />}
+                        {scrolled ? <Image src="/images/Mwembe-White.png" alt="Mwembe 2026 Logo" width={200} height={40} /> : <Image src="/images/Mwembe-Blue.png" alt="Mwembe 2026 Logo" width={200} height={40} />}
                     </Link>
 
                     {/* DESKTOP NAV */}
@@ -106,7 +106,7 @@ export default function Navbar() {
                         onClick={() => setOpen(false)}
                         className="absolute top-8 left-6 text-gold-400 font-black text-xl tracking-widest uppercase"
                     >
-                        <Image src="/images/logoWhite.png" alt="Mwembe Logo" width={200} height={100} />
+                        <Image src="/images/Mwembe-White.png" alt="Mwembe Logo" width={200} height={100} />
                     </Link>
 
                     {/* Nav Items */}
