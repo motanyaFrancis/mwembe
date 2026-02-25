@@ -89,7 +89,7 @@ export default function BlogList({
                     <div className="flex justify-end mt-16">
                         {/* <Link
                             href="/news"
-                            className="border border-gold-600 text-gold-600 px-10 py-4 text-xs tracking-widest font-bold hover:bg-gold-600 hover:text-primary-950 transition"
+                            className="border border-gold-600 text-gold-600 px-10 py-4 text-xs tracking-widest font-bold hover:bg-gold-600 hover:text-primary-800 transition"
                         >
                             SEE ALL NEWS
                         </Link> */}

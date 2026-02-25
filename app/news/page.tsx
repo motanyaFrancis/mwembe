@@ -22,14 +22,14 @@ export default function NewsPage() {
       <section
         className="px-8 pt-40 md:px-20 py-16 min-h-[400px] md:min-h-[500px] text-white"
         style={{
-          backgroundImage: "url('/images/background-1.png')",
+          backgroundImage: "url('/images/hero-bg2.jpg')",
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
       >
         {/* Overlay to darken background for text readability */}
-        {/* <div className="absolute inset-0 bg-slate-900/10"></div> */}
+        {/* <div className="absolute inset-0 bg-slate-800/10"></div> */}
 
         {/* Content container */}
         <div className="max-w-7xl mx-auto">

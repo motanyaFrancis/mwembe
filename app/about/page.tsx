@@ -49,7 +49,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
 
             <div className="space-y-6 text-dark-800">
-              <h2 className="text-3xl md:text-4xl font-extrabold text-primary-900">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-primary-800">
                 A Profession at a Crossroads
               </h2>
 
@@ -88,7 +88,7 @@ export default function AboutPage() {
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
 
             <div className="bg-white p-10 shadow-lg hover:shadow-2xl transition">
-              <h3 className="text-2xl font-bold text-primary-900 mb-4">
+              <h3 className="text-2xl font-bold text-primary-800 mb-4">
                 Vision
               </h3>
               <p className="text-dark-700">
@@ -99,7 +99,7 @@ export default function AboutPage() {
             </div>
 
             <div className="bg-white p-10 shadow-lg hover:shadow-2xl transition">
-              <h3 className="text-2xl font-bold text-primary-900 mb-4">
+              <h3 className="text-2xl font-bold text-primary-800 mb-4">
                 Mission
               </h3>
               <p className="text-dark-700">
@@ -163,7 +163,7 @@ export default function AboutPage() {
         </section> */}
 
         {/* ================= 90 DAY ACTION PLAN ================= */}
-        {/* <section className="bg-primary-900 text-white py-24 px-6 md:px-20">
+        {/* <section className="bg-primary-800 text-white py-24 px-6 md:px-20">
           <div className="max-w-6xl mx-auto text-center">
 
             <h2 className="text-3xl md:text-4xl font-extrabold mb-12">
@@ -180,7 +180,7 @@ export default function AboutPage() {
                 "Activate National Policy Engagement Strategy",
               ].map((item, idx) => (
                 <div key={idx} className="bg-white text-dark-900 p-8 shadow-lg">
-                  <h3 className="font-bold text-primary-900 mb-3">
+                  <h3 className="font-bold text-primary-800 mb-3">
                     Initiative {idx + 1}
                   </h3>
                   <p>{item}</p>
@@ -193,7 +193,7 @@ export default function AboutPage() {
 
         {/* ================= LEADERSHIP MANIFESTO ================= */}
         {/* <section className="max-w-6xl mx-auto px-6 md:px-20 py-24 text-center">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-primary-900 mb-10">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-primary-800 mb-10">
             A Leadership Charter
           </h2>
 
@@ -203,7 +203,7 @@ export default function AboutPage() {
             <p>“Integrity must guide every decision.”</p>
             <p>“Inclusivity strengthens institutions.”</p>
 
-            <p className="font-bold text-primary-900 text-xl pt-6">
+            <p className="font-bold text-primary-800 text-xl pt-6">
               If elected, I will lead not for position — but for progress.
             </p>
           </div>

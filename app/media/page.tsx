@@ -26,7 +26,7 @@ export default function MediaPage() {
     return (
         <main className="">
             <section
-                className="relative px-2 md:px-20 pt-40 pb-10 bg-pri-900 text-white"
+                className="relative px-2 md:px-20 pt-40 pb-10 bg-priimary-800 text-white"
                 style={{
                     backgroundImage: "url('/gallery/gallery-11.jpeg')",
                     backgroundPosition: "center",

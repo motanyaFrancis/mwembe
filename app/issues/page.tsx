@@ -36,7 +36,7 @@ export default function IssuesPage() {
         <main className="min-h-screen bg-[#E9E4D8] ">
             {/* Header Section */}
             <section
-                className="relative px-2 md:px-20 pt-40 pb-10 bg-pri-900 text-white"
+                className="relative px-2 md:px-20 pt-40 pb-10 bg-primary-800 text-white"
                 style={{
                     backgroundImage: "url('/gallery/gallery-11.jpeg')",
                     backgroundPosition: "center",
@@ -74,9 +74,9 @@ export default function IssuesPage() {
                                 placeholder="Search"
                                 value={search}
                                 onChange={(e) => handleSearch(e.target.value)}
-                                className="w-full outline-none text-primary-900"
+                                className="w-full outline-none text-primary-800"
                             />
-                            <Search className="text-primary-900 ml-2" size={18} />
+                            <Search className="text-primary-800 ml-2" size={18} />
                         </div>
                     </div>
 

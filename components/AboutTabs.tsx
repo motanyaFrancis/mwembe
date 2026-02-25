@@ -56,7 +56,7 @@ export default function AboutTabs() {
                             key={tab.id}
                             onClick={() => setActiveTab(tab.id)}
                             className={`px-6 py-4 font-semibold transition duration-300 cursor-pointer ${activeTab === tab.id
-                                    ? "text-primary-900 border-b-4 border-gold-500"
+                                    ? "text-primary-800 border-b-4 border-gold-500"
                                     : "text-neutral-600 hover:text-primary-800"
                                 }`}
                         >
@@ -72,7 +72,7 @@ export default function AboutTabs() {
                         {/* Biography Section */}
                         <div className="grid md:grid-cols-2 gap-16 items-center">
                             <div className="space-y-6 text-dark-800">
-                                <h2 className="text-3xl md:text-4xl font-extrabold text-primary-900">
+                                <h2 className="text-3xl md:text-4xl font-extrabold text-primary-800">
                                     Personal Biography
                                 </h2>
 
@@ -89,7 +89,7 @@ export default function AboutTabs() {
                                 </p>
 
                                 <div className="bg-gold-50 p-6 border-l-4 border-gold-500">
-                                    <h4 className="font-bold text-primary-900 mb-2">Core Values</h4>
+                                    <h4 className="font-bold text-primary-800 mb-2">Core Values</h4>
                                     <ul className="grid grid-cols-2 gap-2 text-base">
                                         <li>• Integrity & Accountability</li>
                                         <li>• Inclusivity & Equity</li>
@@ -120,7 +120,7 @@ export default function AboutTabs() {
                 {activeTab === "achievements" && (
                     <div className="space-y-12">
 
-                        <h2 className="text-3xl md:text-4xl font-extrabold text-primary-900 text-center">
+                        <h2 className="text-3xl md:text-4xl font-extrabold text-primary-800 text-center">
                             Professional Experience & Leadership
                         </h2>
 
@@ -128,7 +128,7 @@ export default function AboutTabs() {
 
                             {/* Institutional Leadership */}
                             <div className="bg-neutral-50 p-8 rounded-lg shadow-md">
-                                <h3 className="text-2xl font-bold text-primary-900 mb-6">Institutional Leadership</h3>
+                                <h3 className="text-2xl font-bold text-primary-800 mb-6">Institutional Leadership</h3>
                                 <ul className="list-disc pl-6 space-y-3">
                                     <li><strong>Honorary Secretary:</strong> IEK Council (2024–2026)</li>
                                     <li><strong>Secretary & Registrar:</strong> AAK Engineers’ Chapter</li>
@@ -140,7 +140,7 @@ export default function AboutTabs() {
 
                             {/* Public & Social Engagement */}
                             <div className="bg-neutral-50 p-8 rounded-lg shadow-md">
-                                <h3 className="text-2xl font-bold text-primary-900 mb-6">Public & Social Impact</h3>
+                                <h3 className="text-2xl font-bold text-primary-800 mb-6">Public & Social Impact</h3>
                                 <ul className="list-disc pl-6 space-y-3">
                                     <li>Lead Structural Engineer — Design Studio, State Department for Housing & Urban Development</li>
                                     <li>Board Chairperson — Akala Primary School, Homa Bay County</li>
@@ -152,7 +152,7 @@ export default function AboutTabs() {
 
                             {/* Private Sector Leadership */}
                             <div className="bg-neutral-50 p-8 rounded-lg shadow-md">
-                                <h3 className="text-2xl font-bold text-primary-900 mb-6">Entrepreneurship & Industry Leadership</h3>
+                                <h3 className="text-2xl font-bold text-primary-800 mb-6">Entrepreneurship & Industry Leadership</h3>
                                 <ul className="list-disc pl-6 space-y-3">
                                     <li>Managing Partner — Mwembe & Mwembe Ltd (Award-winning, NCA-certified construction firm)</li>
                                     <li>Principal Partner — Thatch Consultants Ltd</li>
@@ -171,13 +171,13 @@ export default function AboutTabs() {
 
                         {/* Vision & Mission */}
                         <div className="grid md:grid-cols-2 gap-10">
-                            <div className="bg-primary-900 text-white p-10 rounded-sm">
+                            <div className="bg-primary-800 text-white p-10 rounded-sm">
                                 <h3 className="text-2xl font-bold text-gold-400 mb-4">Vision</h3>
                                 <p className="text-lg leading-relaxed">
                                     Build a strong, inclusive, globally respected, and influential IEK that safeguards the profession, empowers members, and shapes national development.
                                 </p>
                             </div>
-                            <div className="bg-gold-500 text-primary-950 p-10 rounded-sm">
+                            <div className="bg-gold-500 text-primary-800 p-10 rounded-sm">
                                 <h3 className="text-2xl font-bold mb-4">Mission</h3>
                                 <p className="text-lg leading-relaxed">
                                     Provide ethical leadership, effective governance, strategic partnerships, and strong advocacy that advance the welfare, professionalism, and societal impact of engineers in Kenya.
@@ -187,7 +187,7 @@ export default function AboutTabs() {
 
                         {/* Strategic Reform Pillars */}
                         <div className="bg-neutral-100 py-20 px-6 md:px-12 rounded-sm">
-                            <h2 className="text-3xl md:text-4xl font-extrabold text-primary-950 mb-20 text-center">
+                            <h2 className="text-3xl md:text-4xl font-extrabold text-primary-800 mb-20 text-center">
                                 Strategic Reform Pillars
                             </h2>
                             <div className="grid md:grid-cols-2 gap-x-12 gap-y-16">
@@ -201,15 +201,15 @@ export default function AboutTabs() {
 
                         {/* Why Vote Section */}
                         <div className="text-center bg-primary-50 py-16 px-6">
-                            <h2 className="text-3xl font-extrabold text-primary-900 mb-6">Why Vote for Eng. Jacton Mwembe?</h2>
+                            <h2 className="text-3xl font-extrabold text-primary-800 mb-6">Why Vote for Eng. Jacton Mwembe?</h2>
                             <div className="flex flex-wrap justify-center gap-6">
                                 {["Visionary Leadership", "Proven Institutional Experience", "Results-Oriented", "Collaborative & Inclusive", "Firm Advocate for Engineers"].map((tag) => (
-                                    <span key={tag} className="px-6 py-2 bg-white border border-gold-400 text-primary-900 font-bold rounded-full shadow-sm">
+                                    <span key={tag} className="px-6 py-2 bg-white border border-gold-400 text-primary-800 font-bold rounded-full shadow-sm">
                                         {tag}
                                     </span>
                                 ))}
                             </div>
-                            <p className="mt-12 text-xl font-bold text-primary-900">
+                            <p className="mt-12 text-xl font-bold text-primary-800">
                                 Let us move forward together — towards Sustainable Engineering and Professional Excellence.
                             </p>
                         </div>

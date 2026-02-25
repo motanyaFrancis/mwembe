@@ -50,7 +50,7 @@ export default async function PostPage({ params }: Props) {
                         <div className="mt-16">
                             <Link
                                 href="/news"
-                                className="inline-block bg-primary-900 text-white text-sm font-bold tracking-wider px-6 py-3 border-b-4 border-gold-400 hover:bg-primary-800 transition"
+                                className="inline-block bg-primary-800 text-white text-sm font-bold tracking-wider px-6 py-3 border-b-4 border-gold-400 hover:bg-primary-900 transition"
                             >
                                 BACK TO NEWS & PRESS
                             </Link>

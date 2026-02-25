@@ -23,6 +23,7 @@ export default {
             colors: {
                 white: 'var(--color-white)',
                 black: 'var(--color-black)',
+                danger: 'var(--color-danger)',
                 primary: mapColors('primary'),
                 gold: mapColors('gold'),
                 beige: mapColors('beige'),

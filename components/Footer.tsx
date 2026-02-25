@@ -19,7 +19,7 @@ export default function Footer() {
       />
 
       {/* Dark Backdrop Overlay */}
-      <div className="absolute inset-0 bg-primary-950/65 backdrop-blur-[1px]" />
+      <div className="absolute inset-0 bg-primary-800/65 backdrop-blur-[1px]" />
 
       {/* Content */}
       <div className="relative max-w-6xl mx-auto px-6 py-16 text-center">
@@ -39,20 +39,20 @@ export default function Footer() {
         </p>
         <a
           href="mailto:hello@example.com"
-          className="text-gold-600 font-semibold hover:text-gold-300 transition"
+          className="text-gold-500 font-semibold hover:text-gold-300 transition"
         >
           hello@example.com
         </a>
 
         {/* Navigation */}
         <div className="mt-10 flex justify-center gap-8 text-primary-200 font-medium">
-          <Link href="/about" className="hover:text-gold-400 transition">
+          <Link href="/about" className="hover:text-gold-500 transition">
             About
           </Link>
-          <Link href="/news" className="hover:text-gold-400 transition">
+          <Link href="/news" className="hover:text-gold-500 transition">
             News
           </Link>
-          <Link href="/media" className="hover:text-gold-400 transition">
+          <Link href="/media" className="hover:text-gold-500 transition">
             Media Kit
           </Link>
         </div>
@@ -64,7 +64,7 @@ export default function Footer() {
               <a
                 key={index}
                 href="#"
-                className="bg-white/10 hover:bg-gold-400 hover:text-primary-950 transition p-3 rounded-full backdrop-blur-sm"
+                className="bg-white/10 hover:bg-gold-400 hover:text-primary-800 transition p-3 rounded-full backdrop-blur-sm"
               >
                 <Icon size={18} />
               </a>
@@ -74,7 +74,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="relative bg-primary-950/95 text-primary-50 text-sm py-4 border-t border-primary-800">
+      <div className="relative bg-primary-800/95 text-primary-50 text-sm py-4 border-t border-primary-800">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-2">
           <p>
             © {new Date().getFullYear()} Mwembe Campaign. All rights reserved.
@@ -88,7 +88,7 @@ export default function Footer() {
               powered by{" "}
               <Link
                 href="https://www.motanya.co.ke"
-                className="text-gold-100 font-semibold hover:text-gold-300 transition"
+                className="text-gold-500 font-semibold hover:text-gold-300 transition"
               >
                 Motanya
               </Link>

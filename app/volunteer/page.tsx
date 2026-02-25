@@ -5,7 +5,7 @@ export default function VolunteerPage() {
         <main className="bg-[#f7f1e7] text-[#1a1f38]">
 
             {/* ================= HERO ================= */}
-            <section className="bg-primary-900 text-white px-6 md:px-20 py-32 pt-44">
+            <section className="bg-primary-800 text-white px-6 md:px-20 py-32 pt-44">
                 <div className="max-w-5xl mx-auto text-center">
                     <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
                         Join the Movement.
@@ -51,7 +51,7 @@ export default function VolunteerPage() {
                         }
                     ].map((item, i) => (
                         <div key={i} className="bg-white shadow-lg p-8 border-t-4 border-gold-600">
-                            <h3 className="font-serif font-bold text-xl mb-4 text-primary-900">
+                            <h3 className="font-serif font-bold text-xl mb-4 text-primary-800">
                                 {item.title}
                             </h3>
                             <p className="text-slate-600 leading-relaxed">
@@ -65,7 +65,7 @@ export default function VolunteerPage() {
             {/* ================= OPPORTUNITIES ================= */}
             <section className="bg-primary-100 px-6 md:px-20 py-20">
                 <div className="max-w-6xl mx-auto">
-                    <h2 className="text-3xl font-extrabold mb-12 text-center text-primary-900">
+                    <h2 className="text-3xl font-extrabold mb-12 text-center text-primary-800">
                         Volunteer Opportunities
                     </h2>
 
@@ -80,9 +80,9 @@ export default function VolunteerPage() {
                         ].map((role, i) => (
                             <div
                                 key={i}
-                                className="bg-white p-6 shadow-md hover:shadow-xl transition border-l-4 border-primary-900"
+                                className="bg-white p-6 shadow-md hover:shadow-xl transition border-l-4 border-primary-800"
                             >
-                                <h4 className="font-semibold text-lg text-primary-900">
+                                <h4 className="font-semibold text-lg text-primary-800">
                                     {role}
                                 </h4>
                             </div>
@@ -108,7 +108,7 @@ export default function VolunteerPage() {
                         </label>
                         <input
                             type="text"
-                            className="w-full border border-primary-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-900"
+                            className="w-full border border-primary-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-800"
                         />
                     </div>
 
@@ -118,7 +118,7 @@ export default function VolunteerPage() {
                         </label>
                         <input
                             type="email"
-                            className="w-full border border-primary-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-900"
+                            className="w-full border border-primary-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-800"
                         />
                     </div>
 
@@ -128,7 +128,7 @@ export default function VolunteerPage() {
                         </label>
                         <input
                             type="tel"
-                            className="w-full border border-primary-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-900"
+                            className="w-full border border-primary-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-800"
                         />
                     </div>
 
@@ -136,7 +136,7 @@ export default function VolunteerPage() {
                         <label className="block text-sm font-semibold mb-2">
                             Area of Interest
                         </label>
-                        <select className="w-full border border-primary-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-900">
+                        <select className="w-full border border-primary-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-800">
                             <option>Community Outreach</option>
                             <option>Event Coordination</option>
                             <option>Social Media Advocacy</option>
@@ -151,13 +151,13 @@ export default function VolunteerPage() {
                         </label>
                         <textarea
                             rows={4}
-                            className="w-full border border-primary-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-900"
+                            className="w-full border border-primary-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-800"
                         />
                     </div>
 
                     <button
                         type="submit"
-                        className="w-full bg-primary-900 text-white font-bold tracking-widest py-4 hover:bg-primary-800 transition"
+                        className="w-full bg-primary-800 text-white font-bold tracking-widest py-4 hover:bg-primary-800 transition"
                     >
                         SUBMIT APPLICATION
                     </button>
@@ -171,7 +171,7 @@ export default function VolunteerPage() {
                 </h3>
                 <Link
                     href="/donate"
-                    className="inline-block bg-primary-900 px-8 py-4 font-bold hover:bg-primary-800 transition"
+                    className="inline-block bg-primary-800 px-8 py-4 font-bold hover:bg-primary-800 transition"
                 >
                     SUPPORT THE MOVEMENT
                 </Link>

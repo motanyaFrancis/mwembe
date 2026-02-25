@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function CallToAction() {
   return (
-    <section className="relative bg-primary-950 text-white overflow-hidden">
+    <section className="relative bg-primary-800 text-white overflow-hidden">
 
       {/* gold Power Strip */}
       <div className="absolute top-0 left-0 w-full h-3 bg-gold-600" />
@@ -42,7 +42,7 @@ export default function CallToAction() {
 
           <Link
             href="/donate"
-            className="bg-white text-primary-950 font-bold tracking-widest px-10 py-5 border-b-4 border-primary-700 hover:bg-primary-100 hover:-translate-y-1 transition-all duration-300"
+            className="bg-white text-primary-800 font-bold tracking-widest px-10 py-5 border-b-4 border-primary-700 hover:bg-primary-100 hover:-translate-y-1 transition-all duration-300"
           >
             CONTRIBUTE TODAY
           </Link>

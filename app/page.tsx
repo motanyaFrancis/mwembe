@@ -10,16 +10,18 @@ import { gallery } from "@/data/gallery";
 
 
 export default function HomePage() {
-const imageGallery = gallery.filter((item) => item.type === "image").map((item) => item.src);
+  const imageGallery = gallery.filter((item) => item.type === "image").map((item) => item.src);
 
- 
+
   return (
     <>
       <Hero />
       <AboutUs
         imageUrl="/images/mwembe-about.jpg"
         name="Mwembe"
-        snippet="With nearly 20 years in civil engineering practice, Eng. Jacton “Tony” Mwembe has built a career spanning infrastructure delivery, regulatory governance, and institutional leadership. As a national leader within the Institution of Engineers of Kenya (IEK), he champions transparency, professional dignity, and structured reform to position engineers at the center of Kenya’s development."
+        snippet={`With nearly two decades of experience in civil engineering, Eng. Jacton Mwembe Achieng has cultivated a distinguished career spanning infrastructure development, regulatory oversight, and institutional leadership. His work reflects a deep commitment to technical excellence, ethical governance, and sustainable nation-building.
+
+As a national leader within the Institution of Engineers of Kenya (IEK), he advocates for transparency, professional integrity, and structured reform. He is committed to elevating the dignity of the engineering profession and positioning engineers at the forefront of Kenya’s development agenda — not merely as implementers of policy, but as strategic drivers of progress.`}
         fullAboutLink="/about"
       />
 

@@ -26,7 +26,7 @@ export default function Agenda() {
             key={index}
             className="bg-white rounded-xl p-6 shadow hover:shadow-lg transition"
           >
-            <h4 className="text-xl font-semibold text-primary-900 mb-3">
+            <h4 className="text-xl font-semibold text-primary-800 mb-3">
               {item.title}
             </h4>
             <p className="text-gray-700">{item.description}</p>

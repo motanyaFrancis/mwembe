@@ -12,11 +12,11 @@ function PillarBlock({ pillar }: { pillar: any }) {
 
         {/* Content */}
         <div>
-          <h3 className="text-2xl font-extrabold text-primary-950 mb-4 group-hover:text-primary-800 transition">
+          <h3 className="text-2xl font-extrabold text-primary-800 mb-4 group-hover:text-primary-800 transition">
             {pillar.title}
           </h3>
 
-          <p className="text-lg leading-relaxed text-primary-950">
+          <p className="text-lg leading-relaxed text-primary-800">
             {pillar.description}
           </p>
         </div>

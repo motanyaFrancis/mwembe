@@ -1,9 +1,11 @@
+import Image from "next/image";
+
 export default function Hero() {
     return (
         <section
             className="
             relative min-h-screen overflow-hidden
-            bg-dark-950
+            bg-dark-800
             bg-no-repeat bg-cover
             bg-[position:85%_center]
             sm:bg-[position:75%_center]
@@ -14,7 +16,7 @@ export default function Hero() {
                 backgroundImage: "url('/images/hero-bg2.jpg')",
             }}
         >
-            <div className="absolute inset-0 bg-gradient-to-t from-dark-950/90 via-dark-950/20 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-dark-800/90 via-dark-800/20 to-transparent" />
             <div className="run-pinstripes undefined css-wyqlws-Pinstripes"></div>
 
             <div
@@ -27,13 +29,13 @@ export default function Hero() {
 
             {/* CONTENT */}
             <div className="relative z-10 w-7xl mx-auto px-0 sm:px-6 flex flex-col justify-end md:justify-center min-h-screen sm:mt-32">
-                <div className="max-w-3xl mx-0 sm:mx-0 text-left py-12 pb-4 px-8 bg-gradient-to-b from-primary-800/10 to-primary-950 sm:bg-none">
-                    
-                    <h1 className="text-4xl md:text-6xl font-black text-primary-100 mb-6 leading-tight">
+                <div className="max-w-3xl mx-0 sm:mx-0 text-left py-12 pb-4 px-8 bg-gradient-to-b from-transparent via-primary-800/10 to-primary-800 sm:bg-none">
+                    <Image src="/images/vote.png" alt="Vote Logo" width={200} height={40} />
+                    <h1 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
                         Engineering Integrity. Institutional Reform. National Impact.
                     </h1>
 
-                    <p className="text-lg md:text-2xl font-bold text-primary-100 mb-6">
+                    <p className="text-lg md:text-2xl font-bold text-white mb-6">
                         Eng. Jacton Mwembe Achieng for President — Engineers Board of Kenya
                     </p>
 
