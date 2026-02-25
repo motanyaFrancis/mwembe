@@ -7,7 +7,7 @@ export default function Hero() {
             relative min-h-screen overflow-hidden
             bg-blue-800
             bg-no-repeat bg-cover
-            bg-[position:85%_center]
+            bg-[position:75%_center]
             sm:bg-[position:75%_center]
             lg:bg-[position:85%_bottom]
             flex items-center
