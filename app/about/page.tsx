@@ -33,8 +33,8 @@ export default function AboutPage() {
             </p>
 
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight">
-              Restoring Dignity
-              <br className="hidden md:block" />
+              Restoring Dignity 
+              <br />
               Strengthening Influence
             </h1>
 
