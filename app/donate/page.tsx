@@ -6,9 +6,9 @@ export default function DonatePage() {
             <section className="bg-primary-800 text-white px-6 md:px-20 py-32 pt-44">
                 <div className="max-w-4xl mx-auto text-center">
                     <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
-                        Support the Movement.
+                        Support the Movement
                         <br />
-                        Invest in Change.
+                        Invest in Change
                     </h1>
 
                     <p className="text-primary-200 text-lg max-w-2xl mx-auto">

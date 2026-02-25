@@ -2,6 +2,7 @@ import { issues } from "@/data/issues";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Facebook, Twitter, Mail } from "lucide-react";
+import { FaFacebookF, FaXTwitter, FaInstagram } from "react-icons/fa6";
 
 export default async function IssueDetail({
     params,
@@ -11,11 +12,33 @@ export default async function IssueDetail({
     const { slug } = await params;
 
     const issue = issues.find((i) => i.slug === slug);
-
     if (!issue) return notFound();
 
-    // 👇 Get all other issues except current
     const otherIssues = issues.filter((i) => i.slug !== slug);
+
+    // Social URLs
+    const pageUrl = typeof window !== "undefined" ? window.location.href : "#";
+    const socialLinks = [
+        {
+            name: "Twitter",
+            icon: FaXTwitter,
+            url: `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+                issue.title
+            )}&url=${encodeURIComponent(pageUrl)}`,
+        },
+        {
+            name: "Facebook",
+            icon: FaFacebookF,
+            url: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+                pageUrl
+            )}`,
+        },
+        {
+            name: "Instagram",
+            icon: FaInstagram,
+            url: `https://www.instagram.com/?url=${encodeURIComponent(pageUrl)}`,
+        },
+    ];
 
     return (
         <main>
@@ -26,20 +49,27 @@ export default async function IssueDetail({
                         {issue.title}
                     </h1>
 
-                    {/* Share Row */}
+                    {/* Social Share Row */}
                     <div className="flex items-center gap-4 mt-10">
                         <span className="uppercase text-sm tracking-widest text-primary-200">
                             Share
                         </span>
 
-                        {[Twitter, Facebook, Mail].map((Icon, i) => (
-                            <button
-                                key={i}
-                                className="border border-white rounded-full p-2 hover:bg-white hover:text-primary-900 transition"
-                            >
-                                <Icon size={16} />
-                            </button>
-                        ))}
+                        {socialLinks.map((social, i) => {
+                            const Icon = social.icon;
+                            return (
+                                <a
+                                    key={i}
+                                    href={social.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={`Share on ${social.name}`}
+                                    className="border border-white rounded-full p-2 hover:bg-white hover:text-primary-900 transition"
+                                >
+                                    <Icon size={16} />
+                                </a>
+                            );
+                        })}
                     </div>
                 </div>
             </section>
@@ -47,15 +77,12 @@ export default async function IssueDetail({
             {/* CONTENT + SIDEBAR SECTION */}
             <section className="px-6 md:px-20 py-20 max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
-
                     {/* MAIN CONTENT */}
                     <div className="lg:col-span-2">
                         <div className="max-w-3xl text-primary-800 leading-relaxed space-y-6 text-lg">
                             {issue.description.split("\n").map(
                                 (paragraph, index) =>
-                                    paragraph.trim() && (
-                                        <p key={index}>{paragraph.trim()}</p>
-                                    )
+                                    paragraph.trim() && <p key={index}>{paragraph.trim()}</p>
                             )}
                         </div>
 
@@ -95,7 +122,6 @@ export default async function IssueDetail({
                             </div>
                         </div>
                     </aside>
-
                 </div>
             </section>
         </main>

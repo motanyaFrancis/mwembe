@@ -1,15 +1,38 @@
 "use client";
 
 import Link from "next/link";
-import {
-  Instagram,
-  Twitter,
-  Facebook,
-  Youtube,
-  Mail,
-} from "lucide-react";
+import Image from "next/image";
+
+import { FaInstagram, FaXTwitter, FaYoutube, FaFacebookF, FaTiktok } from "react-icons/fa6";
 
 export default function Footer() {
+  const socialLinks = [
+    {
+      name: "Instagram",
+      icon: FaInstagram,
+      url: "https://instagram.com/Jacton_Mwembe",
+    },
+    {
+      name: "X",
+      icon: FaXTwitter,
+      url: "https://x.com/Jacton_Mwembe",
+    },
+    {
+      name: "Facebook",
+      icon: FaFacebookF,
+      url: "https://facebook.com/Jacton_Mwembe",
+    },
+    {
+      name: "YouTube",
+      icon: FaYoutube,
+      url: "https://youtube.com/Jacton_Mwembe",
+    },
+    {
+      name: "TikTok",
+      icon: FaTiktok,
+      url: "https://tiktok.com/@Jacton_Mwembe",
+    },
+  ];
   return (
     <footer className="relative text-white overflow-hidden">
       {/* Background Image */}
@@ -25,12 +48,13 @@ export default function Footer() {
       <div className="relative max-w-6xl mx-auto px-6 py-16 text-center">
         {/* Logo / Campaign Title */}
         <div className="inline-block border-4 border-gold-500 px-6 py-3 mb-6 bg-primary-900/40">
-          <h2 className="text-2xl md:text-3xl font-extrabold tracking-wide text-gold-500">
+          <Image src="/images/logoWhite.png" alt="Mwembe Logo" width={300} height={100} className="mx-auto mb-2" />
+          {/* <h2 className="text-2xl md:text-3xl font-extrabold tracking-wide text-gold-500">
             Mwembe
           </h2>
           <p className="text-sm uppercase tracking-widest text-primary-200">
             For IEK President
-          </p>
+          </p> */}
         </div>
 
         {/* Contact */}
@@ -59,17 +83,22 @@ export default function Footer() {
 
         {/* Social Icons */}
         <div className="mt-8 flex justify-center gap-5">
-          {[Instagram, Twitter, Facebook, Youtube, Mail].map(
-            (Icon, index) => (
+          {socialLinks.map((social, index) => {
+            const Icon = social.icon;
+
+            return (
               <a
                 key={index}
-                href="#"
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={social.name}
                 className="bg-white/10 hover:bg-gold-400 hover:text-primary-800 transition p-3 rounded-full backdrop-blur-sm"
               >
                 <Icon size={18} />
               </a>
-            )
-          )}
+            );
+          })}
         </div>
       </div>
 

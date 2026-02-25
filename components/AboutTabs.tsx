@@ -55,9 +55,9 @@ export default function AboutTabs() {
                         <button
                             key={tab.id}
                             onClick={() => setActiveTab(tab.id)}
-                            className={`px-6 py-4 font-semibold transition duration-300 cursor-pointer ${activeTab === tab.id
-                                    ? "text-primary-800 border-b-4 border-gold-500"
-                                    : "text-neutral-600 hover:text-primary-800"
+                            className={`px-0 md:pr-6 py-4 transition duration-300 cursor-pointer ${activeTab === tab.id
+                                    ? "text-primary-800 font-extrabold border-b-4 border-gold-500"
+                                    : "text-neutral-600 pl-6 font-medium hover:text-primary-800"
                                 }`}
                         >
                             {tab.label}

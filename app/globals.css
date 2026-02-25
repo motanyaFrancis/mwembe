@@ -2,7 +2,7 @@
 
 
 :root {
-  --background: #ffffff;
+  --background: #fff9f7;
   --foreground: #171717;
 
   --navy: #143a52;
@@ -10,8 +10,8 @@
   --light-gray: #e9e9e9;
   --text-dark: #1b2d3a;
 
-  --color-white: #fff;
-  --color-black: #000;
+  --color-white: #fff9f7;
+  --color-black: #333333;
   --color-danger: #ff4d4f;
 
   --color-primary-50: #eef2ff;

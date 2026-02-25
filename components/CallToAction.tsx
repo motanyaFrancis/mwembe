@@ -19,9 +19,9 @@ export default function CallToAction() {
 
         {/* Headline */}
         <h3 className="text-4xl md:text-5xl font-extrabold leading-tight mb-8">
-          This Is Our Moment.
+          Building Better
           <br />
-          Let’s Build The Future Together.
+          Together
         </h3>
 
         {/* Supporting Copy */}

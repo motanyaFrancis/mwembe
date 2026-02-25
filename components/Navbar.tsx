@@ -51,13 +51,13 @@ export default function Navbar() {
             <header
                 className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-t-4 border-gold-500 ${scrolled
                     ? "bg-primary-800 shadow-xl order-t-4 border-gold-500"
-                    : "bg-transparent"
+                    : "bg-gradient-to-b from-white via-white/70 to-transparent border-transparent"
                     }`}
             >
                 <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
                     {/* LOGO */}
                     <Link href="/" className="text-gold-500 font-black text-2xl tracking-widest uppercase"                    >
-                        {scrolled ? <Image src="/images/logo-white.png" alt="Mwembe 2026 Logo" width={200} height={40} /> : <Image src="/images/logo.png" alt="Mwembe 2026 Logo" width={200} height={40} />}
+                        {scrolled ? <Image src="/images/logoWhite.png" alt="Mwembe 2026 Logo" width={250} height={40} /> : <Image src="/images/logoBlue.png" alt="Mwembe 2026 Logo" width={250} height={40} />}
                     </Link>
 
                     {/* DESKTOP NAV */}
@@ -67,9 +67,9 @@ export default function Navbar() {
                                 key={item.label}
                                 href={item.href}
                                 className={
-                                    item.variant === "primary"
+                                    item.variant === "primary" 
                                         ? "bg-gold-500 text-white font-extrabold px-6 py-3 uppercase tracking-wide hover:bg-gold-400 transition flex items-center shadow-lg"
-                                        : "text-white font-bold uppercase text-sm tracking-wide hover:text-gold-400 transition"
+                                        : `${scrolled ? "text-white" : "text-primary-800"} font-bold uppercase text-sm tracking-wide hover:text-gold-400 transition`
                                 }
                             >
                                 {item.icon && <span className="mr-2">{item.icon}</span>}
