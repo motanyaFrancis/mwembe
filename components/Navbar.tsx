@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Menu, X, Heart } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 type NavItem = {
     label: string;
@@ -26,6 +27,7 @@ const navItems: NavItem[] = [
 ];
 
 export default function Navbar() {
+    const pathname = usePathname();
     const [scrolled, setScrolled] = useState(false);
     const [open, setOpen] = useState(false);
 
@@ -62,29 +64,41 @@ export default function Navbar() {
 
                     {/* DESKTOP NAV */}
                     <nav className="hidden md:flex items-center space-x-6">
-                        {navItems.map((item) => (
-                            <Link
-                                key={item.label}
-                                href={item.href}
-                                className={
-                                    item.variant === "primary" 
-                                        ? "bg-gold-500 text-white font-extrabold px-6 py-3 uppercase tracking-wide hover:bg-gold-400 transition flex items-center shadow-lg"
-                                        : `${scrolled ? "text-white" : "text-primary-800"} font-bold uppercase text-sm tracking-wide hover:text-gold-400 transition`
-                                }
-                            >
-                                {item.icon && <span className="mr-2">{item.icon}</span>}
-                                {item.label}
-                            </Link>
-                        ))}
+                        {navItems.map((item) => {
+                            const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
+
+                            return (
+                                <Link
+                                    key={item.label}
+                                    href={item.href}
+                                    className={
+                                        item.variant === "primary"
+                                            ? "bg-gold-500 text-white font-extrabold px-6 py-3 uppercase tracking-wide hover:bg-gold-400 transition flex items-center shadow-lg"
+                                            : `
+                                            ${isActive
+                                                ? "text-gold-400 border-b-2 border-gold-400"
+                                                : scrolled
+                                                    ? "text-white"
+                                                    : "text-primary-800"
+                                            }
+                                                font-bold uppercase text-sm tracking-wide hover:text-gold-400 transition pb-1
+                                                `
+                                    }
+                                >
+                                    {item.icon && <span className="mr-2">{item.icon}</span>}
+                                    {item.label}
+                                </Link>
+                            );
+                        })}
                     </nav>
 
                     {/* MOBILE TOGGLE */}
-                    
+
                     <button
                         onClick={() => setOpen(!open)}
                         className={`md:hidden ${scrolled ? "text-white" : "text-primary-800"} focus:outline-none`}
                     >
-                        {open ? <X  className="text-danger" size={32} /> : <Menu size={32} />}
+                        {open ? <X className="text-danger" size={32} /> : <Menu size={32} />}
                     </button>
                 </div>
             </header>
@@ -110,22 +124,29 @@ export default function Navbar() {
                     </Link>
 
                     {/* Nav Items */}
-                    <div className="flex flex-col items-center space-y-8">
-                        {navItems.map((item) => (
+                   <div className="flex flex-col items-center space-y-8">
+                        {navItems.map((item) => {
+                            const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
+
+                            return (
                             <Link
                                 key={item.label}
                                 href={item.href}
                                 onClick={() => setOpen(false)}
                                 className={
-                                    item.variant === "primary"
-                                        ? "bg-gold-500 text-white font-extrabold px-8 py-4 text-xl uppercase tracking-wide shadow-xl hover:bg-gold-400 transition flex items-center"
-                                        : "text-white text-2xl font-black uppercase tracking-wide hover:text-gold-400 transition"
+                                item.variant === "primary"
+                                    ? "bg-gold-500 text-white font-extrabold px-8 py-4 text-xl uppercase tracking-wide shadow-xl hover:bg-gold-400 transition flex items-center"
+                                    : `
+                                    ${isActive ? "text-gold-400" : "text-white"}
+                                    text-2xl font-black uppercase tracking-wide hover:text-gold-400 transition
+                                    `
                                 }
                             >
                                 {item.icon && <span className="mr-2">{item.icon}</span>}
                                 {item.label}
                             </Link>
-                        ))}
+                            );
+                        })}
                     </div>
                 </div>
             )}

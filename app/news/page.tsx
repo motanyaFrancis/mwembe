@@ -20,13 +20,20 @@ export default function NewsPage() {
   return (
     <>
       <section
-        className="px-8 pt-40 md:px-20 py-16 min-h-[400px] md:min-h-[500px] text-white"
-        style={{
-          backgroundImage: "url('/images/hero-bg2.jpg')",
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
+        className="px-8 pt-40 md:px-20 py-16 min-h-[400px] md:min-h-[500px] 
+                bg-no-repeat bg-cover
+                bg-[position:75%_center] 
+                sm:bg-[position:85%_center]
+                bg-[position:0%_top]
+                lg:bg-[position:0%_top]
+                flex items-center
+            "
+        style={
+          {
+            backgroundImage: "url(/images/hero.jpg)",
+
+          }
+        }
       >
         {/* Overlay to darken background for text readability */}
         {/* <div className="absolute inset-0 bg-slate-800/10"></div> */}
@@ -37,7 +44,7 @@ export default function NewsPage() {
                         Engineering is out of touch:
                     </p> */}
 
-          <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight">
+          <h1 className="text-5xl md:text-7xl font-extrabold text-black leading-tight text-left">
             News & Press
           </h1>
         </div>
