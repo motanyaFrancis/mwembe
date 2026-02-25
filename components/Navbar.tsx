@@ -106,7 +106,7 @@ export default function Navbar() {
                         onClick={() => setOpen(false)}
                         className="absolute top-8 left-6 text-gold-400 font-black text-xl tracking-widest uppercase"
                     >
-                        <Image src="/images/logo-white.png" alt="Mwembe Logo" width={150} height={100} />
+                        <Image src="/images/logoWhite.png" alt="Mwembe Logo" width={200} height={100} />
                     </Link>
 
                     {/* Nav Items */}
