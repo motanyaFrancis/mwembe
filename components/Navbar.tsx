@@ -125,6 +125,20 @@ export default function Navbar() {
     const textColor = isDarkBg ? "text-white" : "text-primary-800";
     const activeColor = "text-gold-400 border-b-2 border-gold-400";
 
+    const getLinkClass = (item: NavItem, isActive: boolean) => {
+        if (item.variant === "primary") {
+            return "bg-gold-500 text-white font-extrabold px-6 py-3 uppercase tracking-wide hover:bg-gold-400 transition flex items-center shadow-lg";
+        }
+
+        // Determine text color
+        let colorClass = textColor; // default based on hero brightness
+        if (scrolled || isDarkBg) colorClass = "text-white"; // header scrolled / dark background
+        if (isActive) colorClass = "text-gold-400"; // active link overrides
+
+        return `font-bold uppercase text-sm tracking-wide pb-1 transition hover:text-gold-400 flex items-center ${colorClass} ${isActive ? "border-b-2 border-gold-400" : ""
+            }`;
+    };
+
     return (
         <>
             {/* HEADER */}
@@ -165,20 +179,8 @@ export default function Navbar() {
                                     pathname.startsWith(item.href));
 
                             return (
-                                <Link
-                                    key={item.label}
-                                    href={item.href}
-                                    className={
-                                        item.variant === "primary"
-                                            ? "bg-gold-500 text-white font-extrabold px-6 py-3 uppercase tracking-wide hover:bg-gold-400 transition flex items-center shadow-lg"
-                                            : `${isActive ? activeColor : textColor} ${scrolled ? "text-white" : "text-primary-800"} font-bold uppercase text-sm tracking-wide hover:text-gold-400 transition pb-1`
-                                    }
-                                >
-                                    {item.icon && (
-                                        <span className="mr-2">
-                                            {item.icon}
-                                        </span>
-                                    )}
+                                <Link key={item.label} href={item.href} className={getLinkClass(item, isActive)}>
+                                    {item.icon && <span className="mr-2">{item.icon}</span>}
                                     {item.label}
                                 </Link>
                             );
