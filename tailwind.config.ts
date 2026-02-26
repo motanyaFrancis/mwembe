@@ -16,7 +16,7 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ["var(--font-montserrat)"],
+                sans: ["montserrat", "sans-serif"],
             },
             colors: {
                 white: 'var(--color-white)',

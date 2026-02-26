@@ -36,8 +36,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={montserrat.variable}>
-      <body className="bg-beige-50 text-dark font-sans">
+    <html lang="en">
+      <body className={`${montserrat.className} bg-beige-50 text-dark`}>
         <Navbar />
         {children}
         <Footer />
