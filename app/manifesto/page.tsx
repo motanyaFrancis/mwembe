@@ -103,7 +103,7 @@ export default function ManifestoArticle() {
             {/* Hero Header */}
             <div className="relative h-132 w-full overflow-hidden
                 bg-no-repeat bg-cover
-                bg-[position:85%_center] 
+                bg-[position:75%_center] 
                 sm:bg-[position:85%_center]
                 bg-[position:0%_top]
                 lg:bg-[position:0%_top]
