@@ -51,9 +51,9 @@ export default function Navbar() {
         <>
             {/* HEADER */}
             <header
-                className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-t-4 border-gold-500 border-b-transparent ${scrolled
+                className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-t-4 border-gold-500 border-b-0 will-change-transform ${scrolled
                     ? "bg-primary-800 shadow-xl"
-                    : "bg-gradient-to-b from-white via-white/70 to-transparent"
+                    : "bg-gradient-to-b from-white via-white/70 to-white/0 backdrop-blur-sm"
                     }`}
             >
                 <div className="max-w-7xl mx-auto px-6 py-8 flex items-center justify-between">
