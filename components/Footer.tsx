@@ -48,7 +48,7 @@ export default function Footer() {
       <div className="relative max-w-6xl mx-auto px-6 py-16 text-center">
         {/* Logo / Campaign Title */}
         <div className="inline-block border-4 border-gold-500 px-6 py-3 mb-6 bg-primary-900/40">
-          <Image src="/images/logoWhite.png" alt="Mwembe Logo" width={300} height={100} className="mx-auto mb-2" />
+          <Image src="/images/Mwembe-White.png" alt="Mwembe Logo" width={300} height={100} className="mx-auto mb-2" />
           {/* <h2 className="text-2xl md:text-3xl font-extrabold tracking-wide text-gold-500">
             Mwembe
           </h2>
