@@ -129,11 +129,10 @@ export default function Navbar() {
         <>
             {/* HEADER */}
             <header
-                className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-t-4 border-gold-500 will-change-transform ${
-                    scrolled
-                        ? "bg-primary-800 shadow-xl"
-                        : "bg-transparent"
-                }`}
+                className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-t-4 border-gold-500 will-change-transform ${scrolled
+                    ? "bg-primary-800 shadow-xl text-white"
+                    : "bg-transparent"
+                    }`}
             >
                 <div className="max-w-7xl mx-auto px-6 py-8 flex items-center justify-between">
                     {/* LOGO */}
@@ -172,11 +171,7 @@ export default function Navbar() {
                                     className={
                                         item.variant === "primary"
                                             ? "bg-gold-500 text-white font-extrabold px-6 py-3 uppercase tracking-wide hover:bg-gold-400 transition flex items-center shadow-lg"
-                                            : `${
-                                                  isActive
-                                                      ? activeColor
-                                                      : textColor
-                                              } font-bold uppercase text-sm tracking-wide hover:text-gold-400 transition pb-1`
+                                            : `${isActive ? activeColor : textColor} ${scrolled ? "text-white" : "text-primary-800"} font-bold uppercase text-sm tracking-wide hover:text-gold-400 transition pb-1`
                                     }
                                 >
                                     {item.icon && (
@@ -225,11 +220,10 @@ export default function Navbar() {
                                     className={
                                         item.variant === "primary"
                                             ? "bg-gold-500 text-white font-extrabold px-8 py-4 text-xl uppercase tracking-wide shadow-xl hover:bg-gold-400 transition flex items-center"
-                                            : `${
-                                                  isActive
-                                                      ? "text-gold-400"
-                                                      : "text-white"
-                                              } text-2xl font-black uppercase tracking-wide hover:text-gold-400 transition`
+                                            : `${isActive
+                                                ? "text-gold-400"
+                                                : "text-white"
+                                            } text-2xl font-black uppercase tracking-wide hover:text-gold-400 transition`
                                     }
                                 >
                                     {item.icon && (

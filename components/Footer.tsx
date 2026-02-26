@@ -4,8 +4,11 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { FaInstagram, FaXTwitter, FaYoutube, FaFacebookF, FaTiktok } from "react-icons/fa6";
+import { usePrivacy } from "@/context/PrivacyContext";
 
 export default function Footer() {
+  const { open: openPrivacy } = usePrivacy();
+
   const socialLinks = [
     {
       name: "Instagram",
@@ -110,13 +113,18 @@ export default function Footer() {
           </p>
 
           <div className="flex gap-4">
-            <Link href="/privacy" className="hover:text-gold-100 transition">
+            <Link href="" 
+            onClick={(e) => {
+              e.preventDefault();
+              openPrivacy();
+            }}
+            className="hover:text-gold-100 transition">
               Privacy Policy
             </Link>
             <div>
               powered by{" "}
               <Link
-                href="https://www.motanya.co.ke"
+                href="https://www.motanya.co.ke" target="_blank" rel="noopener noreferrer"
                 className="text-gold-500 font-semibold hover:text-gold-300 transition"
               >
                 Motanya

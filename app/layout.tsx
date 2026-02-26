@@ -3,6 +3,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
+import { PrivacyProvider } from "@/context/PrivacyContext";
+import BackToTopButton from "@/components/BackToTopButton";
+
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -38,9 +41,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${montserrat.className} bg-beige-50 text-dark`}>
-        <Navbar />
-        {children}
-        <Footer />
+        <PrivacyProvider>
+          <Navbar />
+          {children}
+          <BackToTopButton />
+          <Footer />
+        </PrivacyProvider>
       </body>
     </html>
   );
