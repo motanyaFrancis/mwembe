@@ -1,21 +1,24 @@
-// app/layout.tsx
-
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 
-const playfair = Playfair_Display({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  variable: "--font-heading",
-  weight: ["400", "600", "700", "800"],
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-body",
-  weight: ["400", "500", "600", "700"],
+  weight: [
+    "100",
+    "200",
+    "300",
+    "400",
+    "500",
+    "600",
+    "700",
+    "800",
+    "900",
+  ],
+  variable: "--font-montserrat",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -33,8 +36,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable}`}    >
-      <body className="bg-beige-50 text-dark font-body">
+    <html lang="en" className={montserrat.variable}>
+      <body className="bg-beige-50 text-dark font-sans">
         <Navbar />
         {children}
         <Footer />

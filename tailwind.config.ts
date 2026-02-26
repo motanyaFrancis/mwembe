@@ -16,9 +16,7 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Raleway', 'sans-serif'],
-                heading: ['Raleway', 'sans-serif'],
-                accent: ['Rochester', 'cursive'],
+                sans: ["var(--font-montserrat)"],
             },
             colors: {
                 white: 'var(--color-white)',
