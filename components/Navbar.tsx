@@ -51,7 +51,7 @@ export default function Navbar() {
         <>
             {/* HEADER */}
             <header
-                className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-t-4 border-gold-500 ${scrolled
+                className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-t-4 border-gold-500 border-b-transparent ${scrolled
                     ? "bg-primary-800 shadow-xl"
                     : "bg-gradient-to-b from-white via-white/70 to-transparent"
                     }`}
