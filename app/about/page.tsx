@@ -28,17 +28,17 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/90" />
 
           <div className="relative max-w-6xl mx-auto text-left space-y-6">
-            <p className="uppercase tracking-widest text-gold-400 font-semibold text-sm md:text-base">
+            <p className="uppercase tracking-widest text-gold-400 font-bold text-sm md:text-base">
               Engineering Leadership for a New Era
             </p>
 
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-black leading-tight">
               Restoring Dignity 
               <br />
               Strengthening Influence
             </h1>
 
-            <p className="text-base md:text-xl text-neutral-200 max-w-3xl ">
+            <p className="text-base font-semibold md:text-xl max-w-3xl ">
               Engineers built this nation’s infrastructure.
               It is time we shape its direction.
             </p>

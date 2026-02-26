@@ -90,7 +90,7 @@ export default function AboutTabs() {
 
                                 <div className="bg-gold-50 p-6 border-l-4 border-gold-500">
                                     <h4 className="font-bold text-primary-800 mb-2">Core Values</h4>
-                                    <ul className="grid grid-cols-2 gap-2 text-base">
+                                    <ul className="grid grid-cols-1 lg:grid-cols-2 gap-2 text-base">
                                         <li>• Integrity & Accountability</li>
                                         <li>• Inclusivity & Equity</li>
                                         <li>• Professional Excellence</li>

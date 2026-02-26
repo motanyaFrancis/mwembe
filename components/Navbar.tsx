@@ -63,7 +63,7 @@ export default function Navbar() {
                     </Link>
 
                     {/* DESKTOP NAV */}
-                    <nav className="hidden md:flex items-center space-x-6">
+                    <nav className="hidden lg:flex items-center space-x-6">
                         {navItems.map((item) => {
                             const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
 
@@ -96,7 +96,7 @@ export default function Navbar() {
 
                     <button
                         onClick={() => setOpen(!open)}
-                        className={`md:hidden ${scrolled ? "text-white" : "text-primary-800"} focus:outline-none`}
+                        className={`lg:hidden ${scrolled ? "text-white" : "text-primary-800"} focus:outline-none`}
                     >
                         {open ? <X className="text-danger" size={32} /> : <Menu size={32} />}
                     </button>
