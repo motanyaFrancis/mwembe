@@ -46,28 +46,31 @@ export default function AboutTabs() {
     ];
 
     return (
-        <section className="py-16 pt-0 px-6 md:px-20 bg-white">
-            <div className="max-w-7xl mx-auto">
+        <section className=" bg-white">
+                <div className="sticky top-28 z-10 bg-white self-start">
+                    <div className="max-w-7xl mx-auto flex flex-wrap justify-start border-b border-gold-700 mb-16 px-6 md:px-20">
+                        {tabs.map((tab) => (
 
-                {/* TAB NAVIGATION */}
-                <div className="flex flex-wrap justify-start border-b border-gold-700 mb-16">
-                    {tabs.map((tab) => (
-                        <button
-                            key={tab.id}
-                            onClick={() => setActiveTab(tab.id)}
-                            className={`px-0 md:pr-6 py-4 transition duration-300 cursor-pointer ${activeTab === tab.id
+                            <button
+                                key={tab.id}
+                                onClick={() => setActiveTab(tab.id)}
+                                className={`px-0 md:pr-6 py-4 transition duration-300 cursor-pointer ${activeTab === tab.id
                                     ? "text-primary-800 font-extrabold border-b-4 border-gold-500"
                                     : "text-neutral-600 pl-6 font-medium hover:text-primary-800"
-                                }`}
-                        >
-                            {tab.label}
-                        </button>
-                    ))}
+                                    }`}
+                            >
+                                {tab.label}
+                            </button>
+                        ))}
+                    </div>
                 </div>
+            <div className="max-w-7xl mx-auto py-16 pt-0 px-6 md:px-20">
+
+                {/* TAB NAVIGATION */}
 
                 {/* ================= BIO TAB ================= */}
                 {activeTab === "bio" && (
-                    <div className="space-y-24">
+                    <div className="space-y-24 ">
 
                         {/* Biography Section */}
                         <div className="grid md:grid-cols-2 gap-16 items-center">
