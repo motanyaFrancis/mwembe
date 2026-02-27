@@ -127,7 +127,7 @@ export default function Navbar() {
 
     const getLinkClass = (item: NavItem, isActive: boolean) => {
         if (item.variant === "primary") {
-            return "bg-gold-500 text-white font-extrabold px-6 py-3 uppercase tracking-wide hover:bg-gold-400 transition flex items-center shadow-lg";
+            return "bg-gold-500 text-white font-extrabold px-6 py-3 uppercase tracking-wide hover:bg-gold-600 transition flex items-center shadow-lg";
         }
 
         // Determine text color

@@ -77,7 +77,7 @@ export default function Footer() {
             About
           </Link>
           <Link href="/news" className="hover:text-gold-500 transition">
-            News
+            News &amp; Press
           </Link>
           <Link href="/media" className="hover:text-gold-500 transition">
             Media Kit

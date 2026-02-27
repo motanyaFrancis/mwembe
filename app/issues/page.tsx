@@ -49,16 +49,16 @@ export default function IssuesPage() {
                 <div className="absolute inset-0 bg-dark-800/40"></div>
 
                 <div className="relative max-w-7xl mx-auto">
-                    <p className="uppercase tracking-widest text-white font-semibold mb-2">
+                    <p className="uppercase tracking-widest text-gold-400 font-extrabold mb-2">
                         My Policy Platform:
                     </p>
 
                     <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight">
-                        WE DESERVE GOOD THINGS.
+                        WE DESERVE GOOD THINGS
                     </h1>
 
-                    <p className="mt-3 text-white text-lg">
-                        And we don’t have to settle.
+                    <p className="mt-3 text-white text-lg font-bold">
+                        And we don’t have to settle
                     </p>
                 </div>
             </section>

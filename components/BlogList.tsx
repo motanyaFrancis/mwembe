@@ -78,21 +78,15 @@ export default function BlogList({
                             );
                         })
                     ) : (
-                        <div className="col-span-1 md:col-span-3 text-center text-[#143A52] text-lg font-semibold py-20">
+                        <div className="col-span-1 md:col-span-3 text-center text-primary-800 text-lg font-semibold py-20">
                             No press releases available at the moment.
                         </div>
                     )}
                 </div>
 
                 {/* SEE ALL BUTTON */}
-                {showSeeAll && (
+                {showSeeAll && displayedPosts.length > 0 && (
                     <div className="flex justify-end mt-16">
-                        {/* <Link
-                            href="/news"
-                            className="border border-gold-600 text-gold-600 px-10 py-4 text-xs tracking-widest font-bold hover:bg-gold-600 hover:text-primary-800 transition"
-                        >
-                            SEE ALL NEWS
-                        </Link> */}
                         <Link
                             href="/news"
                             className="group inline-flex items-center text-xl text-gold-600 font-bold px-3 py-2.5 uppercase tracking-wide"
