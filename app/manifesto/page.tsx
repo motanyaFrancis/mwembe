@@ -101,7 +101,7 @@ export default function ManifestoArticle() {
     return (
         <section className="relative bg-primary-50">
             {/* Hero Header */}
-            <div className="relative h-132 w-full overflow-hidden
+            <div className="relative h-132 w-full overflow-hidden 
                 bg-no-repeat bg-cover
                 bg-[position:75%_center] 
                 sm:bg-[position:85%_center]
@@ -116,8 +116,10 @@ export default function ManifestoArticle() {
                     }
                 }
             >
-                <div className="absolute inset-0 bg-gradient-to-r from-gold-800/50 via-gold-800/10 to-transparent flex flex-col justify-end sm:justify-center items-left text-left px-0 sm:px-4">
-                    <div className="max-w-3xl mx-0 sm:mx-auto text-left py-12 pb-4 px-8 bg-gradient-to-b from-transparent via-gold-800/30 to-gold-900 sm:bg-none">
+                <div className="absolute inset-0 bg-gradient-to-r from-gold-800/50 via-gold-800/10 to-transparent" />
+
+                <div className="absolute max-w-7xl mx-auto inset-0  flex flex-col justify-end sm:justify-center items-left text-left px-0 sm:px-4">
+                    <div className="text-left py-12 pb-4 px-8 bg-gradient-to-b from-transparent via-gold-800/30 to-gold-900 sm:bg-none">
                         <h1 className="text-4xl md:text-5xl font-extrabold text-shadow-md text-shadow-white sm:text-shadow-none text-black leading-tight">
                             Integrity. Inclusion. Impact.
                         </h1>
