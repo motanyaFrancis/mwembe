@@ -206,6 +206,15 @@ export default function Navbar() {
                     >
                         <X size={32} />
                     </button>
+                    {/* Logo */}
+                    
+                    <Link
+                        href="/"
+                        onClick={() => setOpen(false)}
+                        className="absolute top-8 left-6 text-gold-400 font-black text-xl tracking-widest uppercase"
+                    >
+                        <Image src="/images/Mwembe-White.png" alt="Mwembe Logo" width={200} height={100} />
+                    </Link>
 
                     <div className="flex flex-col items-center space-y-8">
                         {navItems.map((item) => {
