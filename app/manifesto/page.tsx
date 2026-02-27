@@ -1,14 +1,15 @@
 import React from "react";
 import Image from "next/image";
 import MeetMwembeGallery from "@/components/MeetMwembeGallery";
+import ManifestoTOC from "@/components/ManifestoTOC";
 import { FaFilePdf } from "react-icons/fa";
 
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Manifesto 2026–2028",
-  description:
-    "Read the official manifesto of Eng. Jacton Mwembe for IEK President 2026–2028. Integrity. Inclusion. Impact.",
+    title: "Manifesto 2026–2028",
+    description:
+        "Read the official manifesto of Eng. Jacton Mwembe for IEK President 2026–2028. Integrity. Inclusion. Impact.",
 };
 
 
@@ -123,10 +124,10 @@ export default function ManifestoArticle() {
                         <h1 className="text-4xl md:text-5xl font-extrabold text-shadow-md text-shadow-white sm:text-shadow-none text-black leading-tight">
                             Integrity. Inclusion. Impact.
                         </h1>
-                        <h2 className="text-xl md:text-2xl text-white md:text-dark-600 font-semibold mt-2">
+                        <h2 className="text-base md:text-2xl text-white md:text-dark-600 font-black mt-2">
                             Eng. Jacton Mwembe Achieng, PE, MIEK
                         </h2>
-                        <p className="text-white md:text-dark-500 uppercase tracking-widest font-bold mt-1">
+                        <p className="text-sm md:text-2xl text-white md:text-dark-500 uppercase tracking-tight font-extrabold mt-1">
                             Candidate for President, IEK (2026–2028)
                         </p>
                         <a
@@ -145,26 +146,12 @@ export default function ManifestoArticle() {
             {/* Main Content with TOC */}
             <div className="relative max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-12 gap-x-12">
                 {/* Table of Contents */}
-                <aside className="hidden lg:block lg:col-span-3 sticky top-28 self-start">
-                    <div className="bg-primary-100 p-6 h-full shadow-lg">
-                        <h3 className="font-bold text-lg text-gold-600 mb-4">Contents</h3>
-                        <ul className="space-y-2 text-[#143A52]">
-                            {sections.map((section) => (
-                                <li key={section.id}>
-                                    <a
-                                        href={`#${section.id}`}
-                                        className="hover:text-gold-500 transition-colors"
-                                    >
-                                        {section.title}
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                <aside className="hidden lg:block lg:col-span-4 sticky top-28 self-start">
+                    <ManifestoTOC sections={sections} />
                 </aside>
 
                 {/* Article Content */}
-                <article className="relative lg:col-span-9 space-y-16 text-black sticky top-28 py-8 self-start">
+                <article className="relative lg:col-span-8 space-y-16 text-black sticky top-28 py-8 self-start">
                     {/* Intro */}
                     <div className="space-y-4">
                         <p>
