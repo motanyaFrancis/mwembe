@@ -48,7 +48,7 @@ export default function AboutTabs() {
     return (
         <section className=" bg-white">
                 <div className="sticky top-28 z-10 bg-white self-start">
-                    <div className="max-w-7xl mx-auto flex flex-wrap justify-start border-b border-gold-700 mb-16 px-6 md:px-20">
+                    <div className="max-w-6xl mx-auto flex flex-wrap justify-start border-b border-gold-700 mb-16 px-6 md:px-0">
                         {tabs.map((tab) => (
 
                             <button
@@ -64,7 +64,7 @@ export default function AboutTabs() {
                         ))}
                     </div>
                 </div>
-            <div className="max-w-7xl mx-auto py-16 pt-0 px-6 md:px-20">
+            <div className="max-w-6xl mx-auto py-16 pt-0 px-6 md:px-0">
 
                 {/* TAB NAVIGATION */}
 
