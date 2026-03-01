@@ -1,24 +1,42 @@
-"use client";
-
 import { issues } from "@/data/issues";
-import Link from "next/link";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import { FaFacebookF, FaXTwitter, FaInstagram } from "react-icons/fa6";
 
-export default async function IssueDetail({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+type Props = {
+  params: Promise<{ slug: string }>; // production uses a Promise
+};
+
+export async function generateMetadata({ params }: Props) {
+  const { slug } = await params; // Await the params
+
+  const issue = issues.find((i) => i.slug === slug);
+  if (!issue) {
+    return {
+      title: "Agenda | Mwembe",
+      description: "Explore our key issues",
+    };
+  }
+
+  return {
+    title: `${issue.title} - Agenda`,
+    description: issue.description || issue.title,
+  };
+}
+
+export default async function IssueDetail({ params }: Props) {
+  // Await the params (since your production setup returns a Promise)
   const { slug } = await params;
 
+  // Find the issue
   const issue = issues.find((i) => i.slug === slug);
   if (!issue) return notFound();
 
+  // Get other issues for sidebar
   const otherIssues = issues.filter((i) => i.slug !== slug);
 
-  // Social URLs
-  const pageUrl = typeof window !== "undefined" ? window.location.href : "#";
+  // Social URLs — use a static URL for SSR
+  const pageUrl = `https://yourdomain.com/issues/${slug}`;
   const socialLinks = [
     {
       name: "Twitter",
@@ -42,7 +60,8 @@ export default async function IssueDetail({
   ];
 
   return (
-    <main>
+    <main className="bg-[#f7f1e7] text-[#1a1f38]">
+
       {/* HERO SECTION */}
       <section className="bg-primary-800 text-white px-6 md:px-20 py-24 pt-40">
         <div className="max-w-7xl mx-auto px-6 md:px-8">
@@ -78,12 +97,11 @@ export default async function IssueDetail({
       {/* CONTENT + SIDEBAR SECTION */}
       <section className="px-6 md:px-20 py-20 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
+
           {/* MAIN CONTENT */}
           <div className="lg:col-span-2 space-y-6 text-primary-800 text-lg leading-relaxed max-w-3xl">
             {/* Invocation */}
-            {issue.invocation && (
-              <p className="font-bold">{issue.invocation}</p>
-            )}
+            {issue.invocation && <p className="font-bold">{issue.invocation}</p>}
 
             {/* Bullet points */}
             {issue.points && (
@@ -99,7 +117,7 @@ export default async function IssueDetail({
               <p className="mt-4 font-semibold">{issue.conclusion}</p>
             )}
 
-            {/* Fallback to description if none of the above exists */}
+            {/* Fallback to description */}
             {!issue.invocation && !issue.points && !issue.conclusion && (
               <div>
                 {issue.description.split("\n").map(
@@ -145,6 +163,7 @@ export default async function IssueDetail({
               </div>
             </div>
           </aside>
+
         </div>
       </section>
     </main>

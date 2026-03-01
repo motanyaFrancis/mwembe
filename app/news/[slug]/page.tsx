@@ -3,9 +3,31 @@ import { notFound } from "next/navigation"
 import ContentRenderer from "@/components/ContentRenderer"
 import RelatedNewsSidebar from "@/components/RelatedNewsSidebar"
 import Link from "next/link"
+import { Metadata } from "next"
+
 
 type Props = {
     params: Promise<{ slug: string }>
+}
+
+// Dynamic metadata
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    // Await the params because it's a Promise
+    const { slug } = await params;
+
+    const post = posts.find((p) => p.slug === slug);
+
+    if (!post) {
+        return {
+            title: "News & Press",
+            description: "Latest news and press releases",
+        };
+    }
+
+    return {
+        title: `${post.title} | News & Press`,
+        description: post.excerpt || post.title,
+    };
 }
 
 export default async function PostPage({ params }: Props) {
