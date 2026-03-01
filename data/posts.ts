@@ -19,7 +19,7 @@ export type Post = {
 export const posts: Post[] = [
   {
     slug: "inclusivity-who-gets-to-lead-and-who-gets-left-out",
-    published: false,
+    published: true,
     title:
       "Inclusivity",
     category: "Article",
