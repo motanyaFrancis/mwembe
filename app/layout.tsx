@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import { PrivacyProvider } from "@/context/PrivacyContext";
 import BackToTopButton from "@/components/BackToTopButton";
+import ApolloWrapper from "@/providers/ApolloProvider";
 
 
 const montserrat = Montserrat({
@@ -41,12 +42,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${montserrat.className} bg-beige-50 text-dark`}>
-        <PrivacyProvider>
-          <Navbar />
-          {children}
-          <BackToTopButton />
-          <Footer />
-        </PrivacyProvider>
+        <ApolloWrapper>
+          <PrivacyProvider>
+            <Navbar />
+            {children}
+            <BackToTopButton />
+            <Footer />
+          </PrivacyProvider>
+        </ApolloWrapper>
       </body>
     </html>
   );

@@ -7,232 +7,183 @@ export type Post = {
   content: string
 }
 
+// #, ##, ### headers
+// **bold**
+// *italic*
+// [link](url)
+// - bullet lists
+// 1. numbered lists
+// > blockquotes
+
 export const posts: Post[] = [
-  // {
-  //   slug: "mc-morrow-endorsed-by-trenton-bowens",
-  //   title:
-  //     "McMorrow Secures Endorsement of Chair of Michigan Black Summit Trenton Bowens",
-  //   category: "Press Release",
-  //   date: "2026-02-12",
-  //   excerpt:
-  //     "Yesterday, Michigan Senate Majority Whip and candidate for U.S. Senate Mallory McMorrow received the endorsement of Trenton Bowens...",
-  //   content: `
-  //     Full article content goes here.
-  //     This is the detailed press release page.
+  {
+    slug: "inclusivity-who-gets-to-lead-and-who-gets-left-out",
+    title:
+      "Inclusivity",
+    category: "Article",
+    date: "2026-03-01",
+    excerpt:
+      "Look around most engineering boardrooms. Who do you see? And perhaps more importantly, who don’t you see? Engineering has long been defined by precision, logic, and technical excellence. However, institutions are not built by equations alone. They are built by people with diverse experiences...",
+    content: `
+      ## Who gets to lead, and who gets left out?
 
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Look around most engineering boardrooms.
 
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Who do you see? And perhaps more importantly, who don’t you see?
 
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Engineering has long been defined by precision, logic, and technical excellence. However, institutions are not built by equations alone. They are built by people with diverse experiences, regions, genders, and perspectives.
 
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      If engineering solutions serve the entire nation, shouldn’t the profession itself reflect the entire nation?
 
-  //     ###
-  //   `,
-  // },
-  // {
-  //   slug: "we-do-not-have-to-settle",
-  //   title:
-  //     "Mallory McMorrow Makes Her Case at UAW Forum: “We Do Not Have to Settle”",
-  //   category: "Press Release",
-  //   date: "2026-02-11",
-  //   excerpt:
-  //     "Speaking at this morning’s Senate candidate forum hosted by the United Auto Workers...",
-  //   content: `
-  //     WASHINGTON, D.C. — Speaking at this morning’s Senate candidate forum hosted by the United Auto Workers, Michigan Senate Majority Whip and candidate for U.S. Senate Mallory McMorrow said the following in her closing remarks:
+      For me, representation is not symbolism.
 
-  //     “What I know is that we do not have to settle. You have three good choices on the stage. We do not have to settle for somebody who prioritizes rhetoric over results, who's never held office, who's never delivered for you. We don’t have to settle for somebody who's too beholden to corporate interests to actually work alongside you.
+      For years, conversations about inclusivity were treated as “not so important” engineering issues.
 
-  //     Now I want a show of hands. How many people in 2012 were at the Michigan Capitol when Rick Snyder passed ‘Right to Work’? You were treated like criminals. The Michigan government weaponized itself against working families. Had batons, had pepper spray, had shields that kept you out of your own state capitol.
+      Truth be said, **institutions that fail to evolve lose relevance.**
 
-  //     When I became Senate Majority Whip, there were a lot of people who said there’s no way Democrats will ever touch ‘Right to Work.’
+      Ideally, when leadership structures do not reflect their membership, disengagement grows quietly. When young engineers feel invisible in governance spaces, they withdraw. When women engineers see few role models at the top, ambition narrows.
 
-  //     Do you know what’s one of the first things we did? We repealed ‘Right to Work,’ and we invited all of you into your state capitol. When we took that vote, I will never forget the thunderous applause in the gallery, in the rotunda.
+      Someone might wonder, *“Is inclusivity about optics or about institutional strength?”* The response is simple. Diverse leadership strengthens decision-making. It broadens risk assessment and introduces alternative solutions.
 
-  //     That is what it sounds like. That is what it feels like to take your state government back. And together, we are going to go take our country back.
+      Just like Engineering, which thrives on multiple approaches to a single problem, governance does too.
 
-  //     Let’s do it, UAW. Thank you very much.”
+      Kenya has produced brilliant women engineers across. But I’d want to ask us all:
 
-  //     Watch and download McMorrow’s remarks here.
+      - **Are we intentionally mentoring women toward board positions?**
+      - **Are we creating visibility platforms?**
+      - **Are we ensuring that leadership pathways are transparent?**
 
-  //     ###
-  //   `,
-  // },
-  // {
-  //   slug: "response-to-trump-bridge-threat",
-  //   title:
-  //     "McMorrow Responds to Trump’s Threats to Block Opening of the Gordie Howe International Bridge",
-  //   category: "Press Release",
-  //   date: "2026-02-12",
-  //   excerpt:
-  //     "In response to President Trump’s threats to block the opening of the Gordie Howe International Bridge...",
-  //   content: `
-  //     Detailed response content here. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      ### Youth at the table
 
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Most, if not all the young engineers, bring digital fluency, entrepreneurial thinking, and adaptability shaped by rapid technological change.
 
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      However, how often are they invited into strategic committees? How often do they contribute to constitutional reviews, policy discussions, or national advocacy planning?
 
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Youth participation is not about age but relevance. An institution that integrates young voices signals that it is not afraid of the future.
 
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      ### The regional question
 
-  //     ###
-  //   `,
-  // },
-  // {
-  //   slug: "response-to-trump-bridge-thre",
-  //   title:
-  //     "McMorrow Responds to Trump’s Threats to Block Opening of the Gordie Howe International Bridge",
-  //   category: "Press Release",
-  //   date: "2026-02-12",
-  //   excerpt:
-  //     "In response to President Trump’s threats to block the opening of the Gordie Howe International Bridge...",
-  //   content: `
-  //     Detailed response content here. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Countless counties are executing critical projects under unique local conditions.
 
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      However, do they feel equally represented? Are regional chapters sufficiently empowered? Is influence centralized or distributed?
 
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Kenya is a devolved country; hence professional leadership must mirror devolution.
 
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      ### Is the future inclusive?
 
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Globally, governance modernization applies as professional bodies are increasingly measured by how well they embody equity and inclusion principles.
 
-  //     ###
-  //   `,
-  // },
-  // {
-  //   slug: "response-to-trump-bridge-threa",
-  //   title:
-  //     "McMorrow Responds to Trump’s Threats to Block Opening of the Gordie Howe International Bridge",
-  //   category: "Press Release",
-  //   date: "2026-02-12",
-  //   excerpt:
-  //     "In response to President Trump’s threats to block the opening of the Gordie Howe International Bridge...",
-  //   content: `
-  //     Detailed response content here. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Surely, this moment calls for leadership that sees inclusivity as a structural priority.
 
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      And perhaps engineers, more than anyone, understand that strong foundations determine long-term stability.
+    `,
+  },
 
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  {
+    slug: "engineering-the-future",
+    title:
+      "Engineering the Future",
+    category: "Article",
+    date: "2026-03-01",
+    excerpt:
+      "if engineers are building the nation, then surely, they deserve a seat at the table where the nation is designed. This election should be beyond leadership; we need to focus...",
+    content: ` 
+      ## Who is speaking for the Engineer at the decision-making table?
+      
+      Kenya is building at an unprecedented pace. We see highways stretching across counties, water systems expanding into arid regions, renewable energy projects redefining our power mix, affordable housing reshaping urban skylines. Engineers are at the centre of it all.
+      
+      And yet, a difficult question persists: 
+      
+      **Are engineers truly at the centre of national decision-making?**
+      
+      The presidency of the Institution of Engineers of Kenya (IEK) has traditionally been viewed as the pinnacle of professional leadership. But today, it must become something more. It must become a *platform of influence*.
+      
+      ### Beyond ceremonial leadership
+      
+      What should an IEK president really be? Is it custodian of tradition? Or a defender of ethics? or a convener of conferences?
+      
+      Well, all the three are key, but there has to be something greater to it.
+      
+      At this stage in Kenya’s development journey, the IEK presidency must carry policy weight. It must mean **structured engagement** with our top most leaders. It must mean **influencing infrastructure policy** before it is drafted. It must mean ensuring that when engineers speak, the **government listens**, not out of courtesy, but out of necessity.
+      
+      I believe that professional dignity is not demanded. It is earned through strategic positioning.
+      
+      This brings us to the question of professional respect. Public-sector engineers often whisper what they hesitate to say loudly: 
+      
+      > **Why are our schemes of service inconsistent? Why does career progression vary so widely? Why are engineers sometimes treated as technical implementers rather than strategic thinkers?**
+      
+      Some may say these are complaints. However, I see them as structural questions. And structural questions require institutional answers.
+      
+      If IEK is to fully protect its members, it must speak boldly about harmonized career pathways, fair remuneration, and the enforcement of professional standards. We all can attest to the fact that when engineers are undervalued, the country ultimately pays the price through compromised quality, delayed projects, and weakened oversight.
+      
+      Isn’t it time we treated engineering expertise as a national asset rather than an afterthought?
+      
+      Ask yourself the big question: 
+      
+      **What kind of leader does the engineering profession need right now?**
+      
+      Do we need merely an administrator or just a technocrat.
+      
+      We need a **statesman-engineer;** Someone who understands that engineering today intersects with climate change, digital transformation, urbanization, and industrial policy. Someone who sees the presidency not as a title, but as leverage.
+      
+      - Leverage to elevate the profession.
+      - Leverage to negotiate better frameworks.
+      - Leverage to protect standards.
+      
+      Kenya’s infrastructure future will not slow down. The question is whether the engineering profession will move with equal force.
+      
+      Because if engineers are building the nation, then surely, they deserve a seat at the table where the nation is designed.
+      
+      This election should be beyond leadership; we need to focus on **positioning.**
 
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-  //     ###
-  //   `,
-  // },
-  // {
-  //   slug: "response-to-trump-bridge-hreat",
-  //   title:
-  //     "McMorrow Responds to Trump’s Threats to Block Opening of the Gordie Howe International Bridge",
-  //   category: "Press Release",
-  //   date: "2026-02-12",
-  //   excerpt:
-  //     "In response to President Trump’s threats to block the opening of the Gordie Howe International Bridge...",
-  //   content: `
-  //     Detailed response content here. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    `,
+  },
+  {
+    slug: "naturing-ges-to-pes",
+    title:
+      "Naturing GEs to PEs",
+    category: "Article",
+    date: "2026-03-01",
+    excerpt:
+      "Five solid years of calculations, endless design projects, group assignments that stretched into midnight and perhaps industrial attachment under the hot sun. What no one really prepares you for is the space between graduation and recognition. The space between holding a degree and signing off a drawing. The space between ambition and professional legitimacy. That space can be ...",
+    content: `
+      
+    ## The quiet journey from an Engineering Student to a Professional
+      
+    Five solid years of calculations, endless design projects, group assignments that stretched into midnight and perhaps industrial attachment under the hot sun. 
+      
+    What no one really prepares you for is the space between graduation and recognition. The space between holding a degree and signing off a drawing. The space between ambition and professional legitimacy. That space can be long!
+      
+    For many young engineers in Kenya, the transition from a student to a registered professional is quiet, slow and sometimes confusing.
+      
+      - You apply for jobs.
+      - You search for a supervising engineer.
+      - You attend CPD sessions when you can afford them.
+      - You wait for opportunities to gain meaningful site exposure.
+      
+    The theory is strong. The hunger is there. But the pathway? It is not always clear.
+      
+    Some find mentors who take them under their wing, while others, sadly but truly, are not as fortunate. And so, the journey becomes self-navigated.
+      
+    The gap between a student and a professional is not inevitable. It can be structured through: 
+      
+    - Stronger mentorship frameworks.
+    - Clearer registration timelines.
+    - Accessible CPD programs across all regions.
+    - Intentional pairing of graduate engineers with experienced practitioners.
+      
+    Every senior engineer once stood exactly where today’s graduates stand, holding a degree, waiting for an opportunity to prove themselves. The difference between struggle and growth often lies in who walked beside them.
+      
+    The future of engineering in Kenya will not only be shaped by mega projects or policy reforms but also shaped by how deliberately we nurture those taking their first professional steps. Because when the young engineer succeeds, the profession does not just expand. It strengthens. 
+      
+    Leadership, at its best, is not only about influence at the top, but also guidance at the beginning.
 
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    `,
+  },
 
-  //     ###
-  //   `,
-  // },
-  // {
-  //   slug: "response-to-trump-bridge-theat",
-  //   title:
-  //     "McMorrow Responds to Trump’s Threats to Block Opening of the Gordie Howe International Bridge",
-  //   category: "Press Release",
-  //   date: "2026-02-12",
-  //   excerpt:
-  //     "In response to President Trump’s threats to block the opening of the Gordie Howe International Bridge...",
-  //   content: `
-  //     Detailed response content here. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-  //     ###
-  //   `,
-  // },
-  // {
-  //   slug: "response-to-trump-bridge-thrat",
-  //   title:
-  //     "McMorrow Responds to Trump’s Threats to Block Opening of the Gordie Howe International Bridge",
-  //   category: "Press Release",
-  //   date: "2026-02-12",
-  //   excerpt:
-  //     "In response to President Trump’s threats to block the opening of the Gordie Howe International Bridge...",
-  //   content: `
-  //     Detailed response content here. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-  //     ###
-  //   `,
-  // },
-  // {
-  //   slug: "response-to-trump-bridge-thret",
-  //   title:
-  //     "McMorrow Responds to Trump’s Threats to Block Opening of the Gordie Howe International Bridge",
-  //   category: "Press Release",
-  //   date: "2026-02-12",
-  //   excerpt:
-  //     "In response to President Trump’s threats to block the opening of the Gordie Howe International Bridge...",
-  //   content: `
-  //     Detailed response content here. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-  //     ###
-  //   `,
-  // },
-  // {
-  //   slug: "response-to-trump-bridge-threat",
-  //   title:
-  //     "McMorrow Responds to Trump’s Threats to Block Opening of the Gordie Howe International Bridge",
-  //   category: "Press Release",
-  //   date: "2026-02-12",
-  //   excerpt:
-  //     "In response to President Trump’s threats to block the opening of the Gordie Howe International Bridge...",
-  //   content: `
-  //     Detailed response content here. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-  //     lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-  //     ###
-  //   `,
-  // },
 ]

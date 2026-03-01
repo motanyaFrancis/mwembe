@@ -9,11 +9,16 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@apollo/client": "^4.1.6",
+    "graphql": "^16.13.0",
+    "graphql-ws": "^6.0.7",
     "lucide-react": "^0.563.0",
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "react-icons": "^5.5.0"
+    "react-icons": "^5.5.0",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

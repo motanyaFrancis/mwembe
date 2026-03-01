@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import DonateForm from "./DonateForm";
 
 export const metadata: Metadata = {
-  title: "Donate 2026–2028",
-  description:
-    "Support the campaign of Eng. Jacton Mwembe for IEK President 2026–2028. Integrity. Inclusion. Impact.",
+    title: "Donate 2026–2028",
+    description:
+        "Support the campaign of Eng. Jacton Mwembe for IEK President 2026–2028. Integrity. Inclusion. Impact.",
 };
 
 export default function DonatePage() {
@@ -14,16 +15,19 @@ export default function DonatePage() {
             <section className="bg-primary-800 text-white px-6 md:px-20 py-32 pt-44">
                 <div className="max-w-4xl mx-auto text-center">
                     <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
-                        Support the Movement
-                        <br />
+                        Support the Movement <br />
                         Invest in Change
                     </h1>
-
                     <p className="text-primary-200 text-lg max-w-2xl mx-auto">
                         Your contribution fuels grassroots action, community outreach,
                         and policy-driven leadership.
                     </p>
                 </div>
+            </section>
+
+            {/* ================= DONATION FORM ================= */}
+            <section className="bg-primary-100 px-6 md:px-20 py-24">
+                <DonateForm />
             </section>
 
             {/* ================= WHY DONATE ================= */}
@@ -36,16 +40,16 @@ export default function DonatePage() {
                     {[
                         {
                             title: "Community Outreach",
-                            text: "Support engagement programs that reach citizens directly."
+                            text: "Support engagement programs that reach citizens directly.",
                         },
                         {
                             title: "Policy Research",
-                            text: "Fund research and development of transformative policies."
+                            text: "Fund research and development of transformative policies.",
                         },
                         {
                             title: "Youth & Civic Programs",
-                            text: "Empower the next generation of leaders."
-                        }
+                            text: "Empower the next generation of leaders.",
+                        },
                     ].map((item, i) => (
                         <div
                             key={i}
@@ -54,127 +58,39 @@ export default function DonatePage() {
                             <h3 className="font-serif font-bold text-xl mb-4 text-primary-800">
                                 {item.title}
                             </h3>
-                            <p className="text-slate-600 leading-relaxed">
-                                {item.text}
-                            </p>
+                            <p className="text-slate-600 leading-relaxed">{item.text}</p>
                         </div>
                     ))}
                 </div>
             </section>
 
-            {/* ================= DONATION FORM ================= */}
-            <section className="bg-primary-100 px-6 md:px-20 py-24">
-                <div className="max-w-3xl mx-auto bg-white shadow-xl p-10 border-t-4 border-gold-600">
 
-                    <h2 className="text-2xl font-extrabold mb-8 text-center text-primary-800">
-                        Make a Contribution
-                    </h2>
-
-                    {/* Preset Amounts */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                        {["KES 500", "KES 1,000", "KES 2,500", "KES 5,000"].map((amount, i) => (
-                            <button
-                                key={i}
-                                className="border border-primary-800 py-3 font-bold hover:bg-primary-800 hover:text-white transition"
-                            >
-                                {amount}
-                            </button>
-                        ))}
-                    </div>
-
-                    {/* Custom Amount */}
-                    <div className="mb-6">
-                        <label className="block text-sm font-semibold mb-2">
-                            Custom Amount (KES)
-                        </label>
-                        <input
-                            type="number"
-                            placeholder="Enter amount"
-                            className="w-full border border-primary-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-800"
-                        />
-                    </div>
-
-                    {/* Donor Info */}
-                    <div className="space-y-6">
-                        <div>
-                            <label className="block text-sm font-semibold mb-2">
-                                Full Name
-                            </label>
-                            <input
-                                type="text"
-                                className="w-full border border-primary-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-800"
-                            />
-                        </div>
-
-                        <div>
-                            <label className="block text-sm font-semibold mb-2">
-                                Email Address
-                            </label>
-                            <input
-                                type="email"
-                                className="w-full border border-primary-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-800"
-                            />
-                        </div>
-                    </div>
-
-                    {/* Payment Methods */}
-                    <div className="mt-10">
-                        <h3 className="text-lg font-bold mb-4 text-primary-800">
-                            Payment Method
-                        </h3>
-
-                        <div className="space-y-3">
-                            {["M-Pesa", "Card Payment", "Bank Transfer"].map((method, i) => (
-                                <label
-                                    key={i}
-                                    className="flex items-center gap-3 border border-primary-300 p-4 cursor-pointer hover:bg-primary-50 transition"
-                                >
-                                    <input type="radio" name="payment" />
-                                    <span>{method}</span>
-                                </label>
-                            ))}
-                        </div>
-                    </div>
-
-                    <button
-                        type="submit"
-                        className="w-full mt-10 bg-gold-600 text-white font-bold tracking-widest py-4 hover:bg-gold-700 transition"
-                    >
-                        DONATE NOW
-                    </button>
-
-                    <p className="text-xs text-slate-500 mt-6 text-center">
-                        Contributions are secure and used responsibly in accordance
-                        with campaign guidelines.
-                    </p>
-                </div>
-            </section>
 
             {/* ================= IMPACT SECTION ================= */}
-            <section className="px-6 md:px-20 py-20 max-w-6xl mx-auto text-center">
-                <h2 className="text-3xl font-extrabold mb-8">
-                    Your Impact
-                </h2>
+            <section className="bg-primary-50">
+                <div className="px-6 md:px-20 py-20 max-w-6xl mx-auto text-center ">
+                    <h2 className="text-3xl font-extrabold mb-8">Your Impact</h2>
 
-                <div className="grid md:grid-cols-3 gap-10">
-                    {[
-                        { amount: "KES 500", impact: "Print outreach materials for 50 households." },
-                        { amount: "KES 1,000", impact: "Sponsor youth civic training session." },
-                        { amount: "KES 5,000", impact: "Support a full community engagement event." }
-                    ].map((item, i) => (
-                        <div
-                            key={i}
-                            className="bg-white shadow-lg p-8 border-b-4 border-primary-800"
-                        >
-                            <div className="text-2xl font-black text-gold-600 mb-4">
-                                {item.amount}
+                    <div className="grid md:grid-cols-3 gap-10">
+                        {[
+                            { amount: "KES 500", impact: "Print outreach materials for 50 households." },
+                            { amount: "KES 1,000", impact: "Sponsor youth civic training session." },
+                            { amount: "KES 5,000", impact: "Support a full community engagement event." },
+                        ].map((item, i) => (
+                            <div
+                                key={i}
+                                className="bg-white shadow-lg p-8 border-b-4 border-primary-800"
+                            >
+                                <div className="text-2xl font-black text-gold-600 mb-4">
+                                    {item.amount}
+                                </div>
+                                <p className="text-slate-600">{item.impact}</p>
                             </div>
-                            <p className="text-slate-600">{item.impact}</p>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </section>
 
         </main>
-    )
+    );
 }

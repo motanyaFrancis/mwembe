@@ -46,7 +46,7 @@ export default function BlogList({
                                     <article
                                         className="relative bg-primary-100 flex flex-col h-[520px] max-w-[360px] mx-auto shadow-xl cursor-pointer group transition-all duration-300 hover:bg-primary-200 hover:-translate-y-1"
                                     >
-                                        <div className="absolute top-0 left-0 w-full h-3 bg-gold-600" />
+                                        <div className="absolute top-0 left-0 w-full h-1 bg-gold-600" />
 
                                         <div className="absolute -top-6 left-6 bg-gold-600 text-white w-[78px] text-center font-bold text-xs leading-tight py-2 z-10">
                                             <div className="tracking-widest">{month}</div>
@@ -56,7 +56,7 @@ export default function BlogList({
 
                                         <div className="pt-16 px-8 pb-0 flex flex-col flex-grow">
                                             <span className="text-[11px] tracking-[0.2em] uppercase text-[#143A52] mb-6">
-                                                PRESS RELEASE
+                                                {post.category}
                                             </span>
 
                                             <h3 className="font-serif font-extrabold text-[22px] leading-[1.2] mb-6 text-[#143A52]">
