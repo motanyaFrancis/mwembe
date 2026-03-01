@@ -122,7 +122,7 @@ export default function ManifestoArticle() {
                 <div className="absolute max-w-7xl mx-auto inset-0  flex flex-col justify-end sm:justify-center items-left text-left px-0 sm:px-4">
                     <div className="text-left py-12 pb-4 px-8 bg-gradient-to-b from-transparent via-gold-800/30 to-gold-900 sm:bg-none">
                         <h1 className="text-4xl md:text-5xl text-shadow-md text-shadow-white sm:text-shadow-none font-black leading-tight">
-                            Integrity. Inclusion. Impact.
+                            Integrity. Inclusion. Impact. Transparency.
                         </h1>
                         <h2 className="text-base md:text-2xl text-white md:text-dark-600 font-black mt-2">
                             Eng. Jacton Mwembe Achieng, PE, MIEK
