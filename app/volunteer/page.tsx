@@ -1,10 +1,11 @@
-import Link from "next/link"
+import Link from "next/link";
 import type { Metadata } from "next";
+import VolunteerForm from "@/components/VolunteerForm";
 
 export const metadata: Metadata = {
-  title: "Volunteer",
-  description:
-    "Join the movement to support Eng. Jacton Mwembe's campaign for IEK President 2026–2028. Integrity. Inclusion. Impact.",
+    title: "Volunteer",
+    description:
+        "Join the movement to support Eng. Jacton Mwembe's campaign for IEK President 2026–2028. Integrity. Inclusion. Impact.",
 };
 
 export default function VolunteerPage() {
@@ -19,12 +20,10 @@ export default function VolunteerPage() {
                         <br />
                         Volunteer With Us.
                     </h1>
-
                     <p className="text-primary-200 text-lg max-w-2xl mx-auto">
                         Real change happens when committed citizens step forward.
                         Be part of the team shaping a better future.
                     </p>
-
                     <div className="mt-10">
                         <a
                             href="#volunteer-form"
@@ -44,26 +43,13 @@ export default function VolunteerPage() {
 
                 <div className="grid md:grid-cols-3 gap-12">
                     {[
-                        {
-                            title: "Drive Change",
-                            text: "Support policies and initiatives that directly impact communities."
-                        },
-                        {
-                            title: "Build Community",
-                            text: "Connect with like-minded individuals committed to progress."
-                        },
-                        {
-                            title: "Make Your Voice Heard",
-                            text: "Play an active role in shaping the direction of leadership."
-                        }
+                        { title: "Drive Change", text: "Support policies and initiatives that directly impact communities." },
+                        { title: "Build Community", text: "Connect with like-minded individuals committed to progress." },
+                        { title: "Make Your Voice Heard", text: "Play an active role in shaping the direction of leadership." },
                     ].map((item, i) => (
                         <div key={i} className="bg-white shadow-lg p-8 border-t-4 border-gold-600">
-                            <h3 className="font-serif font-bold text-xl mb-4 text-primary-800">
-                                {item.title}
-                            </h3>
-                            <p className="text-slate-600 leading-relaxed">
-                                {item.text}
-                            </p>
+                            <h3 className="font-serif font-bold text-xl mb-4 text-primary-800">{item.title}</h3>
+                            <p className="text-slate-600 leading-relaxed">{item.text}</p>
                         </div>
                     ))}
                 </div>
@@ -85,13 +71,8 @@ export default function VolunteerPage() {
                             "Policy Research",
                             "Youth Engagement"
                         ].map((role, i) => (
-                            <div
-                                key={i}
-                                className="bg-white p-6 shadow-md hover:shadow-xl transition border-l-4 border-primary-800"
-                            >
-                                <h4 className="font-semibold text-lg text-primary-800">
-                                    {role}
-                                </h4>
+                            <div key={i} className="bg-white p-6 shadow-md hover:shadow-xl transition border-l-4 border-primary-800">
+                                <h4 className="font-semibold text-lg text-primary-800">{role}</h4>
                             </div>
                         ))}
                     </div>
@@ -99,91 +80,60 @@ export default function VolunteerPage() {
             </section>
 
             {/* ================= FORM ================= */}
-            <section
-                id="volunteer-form"
-                className="px-6 md:px-20 py-24 max-w-4xl mx-auto"
-            >
+            <section id="volunteer-form" className="px-6 md:px-20 py-24 max-w-4xl mx-auto">
                 <h2 className="text-3xl font-extrabold mb-10 text-center">
                     Sign Up to Volunteer
                 </h2>
 
-                <form className="bg-white shadow-xl p-10 space-y-6 border-t-4 border-gold-600">
-
-                    <div>
-                        <label className="block text-sm font-semibold mb-2">
-                            Full Name
-                        </label>
-                        <input
-                            type="text"
-                            className="w-full border border-primary-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-800"
-                        />
-                    </div>
-
-                    <div>
-                        <label className="block text-sm font-semibold mb-2">
-                            Email Address
-                        </label>
-                        <input
-                            type="email"
-                            className="w-full border border-primary-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-800"
-                        />
-                    </div>
-
-                    <div>
-                        <label className="block text-sm font-semibold mb-2">
-                            Phone Number
-                        </label>
-                        <input
-                            type="tel"
-                            className="w-full border border-primary-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-800"
-                        />
-                    </div>
-
-                    <div>
-                        <label className="block text-sm font-semibold mb-2">
-                            Area of Interest
-                        </label>
-                        <select className="w-full border border-primary-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-800">
-                            <option>Community Outreach</option>
-                            <option>Event Coordination</option>
-                            <option>Social Media Advocacy</option>
-                            <option>Fundraising Support</option>
-                            <option>Policy Research</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label className="block text-sm font-semibold mb-2">
-                            Why do you want to volunteer?
-                        </label>
-                        <textarea
-                            rows={4}
-                            className="w-full border border-primary-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-800"
-                        />
-                    </div>
-
-                    <button
-                        type="submit"
-                        className="w-full bg-primary-800 text-white font-bold tracking-widest py-4 hover:bg-primary-800 transition"
-                    >
-                        SUBMIT APPLICATION
-                    </button>
-                </form>
+                {/* CSR Form */}
+                <VolunteerForm />
             </section>
 
             {/* ================= CTA ================= */}
-            <section className="bg-gold-600 text-white px-6 md:px-20 py-16 text-center">
-                <h3 className="text-2xl font-extrabold mb-4">
-                    Together, We Can Make a Difference.
-                </h3>
-                <Link
-                    href="/donate"
-                    className="inline-block bg-primary-800 px-8 py-4 font-bold hover:bg-primary-800 transition"
-                >
-                    SUPPORT THE MOVEMENT
-                </Link>
+            
+            <section className="relative bg-gold-600 text-white overflow-hidden">
+
+                {/* gold Power Strip */}
+                <div className="absolute top-0 left-0 w-full h-3 bg-primary-800" />
+
+                {/* Subtle Pattern Overlay */}
+                <div className="absolute inset-0 opacity-5 bg-[radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] bg-[length:24px_24px]" />
+
+                <div className="relative px-6 md:px-20 py-28 max-w-6xl mx-auto text-center">
+
+                    {/* Momentum Line */}
+                    <div className="text-white uppercase tracking-[0.25em] text-sm font-black mb-6">
+                        Join 10,000+ Supporters Across The Nation
+                    </div>
+
+                    {/* Headline */}
+                    <h3 className="text-4xl md:text-5xl font-extrabold leading-tight mb-8">
+                        Building Better
+                        <br />
+                        Together
+                    </h3>
+
+                    {/* Supporting Copy */}
+                    <p className="text-white text-lg max-w-2xl mx-auto mb-14">
+                        Every movement is powered by people who choose to act.
+                        Volunteer your time. Support the mission. Stand for progress.
+                    </p>
+
+                    {/* Action Buttons */}
+                    <div className="flex flex-col sm:flex-row justify-center gap-6">
+                        <Link
+                            href="/donate"
+                            className="bg-white text-primary-800 font-bold tracking-widest px-10 py-5 border-b-4 border-primary-700 hover:bg-primary-100 hover:-translate-y-1 transition-all duration-300"
+                        >
+                            SUPPORT THE MOVEMENT
+                        </Link>
+
+                    </div>
+
+                </div>
+
             </section>
 
         </main>
-    )
+    );
 }
