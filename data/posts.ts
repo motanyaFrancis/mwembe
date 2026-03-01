@@ -5,6 +5,7 @@ export type Post = {
   slug: string
   category: string
   content: string
+  published?: boolean
 }
 
 // #, ##, ### headers
@@ -18,6 +19,7 @@ export type Post = {
 export const posts: Post[] = [
   {
     slug: "inclusivity-who-gets-to-lead-and-who-gets-left-out",
+    published: false,
     title:
       "Inclusivity",
     category: "Article",
@@ -81,6 +83,7 @@ export const posts: Post[] = [
 
   {
     slug: "engineering-the-future",
+    published: true,
     title:
       "Engineering the Future",
     category: "Article",
@@ -136,13 +139,11 @@ export const posts: Post[] = [
       
       This election should be beyond leadership; we need to focus on **positioning.**
 
-
-
-
     `,
   },
   {
     slug: "naturing-ges-to-pes",
+    published: true,
     title:
       "Naturing GEs to PEs",
     category: "Article",

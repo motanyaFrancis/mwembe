@@ -1,21 +1,25 @@
-import Link from "next/link";
-import { posts as allPosts } from "@/data/posts";
-import { ChevronRight } from "lucide-react";
+"use client"
+
+import Link from "next/link"
+import { posts as allPosts } from "@/data/posts"
+import { ChevronRight } from "lucide-react"
 
 type BlogListProps = {
-    posts?: typeof allPosts;
-    limit?: number;
-    showSeeAll?: boolean;
-    showHeadline?: boolean;
-};
+    posts?: typeof allPosts
+    limit?: number
+    showSeeAll?: boolean
+    showHeadline?: boolean
+}
 
 function formatDate(dateString: string) {
-    const date = new Date(dateString);
+    const date = new Date(dateString)
     return {
         day: date.getDate(),
-        month: date.toLocaleString("en-US", { month: "short" }).toUpperCase(),
+        month: date
+            .toLocaleString("en-US", { month: "short" })
+            .toUpperCase(),
         year: date.getFullYear(),
-    };
+    }
 }
 
 export default function BlogList({
@@ -24,12 +28,17 @@ export default function BlogList({
     showSeeAll = false,
     showHeadline = false,
 }: BlogListProps) {
-    const displayedPosts = posts ?? allPosts.slice(0, limit);
+    const sourcePosts = posts ?? allPosts
+
+    const publishedPosts = sourcePosts.filter(
+        (post) => post.published === true
+    )
+
+    const displayedPosts = publishedPosts.slice(0, limit)
 
     return (
         <section className="bg-primary-50 py-24">
             <div className="max-w-7xl mx-auto">
-
                 {showHeadline && (
                     <h2 className="text-gold-500 text-center text-lg tracking-widest font-semibold pb-16 mb-16">
                         NEWS & PRESS
@@ -39,19 +48,24 @@ export default function BlogList({
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-32 px-4 md:px-0">
                     {displayedPosts.length > 0 ? (
                         displayedPosts.map((post) => {
-                            const { day, month, year } = formatDate(post.date);
+                            const { day, month, year } = formatDate(post.date)
 
                             return (
-                                <Link href={`/news/${post.slug}`} key={post.slug}>
-                                    <article
-                                        className="relative bg-primary-100 flex flex-col h-[520px] max-w-[360px] mx-auto shadow-xl cursor-pointer group transition-all duration-300 hover:bg-primary-200 hover:-translate-y-1"
-                                    >
+                                <Link
+                                    href={`/news/${post.slug}`}
+                                    key={post.slug}
+                                >
+                                    <article className="relative bg-primary-100 flex flex-col h-[520px] max-w-[360px] mx-auto shadow-xl cursor-pointer group transition-all duration-300 hover:bg-primary-200 hover:-translate-y-1">
                                         <div className="absolute top-0 left-0 w-full h-1 bg-gold-600" />
 
                                         <div className="absolute -top-6 left-6 bg-gold-600 text-white w-[78px] text-center font-bold text-xs leading-tight py-2 z-10">
                                             <div className="tracking-widest">{month}</div>
-                                            <div className="text-3xl font-black leading-none">{day}</div>
-                                            <div className="text-sm tracking-widest font-medium">{year}</div>
+                                            <div className="text-3xl font-black leading-none">
+                                                {day}
+                                            </div>
+                                            <div className="text-sm tracking-widest font-medium">
+                                                {year}
+                                            </div>
                                         </div>
 
                                         <div className="pt-16 px-8 pb-0 flex flex-col flex-grow">
@@ -75,7 +89,7 @@ export default function BlogList({
                                         </div>
                                     </article>
                                 </Link>
-                            );
+                            )
                         })
                     ) : (
                         <div className="col-span-1 md:col-span-3 text-center text-primary-800 text-lg font-semibold py-20">
@@ -84,7 +98,6 @@ export default function BlogList({
                     )}
                 </div>
 
-                {/* SEE ALL BUTTON */}
                 {showSeeAll && displayedPosts.length > 0 && (
                     <div className="flex justify-end mt-16">
                         <Link
@@ -104,5 +117,5 @@ export default function BlogList({
                 )}
             </div>
         </section>
-    );
+    )
 }
