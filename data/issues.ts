@@ -17,7 +17,7 @@ export const issues: Issue[] = [
         points: [
             "Champion gender equity, youth participation, and inclusion of persons living with disabilities",
             "Strengthen programs for graduate engineers, technologists, technicians, and students",
-            "Institutionalize recognition of Eminent Engineers",
+            "Institutionalizing recognition of all cadre of Engineers",
             "Expand women-focused initiatives such as the She-Program",
             "Advocate for engineers’ representation on boards, committees, and national platforms",
         ],
@@ -33,7 +33,7 @@ export const issues: Issue[] = [
         points: [
             "Uphold strict adherence to the IEK Constitution and governance policies",
             "Strengthen oversight, accountability, and ethical leadership across all organs",
-            "Lead a member-driven review and amendment of the IEK Constitution, building on the 2015 amendments and finalizing the 2026 draft through inclusive engagement",
+            "Lead a member-driven review and amendment of the IEK Constitution, building on the 2015 amendments and finalizing the 2026 draft through inclusive engagement with all engineers.",
         ],
         conclusion: "Good governance is non-negotiable if IEK is to command respect nationally and globally.",
         description:
