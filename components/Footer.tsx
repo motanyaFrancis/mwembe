@@ -65,10 +65,10 @@ export default function Footer() {
           Questions? Comments? Concerns?
         </p>
         <a
-          href="mailto:jmwembe@gmail.com"
+          href="mailto:info@themwembe.ke"
           className="text-gold-500 font-semibold hover:text-gold-300 transition"
         >
-          jmwembe@gmail.com
+          info@themwembe.ke
         </a>
 
         {/* Navigation */}
