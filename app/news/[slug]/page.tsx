@@ -2,6 +2,7 @@ import { posts } from "@/data/posts"
 import { notFound } from "next/navigation"
 import ContentRenderer from "@/components/ContentRenderer"
 import RelatedNewsSidebar from "@/components/RelatedNewsSidebar"
+import ImagePreviewLightbox from "@/components/ImagePreviewLightbox";
 import Link from "next/link"
 import { Metadata } from "next"
 
@@ -69,6 +70,39 @@ export default async function PostPage({ params }: Props) {
                         <div className="prose prose-slate max-w-none">
                             <ContentRenderer content={post.content} />
                         </div>
+
+                        {/* DOWNLOAD ARTICLE AS IMAGE */}
+                        <div className="mt-20 border-t border-primary-300 pt-12">
+                            <h3 className="text-2xl font-bold mb-4">
+                                Download This Article
+                            </h3>
+
+                            <p className="text-primary-700 mb-6 max-w-xl">
+                                You can download a pre-designed image version of this article for sharing
+                                on social media or offline viewing.
+                            </p>
+
+                            {/* Image Preview */}
+                            <div className="mb-6">
+                                {post.media?.url && (
+                                    <ImagePreviewLightbox
+                                        src={post.media.url}
+                                        alt={`${post.title} article preview`}
+                                    />
+                                )}
+                            </div>
+
+                            {/* Download Button */}
+                            <a
+                                href={`${post.media?.url}`} // Assuming media.url is the image path
+                                download
+                                className="inline-block bg-gold-500 text-primary-900 font-bold tracking-wider px-6 py-3 hover:bg-gold-400 transition"
+                            >
+                                DOWNLOAD IMAGE
+                            </a>
+                        </div>
+
+                        {/* BACK TO NEWS */}
                         <div className="mt-16">
                             <Link
                                 href="/news"

@@ -6,6 +6,10 @@ export type Post = {
   category: string
   content: string
   published?: boolean
+  media?: {
+    type: "image" | "video"
+    url: string
+  }
 }
 
 // #, ##, ### headers
@@ -24,6 +28,10 @@ export const posts: Post[] = [
       "Inclusivity",
     category: "Article",
     date: "2026-03-01",
+    media: {
+      type: "image",
+      url: "/images/inclusivity.jpeg",
+    },
     excerpt:
       "Look around most engineering boardrooms. Who do you see? And perhaps more importantly, who don’t you see? Engineering has long been defined by precision, logic, and technical excellence. However, institutions are not built by equations alone. They are built by people with diverse experiences...",
     content: `
@@ -88,6 +96,10 @@ export const posts: Post[] = [
       "Engineering the Future",
     category: "Article",
     date: "2026-03-01",
+    media: {
+      type: "image",
+      url: "/images/engineering-future.jpeg",
+    },
     excerpt:
       "if engineers are building the nation, then surely, they deserve a seat at the table where the nation is designed. This election should be beyond leadership; we need to focus...",
     content: ` 
@@ -142,12 +154,16 @@ export const posts: Post[] = [
     `,
   },
   {
-    slug: "naturing-ges-to-pes",
+    slug: "nurturing-ges-to-pes",
     published: true,
     title:
-      "Naturing GEs to PEs",
+      "Nurturing GEs to PEs",
     category: "Article",
     date: "2026-03-01",
+    media: {
+      type: "image",
+      url: "/images/naturing.jpeg",
+    },
     excerpt:
       "Five solid years of calculations, endless design projects, group assignments that stretched into midnight and perhaps industrial attachment under the hot sun. What no one really prepares you for is the space between graduation and recognition. The space between holding a degree and signing off a drawing. The space between ambition and professional legitimacy. That space can be ...",
     content: `
