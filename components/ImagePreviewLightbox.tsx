@@ -48,14 +48,14 @@ export default function ImagePreviewLightbox({ src, alt }: Props) {
     }, []);
 
     /* -----------------------------
-       Pinch Zoom (Mobile)
+        Pinch Zoom (Mobile)
     ------------------------------*/
     useEffect(() => {
         const container = containerRef.current;
         if (!container) return;
 
         let initialDistance = 0;
-        let initialZoom = zoom;
+        const initialZoomRef = { current: zoom }; // use ref
 
         const getDistance = (touches: TouchList) => {
             const dx = touches[0].clientX - touches[1].clientX;
@@ -66,7 +66,7 @@ export default function ImagePreviewLightbox({ src, alt }: Props) {
         const handleTouchStart = (e: TouchEvent) => {
             if (e.touches.length === 2) {
                 initialDistance = getDistance(e.touches);
-                initialZoom = zoom;
+                initialZoomRef.current = zoom; // capture zoom at gesture start
             }
         };
 
@@ -75,7 +75,7 @@ export default function ImagePreviewLightbox({ src, alt }: Props) {
                 e.preventDefault();
                 const newDistance = getDistance(e.touches);
                 const scale = newDistance / initialDistance;
-                setZoom(clamp(initialZoom * scale));
+                setZoom(clamp(initialZoomRef.current * scale));
             }
         };
 
@@ -90,7 +90,7 @@ export default function ImagePreviewLightbox({ src, alt }: Props) {
             container.removeEventListener("touchstart", handleTouchStart);
             container.removeEventListener("touchmove", handleTouchMove);
         };
-    }, [zoom]);
+    }, []); // empty dependency array
 
     return (
         <div className="relative border bg-white   overflow-hidden">
