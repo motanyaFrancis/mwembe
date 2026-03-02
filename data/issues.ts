@@ -93,7 +93,7 @@ export const issues: Issue[] = [
         points: [
             "Strengthen structured training and mentorship across all membership classes",
             "Support smooth transition from student to graduate to professional engineer",
-            "Strengthen collaboration between IEK and Engineering Deans and Principals",
+            "Strengthen collaboration between IEK and the Council of Engineering Deans and Principals",
             "Make CPD programs affordable, accessible, and relevant to all engineers",
         ],
         conclusion: "An empowered engineer is an effective engineer.",
