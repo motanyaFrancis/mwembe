@@ -5,6 +5,7 @@ import RelatedNewsSidebar from "@/components/RelatedNewsSidebar"
 import ImagePreviewLightbox from "@/components/ImagePreviewLightbox";
 import Link from "next/link"
 import { Metadata } from "next"
+import { FaXTwitter, FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
 
 
 type Props = {
@@ -13,10 +14,10 @@ type Props = {
 
 // Dynamic metadata
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-    // Await the params because it's a Promise
     const { slug } = await params;
-
     const post = posts.find((p) => p.slug === slug);
+
+    const baseUrl = "https://themwembe.ke";
 
     if (!post) {
         return {
@@ -25,9 +26,38 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         };
     }
 
+    const imageUrl = post.media?.url
+        ? `${baseUrl}${post.media.url}`
+        : `${baseUrl}/images/hero-1.jpeg`; // fallback image
+
+    const postUrl = `${baseUrl}/news/${slug}`;
+
     return {
         title: `${post.title} | News & Press`,
         description: post.excerpt || post.title,
+
+        openGraph: {
+            title: post.title,
+            description: post.excerpt || post.title,
+            url: postUrl,
+            siteName: "The Mwembe",
+            images: [
+                {
+                    url: imageUrl,
+                    width: 1200,
+                    height: 630,
+                    alt: post.title,
+                },
+            ],
+            type: "article",
+        },
+
+        twitter: {
+            card: "summary_large_image",
+            title: post.title,
+            description: post.excerpt || post.title,
+            images: [imageUrl],
+        },
     };
 }
 
@@ -41,6 +71,11 @@ export default async function PostPage({ params }: Props) {
     const month = dateObj.toLocaleString("en-US", { month: "long" })
     const day = dateObj.getDate()
     const year = dateObj.getFullYear()
+
+    const baseUrl = "https://themwembe.ke";
+    const shareUrl = `${baseUrl}/news/${slug}`;
+    const encodedUrl = encodeURIComponent(shareUrl);
+    const encodedTitle = encodeURIComponent(post.title);
 
     return (
         <main className="min-h-screen bg-[#f7f1e7] text-[#1a1f38]">
@@ -58,6 +93,47 @@ export default async function PostPage({ params }: Props) {
 
                     <div className="text-sm text-primary-200">
                         {month} {day}, {year}
+                    </div>
+
+                    {/* SHARE BUTTONS */}
+                    <div className="mt-6 flex items-center gap-4">
+
+                        <span className="text-primary-200 text-sm font-medium mr-2">
+                            Share:
+                        </span>
+
+                        {/* X (Twitter) */}
+                        <a
+                            href={`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Share on X"
+                            className="w-10 h-10 flex items-center justify-center rounded-full bg-black text-white hover:scale-110 transition-transform duration-200"
+                        >
+                            <FaXTwitter size={16} />
+                        </a>
+
+                        {/* Facebook */}
+                        <a
+                            href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Share on Facebook"
+                            className="w-10 h-10 flex items-center justify-center rounded-full bg-[#1877F2] text-white hover:scale-110 transition-transform duration-200"
+                        >
+                            <FaFacebookF size={16} />
+                        </a>
+
+                        {/* LinkedIn */}
+                        <a
+                            href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Share on LinkedIn"
+                            className="w-10 h-10 flex items-center justify-center rounded-full bg-[#0A66C2] text-white hover:scale-110 transition-transform duration-200"
+                        >
+                            <FaLinkedinIn size={16} />
+                        </a>
                     </div>
                 </div>
             </section>
