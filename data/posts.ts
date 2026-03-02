@@ -144,6 +144,7 @@ export const posts: Post[] = [
       - Leverage to elevate the profession.
       - Leverage to negotiate better frameworks.
       - Leverage to protect standards.
+      - Leverage to protect and preserve local content.
       
       Kenya’s infrastructure future will not slow down. The question is whether the engineering profession will move with equal force.
       
@@ -171,7 +172,9 @@ export const posts: Post[] = [
     ## The quiet journey from an Engineering Student to a Professional
       
     Five solid years of calculations, endless design projects, group assignments that stretched into midnight and perhaps industrial attachment under the hot sun. 
-      
+    
+    As a young graduate from campus I found myself carrying out the errands duties in a motor vehicle loss assessing company. Reviewing accident scene assessment, follow up on police abstracts, interview with surviving accident victims and families among others. These reports were intended to obtain proof of accurence of claims by insurance firms. My daily wage was Ksh 100/-
+
     What no one really prepares you for is the space between graduation and recognition. The space between holding a degree and signing off a drawing. The space between ambition and professional legitimacy. That space can be long!
       
     For many young engineers in Kenya, the transition from a student to a registered professional is quiet, slow and sometimes confusing.
