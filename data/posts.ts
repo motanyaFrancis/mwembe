@@ -101,7 +101,7 @@ export const posts: Post[] = [
       url: "/images/engineering-future.jpeg",
     },
     excerpt:
-      "if engineers are building the nation, then surely, they deserve a seat at the table where the nation is designed. This election should be beyond leadership; we need to focus...",
+      "If engineers are building the nation, then surely, they deserve a seat at the table where the nation is designed. This election should be beyond leadership; we need to focus...",
     content: ` 
       ## Who is speaking for the Engineer at the decision-making table?
       
