@@ -187,7 +187,7 @@ export default function ManifestoArticle() {
                     {/* Core Values */}
                     <section id="core-values" className="space-y-4 scroll-mt-32">
                         <h3 className="text-2xl font-bold text-gold-600">Core Values</h3>
-                        <ul className="list-disc list-inside space-y-1">
+                        <ul className="list-disc list-outside space-y-1 ml-6">
                             <li>Integrity and Accountability</li>
                             <li>Inclusivity and Equity</li>
                             <li>Professional Excellence</li>
@@ -199,7 +199,7 @@ export default function ManifestoArticle() {
                     {/* Professional Membership */}
                     <section id="professional-membership" className="space-y-4 scroll-mt-32">
                         <h3 className="text-2xl font-bold text-gold-600">Professional Membership</h3>
-                        <ul className="list-decimal list-inside space-y-1">
+                        <ul className="list-decimal list-outside space-y-1 ml-6">
                             <li>Professional Engineer (Engineers Board of Kenya) EBK A4516</li>
                             <li>Corporate Member (Institution of Engineers of Kenya) MIEK M.4014</li>
                             <li>Architectural Association of Kenya Engineers Chapter M.AAK(E) 4693</li>
@@ -210,7 +210,7 @@ export default function ManifestoArticle() {
                     {/* Positions of Responsibility */}
                     <section id="positions" className="space-y-4 scroll-mt-32">
                         <h3 className="text-2xl font-bold text-gold-600">Positions of Responsibility</h3>
-                        <ul className="list-disc list-inside space-y-1 leading-relaxed">
+                        <ul className="list-disc list-outside space-y-1 leading-relaxed ml-6">
                             <li>Honorary Secretary 2024-2026: Institution of Engineers of Kenya</li>
                             <li>Logistics Sub-Committee Chairperson: 32nd IEK International Convention</li>
                             <li>Secretary; 32nd IEK International Convention</li>
@@ -230,7 +230,7 @@ export default function ManifestoArticle() {
                     {/* Achievements */}
                     <section id="achievements" className="space-y-4 scroll-mt-32">
                         <h3 className="text-2xl font-bold text-gold-600">Achievements as Honorary Secretary</h3>
-                        <ol className="list-decimal list-inside space-y-1 leading-relaxed">
+                        <ol className="list-decimal list-outside space-y-1 leading-relaxed ml-6">
                             <li>Strengthened the IEK Secretariat through structured oversight and improved operational efficiency</li>
                             <li>Promoted free, fair, and inclusive engagement across Council, committees, and membership</li>
                             <li>Institutionalized timely and effective communication through a consistent and reliable newsletter</li>
@@ -285,7 +285,7 @@ export default function ManifestoArticle() {
                                         </p>
                                     )}
 
-                                    <ul className="list-disc list-inside space-y-1">
+                                    <ul className="list-disc list-outside space-y-1 ml-6">
                                         {section.points.map((point, idx) => (
                                             <li key={idx}>{point}</li>
                                         ))}

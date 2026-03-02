@@ -105,7 +105,7 @@ export default async function IssueDetail({ params }: Props) {
 
             {/* Bullet points */}
             {issue.points && (
-              <ul className="list-disc list-inside space-y-2 mt-2">
+              <ul className="list-disc list-outside space-y-2 mt-2 ml-6">
                 {issue.points.map((point, idx) => (
                   <li key={idx}>{point}</li>
                 ))}
