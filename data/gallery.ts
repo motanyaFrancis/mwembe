@@ -39,9 +39,16 @@ export const gallery: MediaItem[] = [
   { src: "/gallery/gallery-31.jpeg", type: "image" },
   { src: "/gallery/gallery-32.jpeg", type: "image" },
   { src: "/gallery/gallery-33.jpeg", type: "image" },
+  { src: "/gallery/gallery-34.jpeg", type: "image" },
+  { src: "/gallery/gallery-35.jpeg", type: "image" },
+  { src: "/gallery/gallery-36.jpeg", type: "image" },
+  { src: "/gallery/gallery-37.jpeg", type: "image" },
+  { src: "/gallery/gallery-38.jpeg", type: "image" },
+  { src: "/gallery/gallery-39.jpeg", type: "image" },
+  { src: "/gallery/gallery-40.jpeg", type: "image" },
 
   // Videos
-  { src: "/videos/video1.mp4", type: "video" },
-  { src: "/videos/video2.mp4", type: "video" },
-  { src: "/videos/video3.mp4", type: "video" },
+  { src: "/gallery/video-1.mp4", type: "video" },
+  { src: "/gallery/video-2.mp4", type: "video" },
+  { src: "/gallery/video-3.mp4", type: "video" },
 ];
