@@ -38,6 +38,11 @@ export const metadata: Metadata = {
 
   keywords: [
     "Eng. Jacton Mwembe",
+    "Eng. Jacton",
+    "Eng. Mwembe",
+    "Jacton Mwembe",
+    "themwembe.ke",
+    "themwembe",
     "IEK President",
     "Institution of Engineers of Kenya",
     "IEK elections",
