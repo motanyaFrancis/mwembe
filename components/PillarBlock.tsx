@@ -1,8 +1,18 @@
+import Link from "next/link";
 import { Check } from "lucide-react";
+import { Issue } from "@/data/issues";
 
-function PillarBlock({ pillar }: { pillar: any }) {
+function PillarBlock({ pillar }: { pillar: Issue }) {
+  const trimmedDescription =
+    pillar.description.length > 110
+      ? pillar.description.slice(0, 110) + "..."
+      : pillar.description;
+
   return (
-    <div className="block max-w-xl group transition">
+    <Link
+      href={`/issues/${pillar.slug}`}
+      className="block max-w-xl group transition hover:-translate-y-1 hover:shadow-lg rounded-lg p-4"
+    >
       <div className="flex items-start gap-6">
 
         {/* Icon Circle */}
@@ -12,16 +22,20 @@ function PillarBlock({ pillar }: { pillar: any }) {
 
         {/* Content */}
         <div>
-          <h3 className="text-2xl font-extrabold text-primary-800 mb-4 group-hover:text-primary-800 transition">
+          <h3 className="text-2xl font-extrabold text-primary-800 mb-4">
             {pillar.title}
           </h3>
 
           <p className="text-lg leading-relaxed text-primary-800">
-            {pillar.description}
+            {trimmedDescription}
           </p>
+
+          <span className="inline-block mt-4 text-primary-700 font-semibold group-hover:underline">
+            Read More →
+          </span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 

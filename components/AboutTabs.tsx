@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import PillarBlock from "@/components/PillarBlock";
+import { issues } from "@/data/issues";
 
 export default function AboutTabs() {
     const [activeTab, setActiveTab] = useState("bio");
@@ -12,58 +13,25 @@ export default function AboutTabs() {
         { id: "agenda", label: "Aims & Reform Agenda" },
     ];
 
-    const pillars = [
-        {
-            title: "Inclusivity & Equity",
-            description:
-                "Championing gender equity, youth participation, and the inclusion of persons living with disabilities. Strengthening programs for graduate engineers and expanding women-focused initiatives like the She-Program.",
-        },
-        {
-            title: "Good Governance",
-            description:
-                "Upholding the IEK Constitution and governance policies. Leading a member-driven review and amendment of the Constitution to ensure a robust framework for the future.",
-        },
-        {
-            title: "Partnerships & Collaboration",
-            description:
-                "Strengthening ties with Industry, Academia, and Government. Promoting professional mobility through regional and global affiliations and easing international work transitions.",
-        },
-        {
-            title: "Strong Advocacy",
-            description:
-                "Advocating for a harmonized Scheme of Service in the public sector, full implementation of the scale of fees, and ensuring local engineers lead national infrastructure projects.",
-        },
-        {
-            title: "Research & Development",
-            description:
-                "Promoting research-driven policy engagement and collaboration between academia and industry to anchor IEK’s relevance in a rapidly evolving world.",
-        },
-        {
-            title: "Welfare & Financing",
-            description:
-                "Negotiating affordable financing solutions and structured welfare programs including medical cover, SACCOs, professional indemnity, and asset financing.",
-        },
-    ];
-
     return (
         <section className=" bg-white">
-                <div className="sticky top-28 z-10 bg-white self-start">
-                    <div className="max-w-6xl mx-auto flex flex-wrap justify-start border-b border-gold-700 mb-16 px-6 md:px-0">
-                        {tabs.map((tab) => (
+            <div className="sticky top-28 z-10 bg-white self-start">
+                <div className="max-w-6xl mx-auto flex flex-wrap justify-start border-b border-gold-700 mb-16 px-6 md:px-0">
+                    {tabs.map((tab) => (
 
-                            <button
-                                key={tab.id}
-                                onClick={() => setActiveTab(tab.id)}
-                                className={`px-0 md:pr-6 py-4 transition duration-300 cursor-pointer ${activeTab === tab.id
-                                    ? "text-primary-800 font-extrabold border-b-4 border-gold-500"
-                                    : "text-neutral-600 pl-6 font-medium hover:text-primary-800"
-                                    }`}
-                            >
-                                {tab.label}
-                            </button>
-                        ))}
-                    </div>
+                        <button
+                            key={tab.id}
+                            onClick={() => setActiveTab(tab.id)}
+                            className={`px-0 md:pr-6 py-4 transition duration-300 cursor-pointer ${activeTab === tab.id
+                                ? "text-primary-800 font-extrabold border-b-4 border-gold-500"
+                                : "text-neutral-600 pl-6 font-medium hover:text-primary-800"
+                                }`}
+                        >
+                            {tab.label}
+                        </button>
+                    ))}
                 </div>
+            </div>
             <div className="max-w-6xl mx-auto py-16 pt-0 px-6 md:px-0">
 
                 {/* TAB NAVIGATION */}
@@ -194,9 +162,9 @@ export default function AboutTabs() {
                                 Strategic Reform Pillars
                             </h2>
                             <div className="grid md:grid-cols-2 gap-x-12 gap-y-16">
-                                {pillars.map((pillar, index) => (
-                                    <div key={index}>
-                                        <PillarBlock pillar={pillar} />
+                                {issues.map((issue) => (
+                                    <div key={issue.id}>
+                                        <PillarBlock pillar={issue} />
                                     </div>
                                 ))}
                             </div>
