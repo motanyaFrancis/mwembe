@@ -44,6 +44,11 @@ export const metadata: Metadata = {
     "Engineering leadership Kenya",
     "Professional engineers Kenya",
     "IEK campaign",
+    "Engineering excellence Kenya",
+    "mwembe for IEK president",
+    'IEK presidential candidate',
+    'mwembe campaign vision',
+    'mwembe leadership agenda',
   ],
 
   authors: [
