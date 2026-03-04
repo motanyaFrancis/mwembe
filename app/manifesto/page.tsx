@@ -132,7 +132,7 @@ export default function ManifestoArticle() {
                                 Candidate for President, IEK (2026–2028)
                             </p>
                             <a
-                                href="/files/JEng_Jacton_Mwembe_PE_MIEK_Manifesto_1.pdf"
+                                href="/files/Eng_Jacton_Mwembe_PE_MIEK_Manifesto_1.pdf"
                                 // href="/#"
                                 download
                                 className="mt-4 inline-flex items-center gap-2 px-6 py-2 bg-gold-600 text-white font-bold  hover:bg-gold-500 transition-colors"
