@@ -234,10 +234,10 @@ export const posts: Post[] = [
     title: "Mwembe Moderates World Engineering Day Discussions Following Nairobi Engineers’ Procession",
     category: "News",
     date: "2026-03-04",
-    featuredMedia: {
-      type: "image",
-      url: "/gallery/world-engineers-day-1.jpeg",
-    },
+    // featuredMedia: {
+    //   type: "image",
+    //   url: "/gallery/world-engineers-day-1.jpeg",
+    // },
     media: [
       {
         type: "image",

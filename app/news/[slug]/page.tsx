@@ -149,35 +149,35 @@ export default async function PostPage({ params }: Props) {
                         </div>
 
                         {/* DOWNLOAD ARTICLE AS IMAGE */}
-                        <div className="mt-20 border-t border-primary-300 pt-12">
-                            <h3 className="text-2xl font-bold mb-4">
-                                Download This Article
-                            </h3>
+                        {post.featuredMedia?.url && (
+                            <div className="mt-20 border-t border-primary-300 pt-12">
+                                <h3 className="text-2xl font-bold mb-4">
+                                    Download This Article
+                                </h3>
 
-                            <p className="text-primary-700 mb-6 max-w-xl">
-                                You can download a pre-designed image version of this article for sharing
-                                on social media or offline viewing.
-                            </p>
+                                <p className="text-primary-700 mb-6 max-w-xl">
+                                    You can download a pre-designed image version of this article for sharing
+                                    on social media or offline viewing.
+                                </p>
 
-                            {/* Image Preview */}
-                            <div className="mb-6">
-                                {post.featuredMedia?.url && (
+                                {/* Image Preview */}
+                                <div className="mb-6">
                                     <ImagePreviewLightbox
                                         src={post.featuredMedia.url}
                                         alt={`${post.title} article preview`}
                                     />
-                                )}
-                            </div>
+                                </div>
 
-                            {/* Download Button */}
-                            <a
-                                href={`${post.featuredMedia?.url}`} // Assuming featuredMedia.url is the image path
-                                download
-                                className="inline-block bg-gold-500 text-primary-900 font-bold tracking-wider px-6 py-3 hover:bg-gold-400 transition"
-                            >
-                                DOWNLOAD IMAGE
-                            </a>
-                        </div>
+                                {/* Download Button */}
+                                <a
+                                    href={post.featuredMedia.url}
+                                    download
+                                    className="inline-block bg-gold-500 text-primary-900 font-bold tracking-wider px-6 py-3 hover:bg-gold-400 transition"
+                                >
+                                    DOWNLOAD IMAGE
+                                </a>
+                            </div>
+                        )}
 
                         {/* BACK TO NEWS */}
                         <div className="mt-16">
@@ -189,7 +189,7 @@ export default async function PostPage({ params }: Props) {
                             </Link>
                         </div>
                         {/* OTHER MEDIA GALLERY */}
-                        
+
 
                         {post.media && post.media.length > 0 && (
                             <div className="mt-20 border-t border-primary-300 pt-12">
