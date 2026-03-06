@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import NewsList from "@/components/NewsList"; // CSR component
 
+
 import { posts } from "@/data/posts";
 
 export const metadata: Metadata = {
@@ -30,7 +31,7 @@ export default function NewsPage() {
       </section>
 
       {/* ================= NEWS LIST + PAGINATION (CSR) ================= */}
-      <NewsList allPosts={posts} postsPerPage={6} />
+      <NewsList allPosts={posts} postsPerPage={9} />
     </>
   );
 }

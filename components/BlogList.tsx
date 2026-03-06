@@ -30,11 +30,14 @@ export default function BlogList({
 }: BlogListProps) {
     const sourcePosts = posts ?? allPosts
 
-    const publishedPosts = sourcePosts.filter(
-        (post) => post.published === true
-    )
+    const publishedPosts = sourcePosts
+        .filter((post) => post.published === true)
+        .sort(
+            (a, b) =>
+                new Date(b.date).getTime() - new Date(a.date).getTime()
+        )
 
-    const displayedPosts = publishedPosts.slice(0, limit)
+    const displayedPosts = posts ? publishedPosts : publishedPosts.slice(0, limit)
 
     return (
         <section className="bg-primary-50 py-24">

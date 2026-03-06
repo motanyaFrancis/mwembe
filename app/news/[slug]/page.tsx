@@ -6,6 +6,7 @@ import ImagePreviewLightbox from "@/components/ImagePreviewLightbox";
 import Link from "next/link"
 import { Metadata } from "next"
 import { FaXTwitter, FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
+import MasonryMediaGallery from "@/components/MasonryMediaGallery";
 
 
 type Props = {
@@ -26,8 +27,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         };
     }
 
-    const imageUrl = post.media?.url
-        ? `${baseUrl}${post.media.url}`
+    const imageUrl = post.featuredMedia?.url
+        ? `${baseUrl}${post.featuredMedia.url}`
         : `${baseUrl}/images/hero-1.jpeg`; // fallback image
 
     const postUrl = `${baseUrl}/news/${slug}`;
@@ -160,9 +161,9 @@ export default async function PostPage({ params }: Props) {
 
                             {/* Image Preview */}
                             <div className="mb-6">
-                                {post.media?.url && (
+                                {post.featuredMedia?.url && (
                                     <ImagePreviewLightbox
-                                        src={post.media.url}
+                                        src={post.featuredMedia.url}
                                         alt={`${post.title} article preview`}
                                     />
                                 )}
@@ -170,7 +171,7 @@ export default async function PostPage({ params }: Props) {
 
                             {/* Download Button */}
                             <a
-                                href={`${post.media?.url}`} // Assuming media.url is the image path
+                                href={`${post.featuredMedia?.url}`} // Assuming featuredMedia.url is the image path
                                 download
                                 className="inline-block bg-gold-500 text-primary-900 font-bold tracking-wider px-6 py-3 hover:bg-gold-400 transition"
                             >
@@ -187,6 +188,18 @@ export default async function PostPage({ params }: Props) {
                                 BACK TO NEWS & PRESS
                             </Link>
                         </div>
+                        {/* OTHER MEDIA GALLERY */}
+                        
+
+                        {post.media && post.media.length > 0 && (
+                            <div className="mt-20 border-t border-primary-300 pt-12">
+                                <h3 className="text-2xl font-bold mb-8">
+                                    Media Gallery
+                                </h3>
+
+                                <MasonryMediaGallery media={post.media} />
+                            </div>
+                        )}
                     </article>
 
                     {/* 👇 Sidebar Component */}

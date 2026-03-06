@@ -1,3 +1,10 @@
+export type MediaItem = {
+  type: "image" | "video"
+  url: string
+  alt?: string
+  caption?: string
+}
+
 export type Post = {
   title: string
   excerpt: string
@@ -6,10 +13,12 @@ export type Post = {
   category: string
   content: string
   published?: boolean
-  media?: {
-    type: "image" | "video"
-    url: string
-  }
+
+  // Main hero media (required or optional depending on your logic)
+  featuredMedia?: MediaItem
+
+  // Additional gallery / inline media
+  media?: MediaItem[]
 }
 
 // #, ##, ### headers
@@ -28,10 +37,17 @@ export const posts: Post[] = [
       "Inclusivity",
     category: "Article",
     date: "2026-03-01",
-    media: {
+    featuredMedia: {
       type: "image",
       url: "/images/inclusivity.jpeg",
+
     },
+    media: [
+      {
+        type: "image",
+        url: "/images/inclusivity.jpeg",
+      }
+    ],
     excerpt:
       "Look around most engineering boardrooms. Who do you see? And perhaps more importantly, who don’t you see? Engineering has long been defined by precision, logic, and technical excellence. However, institutions are not built by equations alone. They are built by people with diverse experiences...",
     content: `
@@ -96,10 +112,16 @@ export const posts: Post[] = [
       "Engineering the Future",
     category: "Article",
     date: "2026-03-01",
-    media: {
+    featuredMedia: {
       type: "image",
       url: "/images/engineering-future.jpeg",
     },
+    media: [
+      {
+        type: "image",
+        url: "/images/engineering-future.jpeg",
+      }
+    ],
     excerpt:
       "If engineers are building the nation, then surely, they deserve a seat at the table where the nation is designed. This election should be beyond leadership; we need to focus...",
     content: ` 
@@ -161,7 +183,7 @@ export const posts: Post[] = [
       "Nurturing GEs to PEs",
     category: "Article",
     date: "2026-03-01",
-    media: {
+    featuredMedia: {
       type: "image",
       url: "/images/naturing.jpeg",
     },
@@ -205,5 +227,104 @@ export const posts: Post[] = [
 
     `,
   },
+
+  {
+    slug: "mwembe-moderates-world-engineering-day-discussions",
+    published: true,
+    title: "Mwembe Moderates World Engineering Day Discussions Following Nairobi Engineers’ Procession",
+    category: "News",
+    date: "2026-03-04",
+    featuredMedia: {
+      type: "image",
+      url: "/gallery/world-engineers-day-1.jpeg",
+    },
+    media: [
+      {
+        type: "image",
+        url: "/gallery/world-engineers-day.jpeg",
+      },
+      {
+        type: "image",
+        url: "/gallery/world-engineers-day-1.jpeg",},
+      {
+        type: "image",
+        url: "/gallery/world-engineers-day-2.jpeg",},
+      {
+        type: "image",
+        url: "/gallery/world-engineers-day-22.jpeg",},
+      {
+        type: "image",
+        url: "/gallery/world-engineers-day-4.jpeg",},
+      {
+        type: "image",
+        url: "/gallery/world-engineers-day-5.jpeg",},
+      {
+        type: "image",
+        url: "/gallery/world-engineers-day-6.jpeg",},
+      {
+        type: "image",
+        url: "/gallery/world-engineers-day-7.jpeg",},
+      {
+        type: "image",
+        url: "/gallery/world-engineers-day-8.jpeg",},
+      {
+        type: "image",
+        url: "/gallery/world-engineers-day-9.jpeg",},
+      {
+        type: "image",
+        url: "/gallery/world-engineers-day-10.jpeg",},
+      {
+        type: "image",
+        url: "/gallery/world-engineers-day-11.jpeg",},
+      {
+        type: "image",
+        url: "/gallery/world-engineers-day-12.jpeg",},
+      {
+        type: "image",
+        url: "/gallery/world-engineers-day-13.jpeg",},
+      {
+        type: "image",
+        url: "/gallery/world-engineers-day-14.jpeg",},
+      {
+        type: "image",
+        url: "/gallery/world-engineers-day-15.jpeg",},
+      {
+        type: "image",
+        url: "/gallery/world-engineers-day-16.jpeg",},
+      {
+        type: "image",
+        url: "/gallery/world-engineers-day-17.jpeg",},
+      {
+        type: "image",
+        url: "/gallery/world-engineers-day-18.jpeg",},
+      {
+        type: "image",
+        url: "/gallery/world-engineers-day-19.jpeg",},
+      {
+        type: "image",
+        url: "/gallery/world-engineers-day-20.jpeg"},
+      {
+        type: "image",
+        url: "/gallery/world-engineers-day-21.jpeg"},
+    ],
+    excerpt:
+      "Engineers across Kenya gathered at the University of Nairobi to mark World Engineering Day 2026 with a city procession and conference session focused on innovation, sustainability, and the future of engineering.",
+
+    content: `
+**Nairobi, March 4, 2026 —** Engineers across Kenya gathered at the University of Nairobi to commemorate World Engineering Day 2026, marked by a procession through the city and a panel session focused on the future of engineering. World Engineering Day was proclaimed by UNESCO in 2019 to highlight engineers' vital role in achieving the 17 Sustainable Development Goals.
+
+The morning activities began with a procession from the University of Nairobi Main Campus to Kenyatta Avenue toward the Nairobi Central Business District before returning to the university. The procession brought together engineers, students, and stakeholders from across the profession in a symbolic demonstration of the milestones achieved by the engineering community and the roles they play in the national and global development space.
+
+Following the procession, participants convened at Taifa Hall for the conference session held under the theme **“SMART Engineering for a Sustainable Future Through Innovation and Digitalization.”**
+
+Eng. Jacton Mwembe Achieng served as the moderator for the round-table discussions during the conference. The panel brought together industry leaders, academia, and policy experts to explore how innovation, technology, and digital transformation can strengthen engineering practice and contribute to sustainable infrastructure development.
+
+The discussions featured speakers from government agencies, universities, and industry, including representatives from the Engineers Board of Kenya, the Institution of Engineers of Kenya, and engineering leaders from both local and international institutions.
+
+Additional activities during the event included a tree-planting ceremony and presentations on professional development initiatives such as the upcoming IEK Career Week.
+
+The annual observance of World Engineering Day provides an opportunity for engineers to reflect on their contribution to society while encouraging collaboration between academia, industry, and government in shaping a more sustainable future.
+`,
+  }
 
 ]
