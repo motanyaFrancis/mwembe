@@ -238,6 +238,11 @@ export default function ManifestoArticle() {
                             <li>Strengthened institutional governance frameworks, including the Human Resource Policy</li>
                             <li>Ensured Secretariat compliance with the IEK Constitution and Council resolutions</li>
                             <li>Facilitated timely review and approval of membership applications, supporting growth and inclusivity</li>
+                            <li>Participated in resource mobilization.</li>
+                            <li>As the chairperson Logistics subcommittee, successfully delivered the 31st and 32nd IEK International Convention.</li>
+                            <li>Publication of articles in the Engineer in Kenya Magazine.</li>
+                            <li>Strategic representation of the institution at National and international forums.</li>
+                            <li>Promoted the amendment of the IEK constitution.</li>
                         </ol>
                     </section>
 
