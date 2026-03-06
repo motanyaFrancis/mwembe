@@ -311,11 +311,11 @@ export const posts: Post[] = [
       "Engineers across Kenya gathered at the University of Nairobi to mark World Engineering Day 2026 with a city procession and conference session focused on innovation, sustainability, and the future of engineering.",
 
     content: `
-**Nairobi, March 4, 2026 —** Engineers across Kenya gathered at the University of Nairobi to commemorate World Engineering Day 2026, marked by a procession through the city and a panel session focused on the future of engineering. World Engineering Day was proclaimed by UNESCO in 2019 to highlight engineers' vital role in achieving the 17 Sustainable Development Goals.
+*Nairobi, March 4, 2026 —* Engineers across Kenya gathered at the University of Nairobi to commemorate **World Engineering Day 2026**, marked by a procession through the city and a panel session focused on the future of engineering. World Engineering Day was proclaimed by UNESCO in 2019 to highlight engineers' vital role in achieving the 17 Sustainable Development Goals.
 
 The morning activities began with a procession from the University of Nairobi Main Campus to Kenyatta Avenue toward the Nairobi Central Business District before returning to the university. The procession brought together engineers, students, and stakeholders from across the profession in a symbolic demonstration of the milestones achieved by the engineering community and the roles they play in the national and global development space.
 
-Following the procession, participants convened at Taifa Hall for the conference session held under the theme **“SMART Engineering for a Sustainable Future Through Innovation and Digitalization.”**
+Following the procession, participants convened at **Taifa Hall** for the conference session held under the theme **“SMART Engineering for a Sustainable Future Through Innovation and Digitalization.”**
 
 Eng. Jacton Mwembe Achieng served as the moderator for the round-table discussions during the conference. The panel brought together industry leaders, academia, and policy experts to explore how innovation, technology, and digital transformation can strengthen engineering practice and contribute to sustainable infrastructure development.
 
