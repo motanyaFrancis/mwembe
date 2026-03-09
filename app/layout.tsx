@@ -7,7 +7,6 @@ import { PrivacyProvider } from "@/context/PrivacyContext";
 import BackToTopButton from "@/components/BackToTopButton";
 import ApolloWrapper from "@/providers/ApolloProvider";
 
-
 const montserrat = Montserrat({
   subsets: ["latin"],
   weight: [
@@ -26,7 +25,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://themwembe.ke"),
+  metadataBase: new URL("https://www.themwembe.ke"),
 
   title: {
     default: "Eng. Jacton Mwembe for IEK President",
@@ -42,13 +41,8 @@ export const metadata: Metadata = {
     "Eng. Mwembe",
     "Jacton Mwembe",
     "Mwembe",
-    "Mwembe .ke",
-    "mwembe ke",
-    "Jacton",
+    "Mwembe ke",
     "themwembe.ke",
-    "themwembe",
-    "the mwembe",
-    "the mwembe ke",
     "IEK President",
     "Institution of Engineers of Kenya",
     "IEK elections",
@@ -57,32 +51,30 @@ export const metadata: Metadata = {
     "IEK campaign",
     "Engineering excellence Kenya",
     "mwembe for IEK president",
-    'IEK presidential candidate',
-    'mwembe campaign vision',
-    'mwembe leadership agenda',
+    "IEK presidential candidate",
+    "mwembe campaign vision",
+    "mwembe leadership agenda",
   ],
 
-  authors: [
-    { name: "Eng. Jacton Mwembe" }
-  ],
+  authors: [{ name: "Eng. Jacton Mwembe" }],
 
   creator: "Eng. Jacton Mwembe",
   publisher: "Eng. Jacton Mwembe Campaign",
 
   alternates: {
-    canonical: "https://themwembe.ke",
+    canonical: "https://www.themwembe.ke",
   },
 
   openGraph: {
     type: "website",
-    url: "https://themwembe.ke",
+    url: "https://www.themwembe.ke",
     title: "Eng. Jacton Mwembe for IEK President",
     description:
       "Build Better, Together. Discover Eng. Jacton Mwembe's vision, leadership agenda, and commitment to advancing engineering excellence in Kenya.",
     siteName: "Eng. Jacton Mwembe Campaign",
     images: [
       {
-        url: "https://themwembe.ke/og-image.jpeg",
+        url: "https://www.themwembe.ke/og-image.jpeg",
         width: 1200,
         height: 630,
         alt: "Eng. Jacton Mwembe – IEK Presidential Candidate",
@@ -95,7 +87,7 @@ export const metadata: Metadata = {
     title: "Eng. Jacton Mwembe for IEK President",
     description:
       "Build Better, Together. Leadership vision for the Institution of Engineers of Kenya.",
-    images: ["https://themwembe.ke/og-image.jpeg"],
+    images: ["https://www.themwembe.ke/og-image.jpeg"],
   },
 
   robots: {
@@ -118,8 +110,44 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Eng. Jacton Mwembe",
+    url: "https://www.themwembe.ke",
+    image: "https://www.themwembe.ke/og-image.jpeg",
+    description:
+      "IEK Presidential Candidate advocating transformative leadership for engineers in Kenya.",
+    jobTitle: "IEK Presidential Candidate",
+    worksFor: {
+      "@type": "Organization",
+      name: "Institution of Engineers of Kenya",
+    },
+    sameAs: [
+      "https://www.themwembe.ke",
+    ],
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Eng. Jacton Mwembe Campaign",
+    url: "https://www.themwembe.ke",
+  };
+
   return (
-    <html lang="en">
+    <html lang="en" className={montserrat.variable}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+      </head>
+
       <body className={`${montserrat.className} bg-beige-50 text-dark`}>
         <ApolloWrapper>
           <PrivacyProvider>
