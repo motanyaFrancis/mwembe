@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import DonateForm from "./DonateForm";
+import DonateForm from "@/components/DonateForm";
 
 export const metadata: Metadata = {
     title: "Donate 2026–2028",
