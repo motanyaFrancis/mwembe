@@ -1,7 +1,7 @@
 "use client";
 
 import { ApolloProvider } from "@apollo/client/react";
-import { apolloClient } from "@/lib/apollo-client";
+import apolloClient from "@/lib/apollo-client";
 
 export default function ApolloWrapper({
   children,
