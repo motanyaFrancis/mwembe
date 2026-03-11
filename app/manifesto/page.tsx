@@ -1,7 +1,6 @@
-import React from "react";
-import Image from "next/image";
-import MeetMwembeGallery from "@/components/MeetMwembeGallery";
 import ManifestoTOC from "@/components/ManifestoTOC";
+import MeetMwembeGallery from "@/components/MeetMwembeGallery";
+import { issues } from "@/data/issues";
 import { FaFilePdf } from "react-icons/fa";
 
 import type { Metadata } from "next";
@@ -21,83 +20,14 @@ export default function ManifestoArticle() {
         { id: "professional-membership", title: "Professional Membership" },
         { id: "positions", title: "Positions of Responsibility" },
         { id: "achievements", title: "Achievements as Honorary Secretary" },
+        { id: "industry-challenges", title: "Industry Challenges" },
+        { id: "key-pillars", title: "Key Pillars of the Manifesto" },
         { id: "manifesto", title: "The Manifesto" },
         { id: "why-vote", title: "Why Vote for Eng. Jacton Mwembe Achieng" },
         { id: "meet-mwembe", title: "Meet Mwembe" }, // TOC updated
         { id: "closing-message", title: "Closing Message & Vote" },
     ];
 
-    const manifestoSections = [
-        {
-            title: "Inclusivity",
-            points: [
-                "Champion gender equity, youth participation and inclusion of persons living with disabilities",
-                "Strengthen programs for graduate engineers, technologists, technicians and students",
-                "Institutionalizing recognition of all cadre of Engineers",
-                "Expand women-focused initiatives such as the She-Program",
-                "Advocate for engineers’ representation on boards, committees, and national platforms",
-            ],
-            conclusion: "An inclusive IEK is a stronger, more relevant IEK.",
-        },
-        {
-            title: "Good Governance",
-            points: [
-                "Uphold strict adherence to the IEK Constitution and governance policies",
-                "Strengthen oversight, accountability, and ethical leadership across all organs",
-                "Lead a member-driven review and amendment of the IEK Constitution, building on the 2015 amendments and finalizing the 2026 draft through inclusive engagement with all engineers.",
-            ],
-            conclusion: "Good governance is non-negotiable if IEK is to command respect nationally and globally.",
-        },
-        {
-            title: "Partnerships and Collaboration",
-            points: [
-                "Strengthen partnerships with Industry, Academia, Government, and Development partners",
-                "Deepen regional and global affiliations to align IEK with international best practice",
-                "Promote exchange programs, knowledge transfer, and professional mobility for members",
-                "Initiate partnership with State department for Immigration to ease VISA renewal for engineers working abroad",
-            ],
-            conclusion: "Through collaboration, IEK will remain relevant, competitive, and future-ready.",
-        },
-        {
-            title: "Advocacy",
-            points: [
-                "A harmonized Scheme of Service for engineers in the public sector",
-                "Full implementation of the scale of fees",
-                "Greater engagement of local engineers in infrastructure projects",
-                "Engineers’ inclusion in boards and decision-making bodies",
-                "Active participation in policy, regulatory, and legislative processes",
-                "Effective engineering regulation and enforcement",
-            ],
-            conclusion: "The engineering voice must be heard, respected, and acted upon.",
-        },
-        {
-            title: "Research and Development",
-            points: [
-                "Promote research-driven policy engagement",
-                "Encourage collaboration between academia, industry, and government",
-                "Use evidence-based advocacy to shape national development discourse",
-            ],
-            conclusion: "Research will anchor IEK’s relevance in a rapidly evolving world.",
-        },
-        {
-            title: "Training, Mentorship, and CPD",
-            points: [
-                "Strengthen structured training and mentorship across all membership classes",
-                "Support smooth transition from student to graduate to professional engineer",
-                "Strengthen collaboration between IEK and the Council of Engineering Deans and Principals",
-                "Make CPD programs affordable, accessible, and relevant to all engineers",
-            ],
-            conclusion: "An empowered engineer is an effective engineer.",
-        },
-        {
-            title: "Affordable Financing and Member Welfare",
-            points: [
-                "Negotiate affordable financing solutions for engineers and engineering firms",
-                "Promote structured member welfare programs, including medical cover, last expense, SACCOs, professional indemnity, and asset financing",
-            ],
-            conclusion: "Member welfare is institutional sustainability.",
-        },
-    ];
 
     return (
         <section className="relative bg-primary-50">
@@ -245,12 +175,36 @@ export default function ManifestoArticle() {
                             <li>Promoted the amendment of the IEK constitution.</li>
                         </ol>
                     </section>
+                    <section id="industry-challenges" className="space-y-4 scroll-mt-32">
+                        <h3 className="text-2xl font-bold text-gold-600">INDUSTRY CHALLENGES</h3>
+                        <p>The engineering fraternity has continued to face challenges that has hampered the growth on the sector. The following areas have been identified as key amongst them:-</p>
+                        <ul className="list-decimal list-outside space-y-1 leading-relaxed ml-6">
+                            <li>Unemployment of Engineers</li>
+                            <li>Unstructured career progression</li>
+                            <li>Poor remuneration of Engineers</li>
+                            <li>Poor enforcement of local content- Local engineers losing opportunities to foreigners</li>
+                            <li>Unfavorable legal and regulatory framework (Registration Of Consultancy firms)</li>
+                            <li>Low rate of professional registration</li>
+                            <li>Misplaced domiciliation of regulatory body.</li>
+                        </ul>
+                    </section>
+                     
+                     <section id="key-pillars" className="space-y-4 scroll-mt-32">
+                        <h3 className="text-2xl font-bold text-gold-600">KEY PILLARS</h3>
+                        <p>This manifesto strives to resolve the identified challenges under the following key pillars to ensure optimum benefit to the IEK fraternity. </p>
+                        <ul className="list-decimal list-outside space-y-1 leading-relaxed ml-6">
+                            <li>Institutional- Both Internal and External factors</li>
+                            <li>Social</li>
+                            <li>Economic</li>
+                            <li>Sustainability</li>
+                        </ul>
+                     </section>
 
                     {/* The Manifesto */}
                     <section id="manifesto" className="space-y-8 scroll-mt-32">
                         <h3 className="text-3xl font-extrabold text-gold-600">The Manifesto</h3>
 
-                        {manifestoSections.map((section) => {
+                        {issues.map((section) => {
                             // Add invocation text for each section
                             let invocationText = "";
                             switch (section.title) {
@@ -291,7 +245,7 @@ export default function ManifestoArticle() {
                                     )}
 
                                     <ul className="list-disc list-outside space-y-1 ml-6">
-                                        {section.points.map((point, idx) => (
+                                        {section.points?.map((point, idx) => (
                                             <li key={idx}>{point}</li>
                                         ))}
                                     </ul>

@@ -17,8 +17,8 @@ export const issues: Issue[] = [
         points: [
             "Champion gender equity, youth participation, and inclusion of persons living with disabilities",
             "Strengthen programs for graduate engineers, technologists, technicians, and students",
-            "Institutionalizing recognition of all cadre of Engineers",
-            "Expand women-focused initiatives such as the She-Program",
+            "Institutionalize recognition of all members of the Institution",
+            "Expand women-focused initiatives such as the WEC",
             "Advocate for engineers’ representation on boards, committees, and national platforms",
         ],
         conclusion: "An inclusive IEK is a stronger, more relevant IEK.",
@@ -65,7 +65,8 @@ export const issues: Issue[] = [
             "Greater engagement of local engineers in infrastructure projects",
             "Engineers’ inclusion in boards and decision-making bodies",
             "Active participation in policy, regulatory, and legislative processes",
-            "Effective engineering regulation and enforcement",
+            "Push for aggressive and Effective engineering regulation and enforcement",
+            "Amendment of section 20(b) of the engineers Act 2011to allow Professional engineers to registered firms.",
         ],
         conclusion: "The engineering voice must be heard, respected, and acted upon.",
         description:
