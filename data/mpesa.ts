@@ -1,166 +1,90 @@
 'use server'
-
 import { gql } from "@apollo/client";
 import client from "@/lib/apollo-client";
 
-/* ================================
-   Types
-================================ */
-
-export type MpesaLineType = {
-    code: string;
-    amount: number | string;
+export type MpesaType = {
+    phone: string;
+    name: string;
+    email: string;
+    amount: number;
 };
 
 export type InitiatedPaymentType = {
     id: string;
-    externalReference: string;
-    reference: string;
-    state: "INITIATED" | "FAILED" | "COMPLETED";
-    ResultDescription: string;
-};
-
-export type MpesaType = {
-    name: string;
-    phone: string;
-    email: string;
-    district?: string;
-    church?: string;
-    lines?: MpesaLineType[];
-    errored: boolean;
-    total?: number;
-    save: boolean;
-};
-
-export type PaidTransactionLineType = {
-    code: string;
-    amount: number;
-    description: string;
-    name: string;
+    CheckoutRequestID?: string;
+    MerchantRequestID?: string;
+    ResultCode?: string;
+    externalReference?: string;
+    reference?: string;
+    state?: 'INITIATED' | 'FAILED' | 'COMPLETED';
+    ResultDescription?: string;
 };
 
 export type PaidTransactionType = {
-    no: string;
-    name: string;
-    phone: string;
-    district?: string;
-    church?: string;
-    email: string;
-    reference: string;
-    externalReference: string;
-    createdAt: Date;
-    paymentMode: string;
-    lines: PaidTransactionLineType[];
-    amount: number;
-};
+    id: string
+    no: string
+    notified: boolean
+    reference: string
+    phone: string
+    paymentMode: string
+    createdAt: string
+    confirmationCode: string
+    amount: number
+    church: string
+    district: string
+    email: string
+    name: string
+    status: string
+}
 
-export type PaymentType = {
-    code: string;
-    sequenceNo: number;
-    description: string;
-    name: string;
-};
-
-/* ================================
-   GraphQL Response Types
-================================ */
-
-type CreateMpesaResponse = {
-    initiateMpesaExpressPayment: {
-        initiateMpesaExpress: InitiatedPaymentType;
-    };
-};
-
-type ConfirmStatusResponse = {
-    initiatedPayment: InitiatedPaymentType;
-};
-
-type PaymentTypesResponse = {
-    paymentTypes: {
-        edges: {
-            node: PaymentType;
-        }[];
-    };
-};
-
-type TransactionResponse = {
-    transactions: {
-        edges: {
-            node: any;
-        }[];
-    };
-};
 
 /* ================================
    Initiate M-Pesa Payment
 ================================ */
+export const PostMpesa = async (data: MpesaType) => {
+    let payload = {
+        phone: data.phone,
+        name: data.name,
+        email: data.email,
+        amount: data.amount
+    }
+    // console.log('payload: ', payload)
 
-export const PostMpesa = async (MpesaData: MpesaType) => {
-    const errorMessage =
-        "Oops! It looks like there are no contributions entered. Please check and try again.";
-
-    const lines = MpesaData.lines
-        ?.filter((line) => Number(line.amount) > 0)
-        .map((line) => ({
-            code: line.code,
-            amount: line.amount,
-        }));
-
-    if (!lines || lines.length === 0) {
-        return { errors: [{ message: errorMessage }] };
+    if (!payload.amount || payload.amount <= 0) {
+        return { errors: [{ message: "Please provide a valid amount" }] };
     }
 
-    const payload = {
-        phone: MpesaData.phone,
-        email: MpesaData.email,
-        name: MpesaData.name,
-        district: MpesaData.district || "",
-        church: MpesaData.church || "",
-        lines,
-    };
-
     try {
-        const { data } = await client.mutate<CreateMpesaResponse>({
+        // console.log('Sending mutation to server...');
+        const { data: response } = await client.mutate<{ initiateMpesaExpressPayment: { initiateMpesaExpress: InitiatedPaymentType } }>({
             mutation: gql`
-        mutation CreateMpesa(
-          $phone: String!
-          $email: String!
-          $name: String!
-          $lines: [InitiateLineType]!
-        ) {
-          initiateMpesaExpressPayment(
-            input: { phone: $phone, email: $email, name: $name, lines: $lines }
-          ) {
-            initiateMpesaExpress {
-              CheckoutRequestID
-              MerchantRequestID
-              ResultCode
-              externalReference
-              ResultDescription
-              mode
-              reference
-              id
-            }
-          }
-        }
-      `,
-            variables: payload,
-            fetchPolicy: "no-cache",
-            context: {
-                fetchOptions: {
-                    next: { revalidate: 0 },
-                },
+                    mutation initiateMpesaExpressPayment($phone: String!, $name: String!, $email: String!, $amount: Decimal!) {
+                    initiateMpesaExpressPayment(input: { phone: $phone, name: $name, email: $email, amount: $amount }) {
+                        initiateMpesaExpress {
+                        id
+                        CheckoutRequestID
+                        MerchantRequestID
+                        ResultCode
+                        externalReference
+                        reference
+                        ResultDescription
+                        }
+                    }
+                    }
+                `,
+            variables: {
+                ...payload
             },
+            fetchPolicy: "no-cache",
         });
+        // console.log('Server response:', response);
 
-        if (!data) {
-            return { errors: [{ message: "Failed to initiate payment" }] };
-        }
+        if (!response) return { errors: [{ message: "Failed to initiate payment" }] };
 
-        const result = data.initiateMpesaExpressPayment.initiateMpesaExpress;
-
-        return { result, errors: null };
+        const result: InitiatedPaymentType = response.initiateMpesaExpressPayment.initiateMpesaExpress;
+        return { result: result, errors: null };
     } catch (error: any) {
+        // console.error("Mutation failed:", error);
         return { errors: [{ message: error.message }] };
     }
 };
@@ -168,152 +92,100 @@ export const PostMpesa = async (MpesaData: MpesaType) => {
 /* ================================
    Confirm Payment Status
 ================================ */
+export const ConfirmStatus = async (checkoutRequestId: string) => {
 
-export const ConfirmStatus = async (reference: string) => {
+    // console.log("🔎 ConfirmStatus called with ID:", checkoutRequestId);
+
     try {
-        const { data } = await client.query<ConfirmStatusResponse>({
+
+        const response = await client.query<{ initiatedPayment: InitiatedPaymentType }>({
             query: gql`
-        query initiatedPayment($transId: ID!) {
-          initiatedPayment(id: $transId) {
-            CheckoutRequestID
-            MerchantRequestID
-            ResultCode
-            externalReference
-            reference
-            state
-            ResultDescription
-          }
-        }
-      `,
-            variables: {
-                transId: reference,
-            },
+                query initiatedPayment($id: ID!) {
+                    initiatedPayment(id: $id) {
+                        id
+                        CheckoutRequestID
+                        MerchantRequestID
+                        ResultCode
+                        externalReference
+                        reference
+                        state
+                        ResultDescription
+                    }
+                }
+            `,
+            variables: { id: checkoutRequestId },
             fetchPolicy: "no-cache",
-            context: {
-                fetchOptions: {
-                    next: { revalidate: 0 },
-                },
-            },
         });
 
-        if (!data) {
-            return { errors: [{ message: "Failed to confirm payment status" }] };
+        // console.log("📡 Full GraphQL Response:", response);
+
+        if (!response.data) {
+            console.warn("⚠️ No data returned");
+            return { errors: [{ message: "Failed to confirm payment" }] };
         }
 
-        return { result: data.initiatedPayment, errors: null };
+        return { result: response.data.initiatedPayment, errors: null };
+
     } catch (error: any) {
         return { errors: [{ message: error.message }] };
+
     }
 };
 
-/* ================================
-   Fetch Payment Types
-================================ */
 
-export const FetchPaymentTypes = async () => {
-    try {
-        const { data } = await client.query<PaymentTypesResponse>({
-            query: gql`
-        query PaymentTypes {
-          paymentTypes(active: true) {
-            edges {
-              node {
-                code
-                id
-                description
-                priority
-                sequenceNo
-                name
-              }
-            }
-          }
-        }
-      `,
-            fetchPolicy: "no-cache",
-            context: {
-                fetchOptions: {
-                    next: { revalidate: 0 },
-                },
-            },
-        });
-
-        if (!data) {
-            return [];
-        }
-
-        const payTypes: PaymentType[] = data.paymentTypes.edges.map(
-            (type) => type.node
-        );
-
-        return payTypes;
-    } catch (error) {
-        console.error("FetchPaymentTypes error:", error);
-        return [];
-    }
-};
-
-/* ================================
-   Fetch Transaction Receipt
-================================ */
 
 export const FetchTransactionReceipt = async (reference: string) => {
     try {
-        const { data } = await client.query<TransactionResponse>({
+
+        const response = await client.query<{
+            transactions: { edges: { node: PaidTransactionType }[] }
+        }>({
             query: gql`
-        query Transactions($reference: String) {
-          transactions(reference: $reference) {
-            edges {
-              node {
-                id
-                no
-                reference
-                phone
-                paymentMode
-                createdAt
-                confirmationCode
-                amount
-                church
-                district
-                email
-                name
-                transactionLines {
-                  edges {
-                    node {
-                      amount
-                      createdAt
-                      id
-                      paymentType {
-                        code
-                        description
-                        name
-                        sequenceNo
-                      }
+                query TranSactions($reference: String) {
+                    transactions(reference: $reference) {
+                        edges {
+                            node {
+                                id
+                                no
+                                notified
+                                reference
+                                phone
+                                paymentMode
+                                createdAt
+                                confirmationCode
+                                amount
+                                church
+                                district
+                                email
+                                name
+                                status
+                            }
+                        }
                     }
-                  }
                 }
-              }
-            }
-          }
-        }
-      `,
+            `,
             variables: { reference },
+            fetchPolicy: "no-cache"
         });
 
-        if (!data) {
-            return { errors: [{ message: "Failed to fetch transaction receipt" }] };
+        console.log("response:", response);
+
+        if (!response.data) {
+            return { result: null, errors: [{ message: "No data returned" }] };
         }
 
-        const result: PaidTransactionType =
-            data.transactions.edges.map((transaction: any) => ({
-                ...transaction.node,
-                lines: transaction.node.transactionLines.edges.map((line: any) => ({
-                    ...line.node,
-                    ...line.node.paymentType,
-                })),
-            }))[0];
+        const result: PaidTransactionType | null = response.data.transactions.edges?.[0]?.node ?? null;
 
-        return { result, errors: null };
+        if (!result) {
+            return { result: null, errors: [{ message: "No transaction found" }] };
+        }
+
+        // Map GraphQL error if any
+        const errors = response.error ? [{ message: response.error.message }] : null;
+
+        return { result, errors };
+
     } catch (error: any) {
-        return { errors: [{ message: error.message }] };
+        return { result: null, errors: [{ message: error.message }] };
     }
 };
