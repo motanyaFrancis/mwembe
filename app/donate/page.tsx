@@ -26,7 +26,14 @@ export default function DonatePage() {
             </section>
 
             {/* ================= DONATION FORM ================= */}
-            <section className="bg-primary-100 px-6 md:px-20 py-24">
+            <section className="bg-primary-100 px-0 md:px-20 py-0 md:py-24"
+                style={{
+                    backgroundImage: "url('/images/kenya-flag-background.jpg')",
+                    backgroundPosition: "center",
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                }}
+            >
                 <DonateForm />
             </section>
 

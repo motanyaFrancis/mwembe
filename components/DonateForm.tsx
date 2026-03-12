@@ -96,7 +96,7 @@ export default function DonateForm() {
 
             const verifyReceipt = async () => {
 
-                setStatusMessage("🔎 Verifying payment receipt...");
+                setStatusMessage("Verifying payment receipt...");
 
                 try {
 
@@ -130,7 +130,7 @@ export default function DonateForm() {
                     } else {
 
                         // If receipt not found, continue processing until backend updates
-                        setStatusMessage("⏳ Waiting for transaction confirmation...");
+                        setStatusMessage("Waiting for transaction confirmation...");
                     }
 
                 } catch (err) {
@@ -153,7 +153,7 @@ export default function DonateForm() {
 
             setCheckoutRequestId(null);
 
-            setStatusMessage("❌ Payment failed or cancelled.");
+            setStatusMessage("Payment failed or cancelled.");
 
         }
 
@@ -279,9 +279,9 @@ export default function DonateForm() {
 
 
     return (
-        <div className="max-w-7xl mx-auto px-4 py-10">
+        <div className="max-w-7xl mx-auto px-0 sm:px-4 py-0 md:py-10">
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 bg-white shadow-xl border-t-4 border-gold-600 p-6 md:p-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 bg-white shadow-xl border-t-4 border-gold-600 p-4 md:p-10">
 
                 {/* LEFT SIDE FORM */}
 
@@ -487,7 +487,7 @@ export default function DonateForm() {
                     </div>
                 </div>
                 {/* RIGHT SIDE PAYBILL */}
-                <div className={`bg-slate-50 rounded-lg border p-6 md:p-8 transition 
+                <div className={`bg-slate-50 rounded-lg border p-3 md:p-8 transition 
                          ${!donationsActive ? "blur-sm opacity-40 pointer-events-none" : ""}`}>
 
                     <h3 className="text-xl font-bold mb-6 text-primary-800">
