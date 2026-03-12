@@ -290,194 +290,201 @@ export default function DonateForm() {
                     <h2 className="text-2xl font-bold mb-6 text-primary-800">
                         Online Donation
                     </h2>
+                    {!donationsActive && (
+                        <div className="bg-yellow-100 border border-yellow-300 text-yellow-800 p-4 mb-6 rounded">
+                            🚧 Donations are not yet active. Please check back soon.
+                        </div>
+                    )}
 
                     {/* NAME */}
+                    <div className={`flex flex-col ${!donationsActive ? "opacity-50 pointer-events-none" : "" }`}>
 
-                    <input
-                        type="text"
-                        placeholder="Full Name"
-                        value={name}
-                        disabled={anonymous}
-                        onChange={(e) => setName(e.target.value)}
-                        className="w-full border rounded px-4 py-3 mb-3"
-                    />
-
-                    {errors.name && (
-                        <p className="text-red-500 text-sm mb-2">{errors.name}</p>
-                    )}
-
-                    {/* EMAIL */}
-
-                    <input
-                        type="email"
-                        placeholder="Email Address"
-                        value={email}
-                        disabled={anonymous}
-                        onChange={(e) => setEmail(e.target.value)}
-                        className="w-full border rounded px-4 py-3"
-                    />
-
-                    {errors.email && (
-                        <p className="text-red-500 text-sm mt-1">{errors.email}</p>
-                    )}
-
-                    {/* ANONYMOUS */}
-
-                    <label className="flex items-center gap-2 mt-3 text-sm">
                         <input
-                            type="checkbox"
-                            checked={anonymous}
-                            onChange={(e) => setAnonymous(e.target.checked)}
+                            type="text"
+                            placeholder="Full Name"
+                            value={name}
+                            disabled={anonymous}
+                            onChange={(e) => setName(e.target.value)}
+                            className="w-full border rounded px-4 py-3 mb-3"
                         />
-                        Donate anonymously
-                    </label>
 
+                        {errors.name && (
+                            <p className="text-red-500 text-sm mb-2">{errors.name}</p>
+                        )}
 
-                    {/* AMOUNT */}
+                        {/* EMAIL */}
 
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5 mt-6">
+                        <input
+                            type="email"
+                            placeholder="Email Address"
+                            value={email}
+                            disabled={anonymous}
+                            onChange={(e) => setEmail(e.target.value)}
+                            className="w-full border rounded px-4 py-3"
+                        />
 
-                        {[500, 1000, 2500, 5000].map((preset) => (
+                        {errors.email && (
+                            <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+                        )}
 
-                            <button
-                                key={preset}
-                                onClick={() => {
-                                    setAmount(preset);
-                                    setCustomAmount("");
-                                }}
-                                className={`py-3 font-semibold border rounded transition 
-                    ${amount === preset
-                                        ? "bg-primary-800 text-white"
-                                        : "border-primary-800 hover:bg-primary-800 hover:text-white"
-                                    }`}
-                            >
-                                KES {preset}
-                            </button>
+                        {/* ANONYMOUS */}
 
-                        ))}
-
-                    </div>
-
-
-                    <input
-                        type="number"
-                        placeholder="Custom Amount"
-                        value={customAmount}
-                        onChange={(e) => {
-                            setCustomAmount(e.target.value);
-                            setAmount(null);
-                        }}
-                        className="w-full border rounded px-4 py-3"
-                    />
-
-
-                    {/* PHONE */}
-
-                    <div className="mt-6">
-
-                        <label className="block text-sm font-semibold mb-2">
-                            Phone Number
+                        <label className="flex items-center gap-2 mt-3 text-sm">
+                            <input
+                                type="checkbox"
+                                checked={anonymous}
+                                onChange={(e) => setAnonymous(e.target.checked)}
+                            />
+                            Donate anonymously
                         </label>
 
-                        <div className="flex w-full gap-1">
 
-                            <div
-                                className="relative flex items-center border rounded-l px-3 bg-white cursor-pointer"
-                                onClick={() =>
-                                    setCountryDropdownOpen(!countryDropdownOpen)
-                                }
-                            >
-                                <ReactCountryFlag
-                                    svg
-                                    countryCode={country.iso}
-                                    style={{ width: "1.3em", height: "1.3em" }}
-                                    className="mr-2"
+                        {/* AMOUNT */}
+
+                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5 mt-6">
+
+                            {[500, 1000, 2500, 5000].map((preset) => (
+
+                                <button
+                                    key={preset}
+                                    onClick={() => {
+                                        setAmount(preset);
+                                        setCustomAmount("");
+                                    }}
+                                    className={`py-3 font-semibold border rounded transition 
+                    ${amount === preset
+                                            ? "bg-primary-800 text-white"
+                                            : "border-primary-800 hover:bg-primary-800 hover:text-white"
+                                        }`}
+                                >
+                                    KES {preset}
+                                </button>
+
+                            ))}
+
+                        </div>
+
+
+                        <input
+                            type="number"
+                            placeholder="Custom Amount"
+                            value={customAmount}
+                            onChange={(e) => {
+                                setCustomAmount(e.target.value);
+                                setAmount(null);
+                            }}
+                            className="w-full border rounded px-4 py-3"
+                        />
+
+
+                        {/* PHONE */}
+
+                        <div className="mt-6">
+
+                            <label className="block text-sm font-semibold mb-2">
+                                Phone Number
+                            </label>
+
+                            <div className="flex w-full gap-1">
+
+                                <div
+                                    className="relative flex items-center border rounded-l px-3 bg-white cursor-pointer"
+                                    onClick={() =>
+                                        setCountryDropdownOpen(!countryDropdownOpen)
+                                    }
+                                >
+                                    <ReactCountryFlag
+                                        svg
+                                        countryCode={country.iso}
+                                        style={{ width: "1.3em", height: "1.3em" }}
+                                        className="mr-2"
+                                    />
+
+                                    +{country.code}
+
+                                    <ChevronDown className="ml-2 w-4 h-4 text-gray-500" />
+
+                                    {countryDropdownOpen && (
+                                        <div className="absolute top-full left-0 w-40 bg-white border rounded shadow max-h-40 overflow-auto z-20">
+
+                                            {countries.map((c) => (
+
+                                                <div
+                                                    key={c.code}
+                                                    className="flex items-center px-3 py-2 hover:bg-gray-100 cursor-pointer"
+                                                    onClick={() => {
+                                                        setCountry(c);
+                                                        setCountryDropdownOpen(false);
+                                                    }}
+                                                >
+                                                    <ReactCountryFlag
+                                                        svg
+                                                        countryCode={c.iso}
+                                                        style={{
+                                                            width: "1.3em",
+                                                            height: "1.3em",
+                                                        }}
+                                                        className="mr-2"
+                                                    />
+
+                                                    (+{c.code})
+                                                </div>
+
+                                            ))}
+
+                                        </div>
+                                    )}
+                                </div>
+
+                                <input
+                                    type="tel"
+                                    placeholder="07XXXXXXXX"
+                                    value={phone}
+                                    onChange={(e) => setPhone(e.target.value)}
+                                    className="flex-1 border rounded-r px-4 py-3"
                                 />
 
-                                +{country.code}
-
-                                <ChevronDown className="ml-2 w-4 h-4 text-gray-500" />
-
-                                {countryDropdownOpen && (
-                                    <div className="absolute top-full left-0 w-40 bg-white border rounded shadow max-h-40 overflow-auto z-20">
-
-                                        {countries.map((c) => (
-
-                                            <div
-                                                key={c.code}
-                                                className="flex items-center px-3 py-2 hover:bg-gray-100 cursor-pointer"
-                                                onClick={() => {
-                                                    setCountry(c);
-                                                    setCountryDropdownOpen(false);
-                                                }}
-                                            >
-                                                <ReactCountryFlag
-                                                    svg
-                                                    countryCode={c.iso}
-                                                    style={{
-                                                        width: "1.3em",
-                                                        height: "1.3em",
-                                                    }}
-                                                    className="mr-2"
-                                                />
-
-                                                (+{c.code})
-                                            </div>
-
-                                        ))}
-
-                                    </div>
-                                )}
                             </div>
 
-                            <input
-                                type="tel"
-                                placeholder="07XXXXXXXX"
-                                value={phone}
-                                onChange={(e) => setPhone(e.target.value)}
-                                className="flex-1 border rounded-r px-4 py-3"
+                            {errors.phone && (
+                                <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
+                            )}
+
+                        </div>
+
+
+                        {/* MPESA LOGO */}
+
+                        <div className="flex items-center gap-3 mt-6">
+
+                            <Image
+                                src="/payments/mpesa.png"
+                                width={70}
+                                height={35}
+                                alt="M-Pesa"
                             />
 
                         </div>
 
-                        {errors.phone && (
-                            <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
+
+                        <button
+                            onClick={triggerSTKPush}
+                            disabled={!donationsActive || processing || !!checkoutRequestId}
+                            className="mt-6 w-full bg-gold-600 hover:bg-gold-700 text-white py-4 rounded font-semibold transition"
+                        >
+                            {processing
+                                ? "Processing Payment..."
+                                : checkoutRequestId
+                                    ? "Waiting for M-Pesa confirmation..."
+                                    : "Donate Now"}
+                        </button>
+
+
+                        {statusMessage && (
+                            <p className="mt-3 text-center text-slate-500">{statusMessage}</p>
                         )}
 
                     </div>
-
-
-                    {/* MPESA LOGO */}
-
-                    <div className="flex items-center gap-3 mt-6">
-
-                        <Image
-                            src="/payments/mpesa.png"
-                            width={70}
-                            height={35}
-                            alt="M-Pesa"
-                        />
-
-                    </div>
-
-
-                    <button
-                        onClick={triggerSTKPush}
-                        disabled={!donationsActive || processing || !!checkoutRequestId}
-                        className="mt-6 w-full bg-gold-600 hover:bg-gold-700 text-white py-4 rounded font-semibold transition"
-                    >
-                        {processing
-                            ? "Processing Payment..."
-                            : checkoutRequestId
-                                ? "Waiting for M-Pesa confirmation..."
-                                : "Donate Now"}
-                    </button>
-
-
-                    {statusMessage && (
-                        <p className="mt-3 text-center text-slate-500">{statusMessage}</p>
-                    )}
-
                 </div>
                 {/* RIGHT SIDE PAYBILL */}
                 <div className={`bg-slate-50 rounded-lg border p-6 md:p-8 transition 
