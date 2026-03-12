@@ -87,9 +87,8 @@ Your continued use of the website constitutes acceptance of the updated Privacy 
         {
             heading: "Contact Information",
             content: `If you have questions, concerns, or complaints regarding this Privacy Policy or our data practices, you may contact us at:
-Email: privacy@website.com
-Phone: +XXX-XXX-XXXX
-Mail: [Physical Address, if applicable]
+Email: info@themwembe.ke
+
 We will respond to inquiries and requests in accordance with applicable law and within a reasonable timeframe.`,
         },
     ],

@@ -6,6 +6,7 @@ import { Montserrat } from "next/font/google";
 import { PrivacyProvider } from "@/context/PrivacyContext";
 import BackToTopButton from "@/components/BackToTopButton";
 import ApolloWrapper from "@/providers/ApolloProvider";
+import { Analytics } from "@vercel/analytics/next"
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -151,6 +152,7 @@ export default function RootLayout({
       <body className={`${montserrat.className} bg-beige-50 text-dark`}>
         <ApolloWrapper>
           <PrivacyProvider>
+            <Analytics />
             <Navbar />
             {children}
             <BackToTopButton />
