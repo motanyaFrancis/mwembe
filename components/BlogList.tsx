@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { posts as allPosts } from "@/data/posts"
 import { ChevronRight } from "lucide-react"
+import Image from "next/image"
 
 type BlogListProps = {
     posts?: typeof allPosts
@@ -79,7 +80,21 @@ export default function BlogList({
                                             <h3 className="font-serif font-extrabold text-[22px] leading-[1.2] mb-6 text-[#143A52]">
                                                 {post.title}
                                             </h3>
+                                            {post.topMedia ? (
+                                                <span className="w-full ">
+                                                    <Image
+                                                        src={post.topMedia?.url}
+                                                        alt={post.title}
+                                                        width={1080}
+                                                        height={1920}
+                                                        className="aspect-[16/9] w-full select-none pointer-events-none object-cover"
+                                                        priority
+                                                    />
+                                                </span>
 
+                                            ) : <p></p>
+
+                                            }
                                             <p className="text-[14px] text-[#143A52] flex-grow leading-relaxed">
                                                 {post.excerpt}
                                             </p>

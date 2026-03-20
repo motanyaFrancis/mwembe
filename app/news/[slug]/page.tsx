@@ -4,6 +4,7 @@ import ContentRenderer from "@/components/ContentRenderer"
 import RelatedNewsSidebar from "@/components/RelatedNewsSidebar"
 import ImagePreviewLightbox from "@/components/ImagePreviewLightbox";
 import Link from "next/link"
+import Image from "next/image"
 import { Metadata } from "next"
 import { FaXTwitter, FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
 import MasonryMediaGallery from "@/components/MasonryMediaGallery";
@@ -144,6 +145,20 @@ export default async function PostPage({ params }: Props) {
                 <div className="max-w-[1100px] flex flex-col lg:flex-row gap-16 w-full border-t border-primary-600 pt-16">
 
                     <article className="flex-1 max-w-4xl">
+                        {post.topMedia ? (
+
+                                <Image
+                                    src={post.topMedia?.url}
+                                    alt={post.title}
+                                    width={1920}
+                                    height={1080}
+                                    className="h-auto w-auto max-w-full select-none pointer-events-none cover"
+                                    priority
+                                />
+
+                        ) : <p></p>
+
+                        }
                         <div className="prose prose-slate max-w-none">
                             <ContentRenderer content={post.content} />
                         </div>

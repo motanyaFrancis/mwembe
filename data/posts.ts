@@ -16,6 +16,7 @@ export type Post = {
 
   // Main hero media (required or optional depending on your logic)
   featuredMedia?: MediaItem
+  topMedia?: MediaItem
 
   // Additional gallery / inline media
   media?: MediaItem[]
@@ -245,67 +246,88 @@ export const posts: Post[] = [
       },
       {
         type: "image",
-        url: "/gallery/world-engineers-day-1.jpeg",},
+        url: "/gallery/world-engineers-day-1.jpeg",
+      },
       {
         type: "image",
-        url: "/gallery/world-engineers-day-2.jpeg",},
+        url: "/gallery/world-engineers-day-2.jpeg",
+      },
       {
         type: "image",
-        url: "/gallery/world-engineers-day-22.jpeg",},
+        url: "/gallery/world-engineers-day-22.jpeg",
+      },
       {
         type: "image",
-        url: "/gallery/world-engineers-day-4.jpeg",},
+        url: "/gallery/world-engineers-day-4.jpeg",
+      },
       {
         type: "image",
-        url: "/gallery/world-engineers-day-5.jpeg",},
+        url: "/gallery/world-engineers-day-5.jpeg",
+      },
       {
         type: "image",
-        url: "/gallery/world-engineers-day-6.jpeg",},
+        url: "/gallery/world-engineers-day-6.jpeg",
+      },
       {
         type: "image",
-        url: "/gallery/world-engineers-day-7.jpeg",},
+        url: "/gallery/world-engineers-day-7.jpeg",
+      },
       {
         type: "image",
-        url: "/gallery/world-engineers-day-8.jpeg",},
+        url: "/gallery/world-engineers-day-8.jpeg",
+      },
       {
         type: "image",
-        url: "/gallery/world-engineers-day-9.jpeg",},
+        url: "/gallery/world-engineers-day-9.jpeg",
+      },
       {
         type: "image",
-        url: "/gallery/world-engineers-day-10.jpeg",},
+        url: "/gallery/world-engineers-day-10.jpeg",
+      },
       {
         type: "image",
-        url: "/gallery/world-engineers-day-11.jpeg",},
+        url: "/gallery/world-engineers-day-11.jpeg",
+      },
       {
         type: "image",
-        url: "/gallery/world-engineers-day-12.jpeg",},
+        url: "/gallery/world-engineers-day-12.jpeg",
+      },
       {
         type: "image",
-        url: "/gallery/world-engineers-day-13.jpeg",},
+        url: "/gallery/world-engineers-day-13.jpeg",
+      },
       {
         type: "image",
-        url: "/gallery/world-engineers-day-14.jpeg",},
+        url: "/gallery/world-engineers-day-14.jpeg",
+      },
       {
         type: "image",
-        url: "/gallery/world-engineers-day-15.jpeg",},
+        url: "/gallery/world-engineers-day-15.jpeg",
+      },
       {
         type: "image",
-        url: "/gallery/world-engineers-day-16.jpeg",},
+        url: "/gallery/world-engineers-day-16.jpeg",
+      },
       {
         type: "image",
-        url: "/gallery/world-engineers-day-17.jpeg",},
+        url: "/gallery/world-engineers-day-17.jpeg",
+      },
       {
         type: "image",
-        url: "/gallery/world-engineers-day-18.jpeg",},
+        url: "/gallery/world-engineers-day-18.jpeg",
+      },
       {
         type: "image",
-        url: "/gallery/world-engineers-day-19.jpeg",},
+        url: "/gallery/world-engineers-day-19.jpeg",
+      },
       {
         type: "image",
-        url: "/gallery/world-engineers-day-20.jpeg"},
+        url: "/gallery/world-engineers-day-20.jpeg"
+      },
       {
         type: "image",
-        url: "/gallery/world-engineers-day-21.jpeg"},
+        url: "/gallery/world-engineers-day-21.jpeg"
+      },
     ],
     excerpt:
       "Engineers across Kenya gathered at the University of Nairobi to mark World Engineering Day 2026 with a city procession and conference session focused on innovation, sustainability, and the future of engineering.",
@@ -324,6 +346,24 @@ The discussions featured speakers from government agencies, universities, and in
 Additional activities during the event included a tree-planting ceremony and presentations on professional development initiatives such as the upcoming IEK Career Week.
 
 The annual observance of World Engineering Day provides an opportunity for engineers to reflect on their contribution to society while encouraging collaboration between academia, industry, and government in shaping a more sustainable future.
+`,
+  },
+  {
+    slug: "eid-ul-fitr",
+    published: true,
+    title: "Eid ul-Fitr",
+    category: "Celebration",
+    date: "2026-03-20",
+    topMedia: {
+      type: "image",
+      url: "/images/eid-ul-fitr.jpeg",
+    },
+
+    excerpt:
+      "Eng. Jacton Mwembe Achieng, PE, MIEK - IEK Honorary Secretary, wishes you a joyful Eid ul-Fitr and continued success. May your celebration be filled with happiness and blessings.",
+
+    content: `
+ test
 `,
   }
 
