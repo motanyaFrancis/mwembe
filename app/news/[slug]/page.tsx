@@ -146,7 +146,10 @@ export default async function PostPage({ params }: Props) {
 
                     <article className="flex-1 max-w-4xl">
                         {post.topMedia ? (
-
+                            <>
+                                <p className="text-[14px] text-[#143A52] flex-grow leading-relaxed">
+                                    {post.excerpt}
+                                </p>
                                 <Image
                                     src={post.topMedia?.url}
                                     alt={post.title}
@@ -155,6 +158,8 @@ export default async function PostPage({ params }: Props) {
                                     className="h-auto w-auto max-w-full select-none pointer-events-none cover"
                                     priority
                                 />
+
+                            </>
 
                         ) : <p></p>
 
