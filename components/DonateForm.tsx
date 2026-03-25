@@ -69,6 +69,7 @@ const StatusModal = ({ type, message, onClose }: StatusModalProps) => {
 
 export default function DonateForm() {
   const donationsActive = process.env.NEXT_PUBLIC_DONATIONS_ENABLED === "true";
+  const donationsFormActive = process.env.NEXT_PUBLIC_DONATIONS_FORM_ENABLED === "true";
   const paybillNumber = process.env.NEXT_PUBLIC_PAYBILL_NUMBER || "000000";
   const paybillAccount = process.env.NEXT_PUBLIC_PAYBILL_ACCOUNT || "DONATION";
 
@@ -232,14 +233,14 @@ export default function DonateForm() {
         {/* LEFT SIDE FORM */}
 
         <div className="flex flex-col relative">
-          {!donationsActive && (
+          {!donationsFormActive && (
             <div className="bg-yellow-100 border border-yellow-300 text-yellow-800 p-4 mb-6 rounded">
               🚧 Donations are not yet active. Please check back soon.
             </div>
           )}
 
           {/* NAME */}
-          <div className={`flex flex-col ${!donationsActive ? "opacity-50 blur-sm pointer-events-none" : ""}`}>
+          <div className={`flex flex-col ${!donationsFormActive ? "opacity-50 blur-sm pointer-events-none" : ""}`}>
             <h2 className="text-2xl font-bold mb-6 text-primary-800">Online Donation</h2>
 
             <input
@@ -332,7 +333,7 @@ export default function DonateForm() {
             <button
               onClick={triggerSTKPush}
               disabled={!donationsActive || processing || !!checkoutRequestId}
-              className="mt-6 w-full bg-gold-600 hover:bg-gold-700 text-white py-4 rounded font-semibold"
+              className="mt-6 w-full bg-gold-600 hover:bg-gold-700 text-white py-4 rounded font-semibold cursor-pointer"
             >
               {processing
                 ? "Processing Payment..."
@@ -345,23 +346,23 @@ export default function DonateForm() {
 
         {/* RIGHT SIDE */}
         <div className={`bg-dark-50 rounded-lg border p-3 md:p-8 transition    ${!donationsActive ? "blur-sm opacity-40 pointer-events-none" : ""}`}>
-          <h3 className="text-xl font-bold mb-6 text-primary-800">Donate via M-Pesa Paybill</h3>
+          <h3 className="text-xl font-bold mb-6 text-primary-800">Donate via M-Pesa</h3>
 
           <div className="space-y-4">
             <p>1. Go to M-Pesa</p>
             <p>2. Select Lipa na M-Pesa</p>
-            <p>3. Select Paybill</p>
+            <p>3. Select Buy Goods</p>
           </div>
 
           <div className="bg-white border rounded p-4 mt-6 text-center">
-            <p className="text-sm">Business Number</p>
+            <p className="text-sm">Till Number</p>
             <p className="text-3xl font-bold text-green-700">{paybillNumber}</p>
           </div>
 
-          <div className="bg-white border rounded p-4 mt-4 text-center">
+          {/* <div className="bg-white border rounded p-4 mt-4 text-center">
             <p className="text-sm">Account Number</p>
             <p className="text-2xl font-bold">{paybillAccount}</p>
-          </div>
+          </div> */}
 
           <div className="space-y-4 pt-4">
             <p>4. Enter the amount</p>
@@ -369,7 +370,7 @@ export default function DonateForm() {
           </div>
 
           <div className="flex justify-center mt-8">
-            <Image src="/payments/mpesa.png" width={120} height={50} alt="M-Pesa" />
+            <Image src="/payments/Lipa-Na-Mpesa-Logo.png" width={300} height={50} alt="M-Pesa" />
           </div>
         </div>
       </div>
