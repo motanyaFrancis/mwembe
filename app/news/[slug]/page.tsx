@@ -2,37 +2,36 @@ import { posts } from "@/data/posts"
 import { notFound } from "next/navigation"
 import ContentRenderer from "@/components/ContentRenderer"
 import RelatedNewsSidebar from "@/components/RelatedNewsSidebar"
-import ImagePreviewLightbox from "@/components/ImagePreviewLightbox";
+import ImagePreviewLightbox from "@/components/ImagePreviewLightbox"
 import Link from "next/link"
 import Image from "next/image"
 import { Metadata } from "next"
-import { FaXTwitter, FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
-import MasonryMediaGallery from "@/components/MasonryMediaGallery";
-
+import { FaXTwitter, FaFacebookF, FaLinkedinIn } from "react-icons/fa6"
+import MasonryMediaGallery from "@/components/MasonryMediaGallery"
 
 type Props = {
-    params: Promise<{ slug: string }>
+    params: { slug: string }
 }
 
-// Dynamic metadata
+// ✅ Dynamic metadata (FIXED)
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-    const { slug } = await params;
-    const post = posts.find((p) => p.slug === slug);
+    const { slug } = params
+    const post = posts.find((p) => p.slug === slug)
 
-    const baseUrl = "https://themwembe.ke";
+    const baseUrl = "https://themwembe.ke"
 
     if (!post) {
         return {
             title: "News & Press",
             description: "Latest news and press releases",
-        };
+        }
     }
 
     const imageUrl = post.featuredMedia?.url
         ? `${baseUrl}${post.featuredMedia.url}`
-        : `${baseUrl}/images/hero-1.jpeg`; // fallback image
+        : `${baseUrl}/images/hero-1.jpeg`
 
-    const postUrl = `${baseUrl}/news/${slug}`;
+    const postUrl = `${baseUrl}/news/${slug}`
 
     return {
         title: `${post.title} | News & Press`,
@@ -60,11 +59,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             description: post.excerpt || post.title,
             images: [imageUrl],
         },
-    };
+    }
 }
 
+// ✅ Page component (FIXED)
 export default async function PostPage({ params }: Props) {
-    const { slug } = await params
+    const { slug } = params
     const post = posts.find((p) => p.slug === slug)
 
     if (!post) return notFound()
@@ -74,14 +74,13 @@ export default async function PostPage({ params }: Props) {
     const day = dateObj.getDate()
     const year = dateObj.getFullYear()
 
-    const baseUrl = "https://themwembe.ke";
-    const shareUrl = `${baseUrl}/news/${slug}`;
-    const encodedUrl = encodeURIComponent(shareUrl);
-    const encodedTitle = encodeURIComponent(post.title);
+    const baseUrl = "https://themwembe.ke"
+    const shareUrl = `${baseUrl}/news/${slug}`
+    const encodedUrl = encodeURIComponent(shareUrl)
+    const encodedTitle = encodeURIComponent(post.title)
 
     return (
         <main className="min-h-screen bg-[#f7f1e7] text-[#1a1f38]">
-
             {/* HERO */}
             <section className="bg-primary-900 text-white px-6 md:px-20 py-32 pt-44">
                 <div className="max-w-5xl mx-auto">
@@ -99,40 +98,33 @@ export default async function PostPage({ params }: Props) {
 
                     {/* SHARE BUTTONS */}
                     <div className="mt-6 flex items-center gap-4">
-
                         <span className="text-primary-200 text-sm font-medium mr-2">
                             Share:
                         </span>
 
-                        {/* X (Twitter) */}
                         <a
                             href={`https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="Share on X"
-                            className="w-10 h-10 flex items-center justify-center rounded-full bg-black text-white hover:scale-110 transition-transform duration-200"
+                            className="w-10 h-10 flex items-center justify-center rounded-full bg-black text-white hover:scale-110 transition"
                         >
                             <FaXTwitter size={16} />
                         </a>
 
-                        {/* Facebook */}
                         <a
                             href={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="Share on Facebook"
-                            className="w-10 h-10 flex items-center justify-center rounded-full bg-[#1877F2] text-white hover:scale-110 transition-transform duration-200"
+                            className="w-10 h-10 flex items-center justify-center rounded-full bg-[#1877F2] text-white hover:scale-110 transition"
                         >
                             <FaFacebookF size={16} />
                         </a>
 
-                        {/* LinkedIn */}
                         <a
                             href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="Share on LinkedIn"
-                            className="w-10 h-10 flex items-center justify-center rounded-full bg-[#0A66C2] text-white hover:scale-110 transition-transform duration-200"
+                            className="w-10 h-10 flex items-center justify-center rounded-full bg-[#0A66C2] text-white hover:scale-110 transition"
                         >
                             <FaLinkedinIn size={16} />
                         </a>
@@ -140,94 +132,75 @@ export default async function PostPage({ params }: Props) {
                 </div>
             </section>
 
-            {/* CONTENT + SIDEBAR */}
+            {/* CONTENT */}
             <section className="flex justify-center px-6 md:px-20 py-20">
                 <div className="max-w-[1100px] flex flex-col lg:flex-row gap-16 w-full border-t border-primary-600 pt-16">
-
                     <article className="flex-1 max-w-4xl">
-                        {post.topMedia ? (
+                        {post.topMedia && (
                             <>
-                                <p className="text-[14px] text-[#143A52] flex-grow leading-relaxed">
+                                <p className="text-[14px] text-[#143A52] leading-relaxed">
                                     {post.excerpt}
                                 </p>
                                 <Image
-                                    src={post.topMedia?.url}
+                                    src={post.topMedia.url}
                                     alt={post.title}
                                     width={1920}
                                     height={1080}
-                                    className="h-auto w-auto max-w-full select-none pointer-events-none cover"
+                                    className="max-w-full"
                                     priority
                                 />
-
                             </>
+                        )}
 
-                        ) : <p></p>
-
-                        }
                         <div className="prose prose-slate max-w-none">
                             <ContentRenderer content={post.content} />
                         </div>
 
-                        {/* DOWNLOAD ARTICLE AS IMAGE */}
+                        {/* DOWNLOAD */}
                         {post.featuredMedia?.url && (
                             <div className="mt-20 border-t border-primary-300 pt-12">
                                 <h3 className="text-2xl font-bold mb-4">
                                     Download This Article
                                 </h3>
 
-                                <p className="text-primary-700 mb-6 max-w-xl">
-                                    You can download a pre-designed image version of this article for sharing
-                                    on social media or offline viewing.
-                                </p>
+                                <ImagePreviewLightbox
+                                    src={post.featuredMedia.url}
+                                    alt={post.title}
+                                />
 
-                                {/* Image Preview */}
-                                <div className="mb-6">
-                                    <ImagePreviewLightbox
-                                        src={post.featuredMedia.url}
-                                        alt={`${post.title} article preview`}
-                                    />
-                                </div>
-
-                                {/* Download Button */}
                                 <a
                                     href={post.featuredMedia.url}
                                     download
-                                    className="inline-block bg-gold-500 text-primary-900 font-bold tracking-wider px-6 py-3 hover:bg-gold-400 transition"
+                                    className="inline-block mt-4 bg-gold-500 text-primary-900 font-bold px-6 py-3"
                                 >
                                     DOWNLOAD IMAGE
                                 </a>
                             </div>
                         )}
 
-                        {/* BACK TO NEWS */}
+                        {/* BACK */}
                         <div className="mt-16">
                             <Link
                                 href="/news"
-                                className="inline-block bg-primary-800 text-white text-sm font-bold tracking-wider px-6 py-3 border-b-4 border-gold-400 hover:bg-primary-900 transition"
+                                className="inline-block bg-primary-800 text-white px-6 py-3"
                             >
                                 BACK TO NEWS & PRESS
                             </Link>
                         </div>
-                        {/* OTHER MEDIA GALLERY */}
 
-
-                        {post.media && post.media.length > 0 && (
+                        {/* GALLERY */}
+                        {post.media && post.media?.length > 0 && (
                             <div className="mt-20 border-t border-primary-300 pt-12">
                                 <h3 className="text-2xl font-bold mb-8">
                                     Media Gallery
                                 </h3>
-
                                 <MasonryMediaGallery media={post.media} />
                             </div>
                         )}
                     </article>
 
-                    {/* 👇 Sidebar Component */}
-                    <RelatedNewsSidebar
-                        posts={posts}
-                        currentSlug={slug}
-                    />
-
+                    {/* SIDEBAR */}
+                    <RelatedNewsSidebar posts={posts} currentSlug={slug} />
                 </div>
             </section>
         </main>
