@@ -235,7 +235,7 @@ export default function DonateForm() {
         <div className="flex flex-col relative">
           {!donationsFormActive && (
             <div className="bg-yellow-100 border border-yellow-300 text-yellow-800 p-4 mb-6 rounded">
-              🚧 Donations are not yet active. Please use the Mpesa Instructions given.
+              🚧 Donations Form is not yet active. Please use the Mpesa Instructions given.
             </div>
           )}
 
