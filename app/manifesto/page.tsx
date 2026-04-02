@@ -1,7 +1,8 @@
 import ManifestoTOC from "@/components/ManifestoTOC";
 import MeetMwembeGallery from "@/components/MeetMwembeGallery";
 import { issues } from "@/data/issues";
-import { FaFilePdf } from "react-icons/fa";
+import { FaFilePdf, FaHeadphones } from "react-icons/fa";
+import AudioPlayer from "@/components/AudioPlayer";
 
 import type { Metadata } from "next";
 
@@ -32,7 +33,7 @@ export default function ManifestoArticle() {
     return (
         <section className="relative bg-primary-50">
             {/* Hero Header */}
-            <div className="relative h-132 w-full overflow-hidden 
+            <div className="relative h-180 w-full overflow-hidden 
                 bg-no-repeat bg-cover
                 bg-[position:75%_center] 
                 sm:bg-[position:85%_center]
@@ -61,22 +62,38 @@ export default function ManifestoArticle() {
                             <p className="text-sm md:text-2xl text-white md:text-dark-500 uppercase tracking-tight font-extrabold mt-1">
                                 Candidate for President, IEK (2026–2028)
                             </p>
-                            <a
-                                href="/files/Eng_Jacton_Mwembe_PE_MIEK_Manifesto_1.pdf"
-                                // href="/#"
-                                download
-                                className="mt-4 inline-flex items-center gap-2 px-6 py-2 bg-gold-600 text-white font-bold  hover:bg-gold-500 transition-colors"
-                            >
-                                <FaFilePdf className="w-5 h-5 " />
-                                Download Manifesto
-                            </a>
+                            <div className="flex flex-col sm:flex-row items-center gap-4 mt-6">
+
+                                <a
+                                    href="/files/Eng_Jacton_Mwembe_PE_MIEK_Manifesto_1.pdf"
+                                    // href="/#"
+                                    download
+                                    className="mt-4 inline-flex items-center gap-2 px-6 py-2 bg-gold-600 text-white  font-bold  hover:bg-gold-500 transition-colors"
+                                >
+                                    <FaFilePdf className="w-5 h-5 " />
+                                    Get Manifesto
+                                </a>
+                                <a
+                                    href="/files/Eng-Mwembe-IEK-Pres-Manifesto-AUDIOBOOK_Narrated-by-Eng-Mwembe.mp3.mpeg"
+                                    // href="/#"
+                                    download
+                                    className="mt-4 inline-flex items-center gap-2 px-6 py-2 bg-gold-600 text-white font-bold  hover:bg-gold-500 transition-colors"
+                                >
+                                    <FaHeadphones className="w-5 h-5 " />
+                                    Get AudioBook
+                                </a>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
+            <div className="max-w-7xl mx-auto px-6 py-4 ">
 
+                <AudioPlayer src="/files/Eng-Mwembe-IEK-Pres-Manifesto-AUDIOBOOK_Narrated-by-Eng-Mwembe.mp3.mpeg" />
+            </div>
             {/* Main Content with TOC */}
-            <div className="relative max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-12 gap-x-12">
+            <div className="relative max-w-7xl mx-auto px-6 pb-16 pt-4 grid grid-cols-1 lg:grid-cols-12 gap-x-12">
                 {/* Table of Contents */}
                 <aside className="hidden lg:block lg:col-span-4 sticky top-28 self-start">
                     <ManifestoTOC sections={sections} />
@@ -188,8 +205,8 @@ export default function ManifestoArticle() {
                             <li>Misplaced domiciliation of regulatory body.</li>
                         </ul>
                     </section>
-                     
-                     <section id="key-pillars" className="space-y-4 scroll-mt-32">
+
+                    <section id="key-pillars" className="space-y-4 scroll-mt-32">
                         <h3 className="text-2xl font-bold text-gold-600">KEY PILLARS</h3>
                         <p>This manifesto strives to resolve the identified challenges under the following key pillars to ensure optimum benefit to the IEK fraternity. </p>
                         <ul className="list-decimal list-outside space-y-1 leading-relaxed ml-6">
@@ -198,7 +215,7 @@ export default function ManifestoArticle() {
                             <li>Economic</li>
                             <li>Sustainability</li>
                         </ul>
-                     </section>
+                    </section>
 
                     {/* The Manifesto */}
                     <section id="manifesto" className="space-y-8 scroll-mt-32">

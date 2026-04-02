@@ -13,7 +13,6 @@ type Props = {
     params: { slug: string }
 }
 
-// ✅ Dynamic metadata (FIXED)
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = params
     const post = posts.find((p) => p.slug === slug)
@@ -62,7 +61,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
 }
 
-// ✅ Page component (FIXED)
+// Page component (FIXED)
 export default async function PostPage({ params }: Props) {
     const { slug } = params
     const post = posts.find((p) => p.slug === slug)
