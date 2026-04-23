@@ -365,6 +365,81 @@ The annual observance of World Engineering Day provides an opportunity for engin
     content: `
  
 `,
+  },
+
+  {
+    slug: "eng-jackton-mwembe-on-newscheck",
+    published: true,
+    title: "Eng. Jackton Mwembe on Newscheck ",
+    category: "News",
+    date: "2026-04-23",
+      topMedia: {
+      type: "image",
+      url: "/images/newscheck.jpeg",
+    },
+
+    excerpt:
+      "Eng. Jackton Mwembe, the Honorary Secretary of IEK as well as a Policy and Governance expert, was featured in an interview session during a roundtable discussion on Newscheck aired on 21st April on Kenya Broadcasting Corporation (KBC).",
+
+    content: `
+    ### Infrastructure, Governance and Economic Stability in Kenya
+
+    Eng. Jackton Mwembe, the Honorary Secretary of IEK as well as a Policy and Governance expert, was featured in an interview session during a roundtable discussion on Newscheck aired on 21st April on Kenya Broadcasting Corporation (KBC). The conversation, moderated by Ben Troy Njue, brought together Hon. Peter Mutua, a governance and policy analyst, to examine Kenya’s infrastructure development agenda, fuel pricing dynamics, and broader economic resilience strategies.
+
+    He shared his thoughts on how Kenya can strengthen its industrial base, manage energy transitions, improve governance frameworks in infrastructure delivery, and his bid for Presidential candidature at the IEK
+
+    ### Leveraging Bilateral Talks for Infrastructure and Industrial Growth
+
+    Eng. Mwembe emphasized that bilateral engagements led by the Head of State are critical to Kenya’s development trajectory, particularly in infrastructure financing and industrial expansion.
+
+    He noted that such talks must be assessed not only by their diplomatic value but by their outcomes, especially where investments and infrastructure funding are concerned. According to him, Kenya must ensure that national interests remain central in all international agreements.
+
+    A key priority, he argued, is knowledge transfer. Any infrastructure partnerships should ensure that local professionals are actively involved so that technical capacity is retained within the country.
+
+    He further stressed the importance of industrialization, particularly manufacturing and value addition, as a pathway to employment creation and economic stability. Kenya must move away from exporting raw materials and instead focus on processing and adding value locally.
+
+    ### Public-Private Partnerships and Infrastructure Risk Allocation
+ 
+    He highlighted Public-Private Partnerships (PPPs) as a key mechanism for supporting infrastructure development.
+    
+    He explained, “PPPs are designed to transfer risk from government to the private sector, ensuring efficiency, accountability, and long-term sustainability of projects. Contractors, in this model, are responsible not only for construction but also for performance over time.
+    
+    This approach is particularly useful in sectors such as water, transport, and housing, where infrastructure must serve long-term national needs.”
+    
+    He added that PPPs also enhance knowledge transfer, as government officials work alongside private actors throughout project implementation, strengthening local expertise for future projects.
+
+    ### Security Concerns, Political Temperatures and Economic Stability
+    
+    Eng. Mwembe raised concern over rising political temperatures and insecurity in the country, warning that sustained violence can weaken economic stability and investor confidence.
+    
+    > “An economy exposed to prolonged violence risks inflation, disruption of business activity, and long-term structural decline cannot grow. While I acknowledging government efforts in addressing insecurity, there words must translate to tangible actions. Arrests must lead to prosecutions, and those found culpable must be held accountable to deter future violence,” he emphasized. 
+    
+    He further called for stronger oversight of politically linked violence and hooliganism, including accountability for those who incite or finance such actions.
+
+    ### Strengthening Security Enforcement and Judicial Accountability
+    
+    Engineer emphasized the need for intentional deployment of security personnel at the grassroots level, noting that insecurity incidents often occur at local levels.
+    
+    He questioned whether security officers are adequately resourced and equipped to conduct thorough investigations and ensure justice and highlighted the role of the judiciary, pointing out delays in politically sensitive and violence-related cases. He stressed that justice must be timely and decisive to reinforce public trust in institutions.
+    
+    ### Electoral Accountability, Leadership and Political Zoning
+    
+    Strongly criticizing political zoning, describing it as undemocratic and exclusionary, he argued that it limits citizens’ freedom to choose competent leaders and protects underperforming politicians through party structures and regional arrangements.
+    
+    > “Leaders who fail to deliver should be voted out, and political loyalty should not override performance and accountability I urge all Kenyan citizens to register and actively engage in elections as a means of holding leaders accountable. Institutions such as IEBC and NCIC, must take a more active role in enforcing electoral integrity and deterring misconduct,” he added. 
+
+    ### Institutional Leadership in Engineering and National Development
+    
+    While sharing his candidature for the presidency of the Institution of Engineers of Kenya, Eng. Mwembe noted the importance of strong professional leadership in national development.
+    
+    He emphasized that engineers play a central role in infrastructure planning, risk assessment, and project execution, and should be fully involved in national development decision-making.
+    
+    To conclude, he called for stronger regulatory systems to ensure timely registration, certification, and professional accountability within the sector.
+    
+    On the other hand, he also pointed out current gaps in the engineering regulatory framework, particularly delays in board appointments, which have affected certification and employment of engineers and further urged authorities to fully operationalize regulatory bodies to strengthen the profession and improve infrastructure delivery in the country. 
+
+
+`,
   }
 
 ]
