@@ -137,7 +137,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={montserrat.variable}>
+    <html lang="en" className={montserrat.variable} suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
@@ -149,7 +149,7 @@ export default function RootLayout({
         />
       </head>
 
-      <body className={`${montserrat.className} bg-beige-50 text-dark`}>
+      <body className={`${montserrat.className} bg-beige-50 text-dark`} >
         <ApolloWrapper>
           <PrivacyProvider>
             <Analytics />

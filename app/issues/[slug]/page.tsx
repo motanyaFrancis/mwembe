@@ -7,6 +7,10 @@ type Props = {
   params: Promise<{ slug: string }>; // production uses a Promise
 };
 
+export async function generateStaticParams() {
+  return issues.map((issue) => ({ slug: issue.slug }));
+}
+
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params; // Await the params
 

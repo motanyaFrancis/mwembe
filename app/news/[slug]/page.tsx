@@ -10,11 +10,11 @@ import { FaXTwitter, FaFacebookF, FaLinkedinIn } from "react-icons/fa6"
 import MasonryMediaGallery from "@/components/MasonryMediaGallery"
 
 type Props = {
-    params: { slug: string }
+    params: Promise<{ slug: string }> // Next.js 15: params is a Promise and must be awaited
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-    const { slug } = params
+    const { slug } = await params
     const post = posts.find((p) => p.slug === slug)
 
     const baseUrl = "https://themwembe.ke"
@@ -61,9 +61,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
 }
 
-// Page component (FIXED)
+// Page component (FIXED: params is now correctly awaited)
 export default async function PostPage({ params }: Props) {
-    const { slug } = params
+    const { slug } = await params
     const post = posts.find((p) => p.slug === slug)
 
     if (!post) return notFound()
